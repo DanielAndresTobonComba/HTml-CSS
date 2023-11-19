@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina web</title>
+
+    <style>
+        header {
+
+            margin: 10px;
+        }
+
+        main {
+            border: solid;
+            margin: 20px;
+        }
+
+
+        main header article {
+            display: inline-block;
+            padding: 0px 0px 0px 75%;
+
+
+        }
+
+        main header section {
+            background-color: teal;
+
+        }
+
+        #logo {
+            display: inline-block;
+            border: solid;
+            margin: 10px;
+            background-color: white;
+        }
+
+        main header section ul {
+            display: inline-block;
+
+        }
+
+        main header section ul li {
+            display: inline-block;
+
+
+        }
+
+        #seccion-left {
+            width: 15%;
+            margin: 10px;
+        }
+
+        #sub-left {
+            padding: 5px;
+            border: solid;
+
+        }
+
+        div div section+section {
+            margin-top: 10px;
+            border: solid red;
+        }
+
+        #principal {
+            display: flex;
+
+        }
+
+        #seccion-center {
+
+            margin: 9px;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #seccion-center h2 {
+
+            margin: 5px;
+
+        }
+
+        #sub1-center {
+
+            margin: 5px;
+
+        }
+
+        #sub2-center {
+
+            margin: 5px;
+
+        }
+
+        #sub1-center img {
+            float: left;
+            margin: 10px;
+            border: solid 4px;
+
+
+
+        }
+
+        #sub2-center img {
+            float: left;
+            margin: 10px;
+            border: solid 4px;
+
+
+        }
+
+        #seccion-right {
+            width: 15%;
+            margin: 10px;
+        }
+
+        #sub-right {
+            padding: 5px;
+            border: solid;
+
+        }
+
+        footer ul {
+            display: flex;
+            background-color: salmon;
+            margin: 10px 10px;
+
+
+
+        }
+
+        footer ul li {
+            display: flex;
+            margin: 0px 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <section id="logo">
+                <h2>Logotipo</h2>
+            </section>
+
+            <article>
+                <label for="busqueda">Buscar:</label>
+                <input type="search" name="q" id="busqueda">
+            </article>
+
+            <section>
+                <ul>
+                    <li id="especial"><a href="#">Inicio</a></li>
+                    <li><a href="#">Quienes somos?</a></li>
+                    <li><a href="#">Contactos</a></li>
+                </ul>
+            </section>
+        </header>
+
+        <div id="principal">
+
+            <div id="seccion-left">
+                <section id="sub-left">
+                    <h3>Noticias</h3>
+                    <ul>
+                        <li>dd/mm/aa <a href="#">Lorem, ipsum </a></li>
+                        <li>dd/mm/aa <a href="#">Lorem, ipsum </a></li>
+                        <li>dd/mm/aa <a href="#">Lorem, ipsum </a></li>
+                        <li>dd/mm/aa <a href="#">Lorem, ipsum </a></li>
+                        <li>dd/mm/aa <a href="#">Lorem, ipsum </a></li>
+                    </ul>
+
+                    <hr>
+
+                    <h3>Enlaces relacionados</h3>
+
+                    <ul>
+                        <li> <a href="#">Lorem, ipsum</a></li>
+                        <li><a href="">Lorem, ipsum</a></li>
+                    </ul>
+
+                </section>
+
+                <section>
+
+                    <h3>Publicidad</h3>
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, quidem quisquam quia fuga
+                        praesentium.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo est labore rerum amet tenetur ea
+                        dicta.</p>
+
+                </section>
+
+            </div>
+
+
+            <div id="seccion-center">
+
+                <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In illo reprehenderit.</h2>
+
+                <section id="sub1-center">
+                    <img src="https://elsumario.com/wp-content/uploads/2018/10/El-Sumario-Investigadores-descifran-caducidad-del-universo.jpg"
+                        alt="" width="100px" height="75px">
+                    <section>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur placeat quos ad sunt
+                            architecto, et nisi quisquam nemo. Magnam atque ipsam a adipisci aliquam hic ea voluptas
+                            consequatur esse voluptate?Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                            placeat quos ad sunt
+                            architecto, et nisi quisquam nemo. Magnam atque ipsam a adipisci aliquam hic ea voluptas
+                            consequatur esse voluptate?</p>
+
+                    </section>
+                </section>
+
+                <section id="sub2-center">
+                    <img src="https://images.ecestaticos.com/JVXVHWMtjjGImoe3tW9o71Y90FM=/0x0:2272x1420/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F16b%2F7b9%2Fba2%2F16b7b9ba281fb7b272cdb1b2fac76ab6.jpg"
+                        alt="" width="100px" height="100px">
+                    <section>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam voluptas praesentium
+                            possimus laudantium facilis eos ut, minus aspernatur molestiae iusto nulla magnam libero
+                            quasi, voluptatum quas saepe sint architecto.Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Tenetur placeat quos ad sunt
+                            architecto, et nisi quisquam nemo. Magnam atque ipsam a adipisci aliquam hic ea voluptas
+                            consequatur esse voluptate?</p>
+                    </section>
+                </section>
+
+            </div>
+
+            <div id="seccion-right">
+                <section id="sub-right">
+                    <h3>Phasellus blandit</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi officia voluptate neque
+                        facere? aperiam modi odio excepturi sapiente ratione omnis fugit
+                        illum laudantium error!
+                        A nisi quae corporis quo!</p>
+                    <a href="">Seguir leyendo</a>
+
+                    <hr>
+
+                    <h3>Enlaces relacionados</h3>
+
+                    <ul>
+                        <li> <a href="#">Lorem, ipsum</a></li>
+                        <li><a href="">Lorem, ipsum</a></li>
+                    </ul>
+
+                </section>
+
+                <section>
+
+                    <h3>Nullam vel turpis</h3>
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, quidem quisquam quia fuga
+                        praesentium.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo est labore rerum amet tenetur ea
+                        dicta.</p>
+
+                    <a href="">Seguir leyendo</a>
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <footer>
+            <ul>
+                <li><a href="">Nulla</a></li>
+                <li><a href="">Nulla</a></li>
+                <li><a href="">Nulla</a></li>
+                <li><a href="">Nulla</a></li>
+                <li><a href="">Nulla</a></li>
+            </ul>
+        </footer>
+    </main>
+
+</body>
+
+</html>

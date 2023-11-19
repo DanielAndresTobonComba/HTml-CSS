@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de maquetacion</title>
+
+    <style>
+        * {
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 1200px;
+            padding: 20px;
+        }
+
+
+
+        header section {
+
+            width: 90%;
+            height: 100px;
+            margin: 10px 0px;
+            background-color: purple;
+            text-align: center;
+            color: yellow;
+            font-weight: 900;
+        }
+
+        header section+section {
+
+            width: 90%;
+            height: 70px;
+            margin: 10px 0px;
+            background-color: teal;
+
+        }
+
+        /* Principal */
+
+        main {
+            display: flex;
+            height: 400px;
+            width: 90%;
+            margin-bottom: 20px;
+
+        }
+
+        #contenedorPrincipal {
+
+            width: 60%;
+            margin: 10px 10px 10px 0px;
+            height: 100%;
+            padding: 20px;
+            background-color: aqua;
+
+
+        }
+
+
+
+        main div section {
+            height: 22%;
+            width: 100%;
+            margin: 10px auto;
+            background-color: red;
+            color: white;
+            font-size: x-small;
+
+        }
+
+        #columna {
+            width: 40%;
+
+            height: 100%;
+            margin: 10px 0px 10px 10px;
+            background-color: burlywood;
+
+        }
+
+        footer {
+
+            width: 90%;
+            height: 10%;
+            margin: 10px 0px;
+            background-color: yellowgreen;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+        <section>Ejemplo de maquetacion</section>
+        <section></section>
+    </header>
+
+    <main>
+
+        <div id="contenedorPrincipal">
+            <section>Articulo1</section>
+            <section>Articulo2</section>
+            <section>Articulo3</section>
+            <section>Articulo4</section>
+        </div>
+
+
+        <div id="columna">
+
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>

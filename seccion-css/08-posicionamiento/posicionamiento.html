@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        body { 
+            margin: 2em;
+            font-size: 2em;
+            font-family: sans-serif;
+            background-color: black;
+            height: 2600px;
+
+        }
+
+        h1{
+            color: white;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+
+        div{
+            border-radius:5px ;
+            background-color: gray;
+        }
+
+        .static{
+            background-color: #dddddd;
+        }
+
+        .relative{
+            background-color: #81c476;
+        }
+
+        .absolute{
+            background-color: #a8d5e2;
+        }
+
+        .sticky {
+            background-color: #e1e1ac;
+            
+        }
+
+        /* top botton left right si la posicion no es estatico si uds tiene top y boton por defecto tomara a top y en left o right ganara left  */
+
+        .relative{
+            position: relative;
+            left: 50px;
+            top: 5px;
+            /* el z-idex es la profundidad de un elemento entre mas alto mas adelante y en negativo va para atras */
+            
+        }
+
+        /* el absolute es como traer la imagen al frente en word */
+        /* si el padre del absolute no es estatico el absoulute no saldra de los limites del padre */
+
+        .parent{
+            position: relative;
+        }
+
+        .absolute{
+            position: absolute;
+            
+            top: 50%;
+        }
+
+        /* fixed deja el elemento en un poscion especifica y siempre se mantendra ahi aunque se haga scroll */
+
+        .fixed{
+            position: fixed;
+            top: 50%;
+        }
+
+        /* se arrastra el elemento pero cuando llega al limite de su padre se queda  */
+
+        .sticky{
+            position: sticky;
+            top: 0px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>CSS Position</h1>
+    <div class="parent">
+
+            <div class="static">Static</div>
+            <div class="relative">Relative</div>
+            <div class="absolute">Absolute</div>
+            
+            <div class="fixed">Fixed</div>
+            <div class="sticky">Sticky</div>
+    </div>
+</body>
+</html>

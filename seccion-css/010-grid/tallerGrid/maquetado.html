@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       
+
+        body{
+            display: flex;
+            box-sizing: border-box;
+            height: 1000px;
+            
+        }
+        .grid-container{
+            height: 40%;
+            flex-basis: 500px;
+            margin: 10px auto;
+            width: 50%;
+            display: grid;
+            gap: 10px;
+            grid-template-areas:    "uno dos dos"
+                                    "tres dos dos "
+                                    "tres cuatro cinco"
+                                    "tres seis siete"
+                                    "ocho ocho ocho";
+        }
+        .grid-items{
+          
+            background-color: aquamarine;
+            padding: 20px;
+            font-size: 10px;
+            text-align: center;
+
+        }
+
+        .item1{
+            grid-area: uno;
+        }
+
+        .item2{
+            grid-area: dos;
+        }
+
+        .item3{
+            grid-area: tres;
+        }
+
+        .item4{
+            grid-area: cuatro;
+        }
+
+        .item5{
+            grid-area: cinco;
+        }
+
+        .item6{
+            grid-area: seis;
+        }
+
+        .item7{
+            grid-area: siete;
+        }
+
+        .item8{
+            grid-area: ocho;
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+    <div class="grid-container">
+
+        <div class="grid-items item1">1</div>
+        <div class="grid-items item2">2</div>
+        <div class="grid-items item3">3</div>
+        <div class="grid-items item4">4</div>
+        <div class="grid-items item5">5</div>
+        <div class="grid-items item6">6</div>
+        <div class="grid-items item7">7</div>
+        <div class="grid-items item8">8</div>
+        
+        
+        
+    </div>
+    
+</body>
+</html>

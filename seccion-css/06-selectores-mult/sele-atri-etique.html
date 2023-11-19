@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores multiples</title>
+
+    <style>
+        .classic{
+            border: solid 2px tomato;
+        }
+
+        .primary{
+            font-size: 3em;
+        }
+
+        .large{
+            width: 50%;
+        }
+
+        /* esta parte es si un boton tiene esta tres clases modificara a ese boton */
+        button.classic.primary.large{
+            color: green;
+        }
+
+        button.classic.primary.large:active{
+            background-color: teal;
+        }
+
+        /* aqui busca al boton que tenga el boton con el atributo desabilitado */
+        button[disabled]{
+            width: 45%;
+        }
+
+        /* todos los elementos que esten desabilitados  */
+        [disabled] { 
+            border: 4px solid black;
+            margin-left: 50px;
+        }
+
+        /* expresiones regulares */ 
+
+        /* el enlace que tenga un atributo llamado rel y ese sea igual a nofollow */
+
+        a[rel="nofollow"]{
+            background-color: teal;
+            margin-left: 50px;
+            
+        }
+
+        /* por lista de palabras si la palabra esta dentro del valor de data-mood afectara a ese elemento el data-mood no es entandar puede tener otro nombre */
+
+        [data-mood~="happy"] {
+            background-color: green;
+        }
+
+        /* si el atributo lang de cualquier elemento tiene un "es" dentro de su valor lo altera */
+
+        [lang|="es"]{
+            background: red;
+            color: white;
+            padding: 5px;
+        }
+
+        [lang|="es"]:hover{
+            background-color: teal;
+        }
+
+        /* si un enlace tiene un href añado como contenido el href despues del texto del enlace */
+        
+
+
+        a[href]:link{
+            color: red;
+            border: 4px solid ;
+
+        }
+
+        /* si la un enlace que tiene un href que empieza por "http://" va a colocar "pagina insegura" */
+        a[href ^= "http://"]::after{
+            content:"(Pagina insegura): "
+            attr(href)
+            
+
+        } 
+
+        /* si un enlace que tiene un href que termina por pdf inserte antes del enlace un icono */
+        a[href$=".pdf"]::before{
+            content: url("data:image/png;base64,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");
+        }
+
+        /* todo enlace que en su href esta "campus" */
+        a[href*="campus"]::after{
+            border: 10px solid blue;
+        }
+
+
+        /* speudoclases */
+        /* :hover si se coloca el cursor encima cambia algo */
+        /* :active si se clickea el elemento cambia algo mientras se clikea  */
+        /* :focus si tiene la atencion cursos cuando escribe pasa algo*/
+        /* :focus-within si selecciona algun elemento del formulario aplica algo sobre todos los elementos dentro del contenedor */
+
+        /*  */
+
+        input:focus{
+            background-color: aqua;
+        }
+
+        form:focus-within{
+            background-color: yellowgreen;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <button class="classic primary large">Boton</button>
+    <br>
+    <br>
+    <button class="classic large" disabled>Boton 2</button>
+    <br>
+    <br>
+    <input type="radio" name="miradio" id="miradio" disabled>
+    <br>
+    <br>
+    <a href="http://www.campuslands.com" rel="nofollow">campus lands</a>
+    <br><br>
+
+    <a href="http://www.google.com">Google</a>
+    <br><br>
+
+    <div data-mood="happy sad">
+        Uno
+    </div>
+    <br><br>
+
+    <div lang="es-MX en-EN">
+        English
+    </div>
+
+    <br><br>
+
+    <a href="https://campuslands.com">Campus Lands</a>
+    <br><br>
+    <a href="http://campuslands.com">Campus Lands</a>
+    <br><br>
+
+    <a href="http://campuslands.pdf">Google</a>
+
+    <br><br>
+    
+
+    <form action="">
+
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+
+        <label for="lastname">Apellido: </label>
+        <input type="text" name="lastname" id="lastname">
+        <br>
+
+    </form>
+    
+</body>
+</html>

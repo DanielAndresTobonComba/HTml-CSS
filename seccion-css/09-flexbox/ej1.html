@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo Flex-Box</title>
+
+    <style>
+        body {
+            background-color: beige;
+
+        }
+
+        .contenedor {
+            display: flex;
+            background-color: #ccc;
+            border: black solid 1px;
+            padding: 20px;
+            
+            flex-direction: row;
+            width: 80%;
+            margin: 0 auto;
+
+            /* para ajustar los items al tamaño del contenedor sino cabe pasa los datos al siguiente renglos/espacio de abajo */
+            flex-wrap: wrap;
+
+            /* simplifica el flex direction y el flex-wrap primero la direccion y luego el wrap */
+
+            flex-flow: row wrap;
+
+            justify-content: flex-start;
+
+            /* alineacion vertical */
+            align-content: space-around;
+
+            
+
+            height: 600px;
+
+
+        }
+
+        .item {
+            border: 1px solid rgb(20, 69, 69);
+            background-color: white;
+            font-family: sans-serif;
+            font-weight: bold;
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+            text-align: center;
+            margin: 5px;
+            
+
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <h1>Aprendiendo Flex</h1>
+    <section class="contenedor">
+
+        <!-- .item{item}*4 -->
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <h1>Campus Lab</h1>
+    <h2>Ejercicio formulario</h2>
+
+    <fieldset>
+        <legend>Indique sus preferencia porfavor </legend>
+
+        <br>
+        <label for="fecha-hora-nac">Elija una fecha:</label>
+        <input type="date" name="fecha-hora-nac" id="fecha-hora-nac">
+
+        <br><br>
+        <label for="checkbox">Escoja un archivo:</label>
+        <input type="file" name="archivo" id="">
+
+        <br><br>
+        <input type="checkbox" name="amd" id="amd" value="amd">
+        <label for="amd">AMD</label>
+
+        <input type="checkbox" name="inteli5" id="inteli5" value="inteli5">
+        <label for="inteli5">Intel i5</label>
+
+        <input type="checkbox" name="inteli7" id="inteli7" value="inteli7">
+        <label for="inteli7">intel i7</label>
+
+
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Indique sus preferencia por favor</legend>
+        <br>
+        <input type="checkbox" name="preferencia1" id="mat" value="matematicas">
+        <label for="preferencia1">Matematicas</label>
+
+        <input type="checkbox" name="preferencia2" id="Historia" value="Historia">
+        <label for="preferencia2">Historia</label>
+
+        <input type="checkbox" name="preferencia3" id="Geografia" value="Geografia">
+        <label for="preferencia3">Geografia</label>
+
+        <input type="checkbox" name="preferencia4" id="lengua" value="Lengua">
+        <label for="preferencia4">Lengua</label>
+
+        <br><br>
+
+        <label for="fnombre">Nombre</label>
+        <input type="text" name="fnombre" id="" maxlength="20" minlength="1" placeholder="" size="10" list="browser"
+            pattern="[a-zA-Z]{1,15}">
+        <br><br>
+
+        <label for="fapellido">Apellidos</label>
+        <input type="text" name="fapellido" id="" maxlength="20" minlength="1" placeholder="" size="10" list="browser"
+            pattern="[a-zA-Z]{1,15}">
+        <br><br>
+
+        <label for="fdireccion">Direccion</label>
+        <input type="text" name="fdireccion" id="" maxlength="20" minlength="1" placeholder="" size="10" list="browser"
+            pattern="[a-zA-Z1-1000]{1,15}">
+
+        <br><br>
+        <label for="colorFav">Escoja un color</label>
+        <input type="color" name="colorFav" id="">
+
+
+        <br>
+        <textarea placeholder="Escriba aqui sus comentarios" name="comentarios" id="" cols="60" rows="10"></textarea>
+
+        <br><br>
+        <label for="fecha-hora-nac">Elija una fecha:</label>
+        <input type="date" name="fecha-hora-nac" id="fecha-hora-nac">
+
+        <br><br>
+
+        <input type="text" name="materias" id="materias" size="10" list="listaMaterias" value="ingles">
+
+        <datalist id="listaMaterias">
+            <option value="Ingles"></option>
+            <option value="Fisica"></option>
+            <option value="Opera"></option>
+            <option value="Ed.Fisica"></option>
+        </datalist>
+
+        <br><br>
+        <label for="tiempo">Elija una hora</label>
+        <input type="time" id="tiempo">
+
+        <br><br>
+        <label for="archivo">Escoja un archivo</label>
+        <input type="file" name="archivo" id="">
+
+        <br><br>
+        <input type="radio" name="sexo" id="sexoHombre" value="Hombre">
+        <label for="sexo">Hombre</label>
+
+
+        <input type="radio" name="sexo" id="sexoMujer" value="Mujer">
+        <label for="sexo">Mujer</label>
+        <br>
+
+
+
+
+
+
+
+    </fieldset>
+
+
+</body>
+
+</html>

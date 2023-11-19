@@ -1,0 +1,84 @@
+#titulo{
+    color: green;
+} 
+
+
+p strong {
+    color: red;
+}
+
+.destacado {
+    color: rgb(214, 214, 38);
+}
+
+#subtitulo { 
+    color: blue;
+}
+
+p a { 
+    color: red;
+}
+
+p a em { 
+    color: blue;
+}
+
+p span {  
+    color:blueviolet;
+    
+} 
+
+span.especial{
+    color: blueviolet;
+}
+
+.especial {
+    color: rgb(214, 214, 38);
+}
+
+
+ table ,td,th{
+    border: solid; border-color: black;
+    
+} 
+/* para hacer una tabla en css */
+table {
+    border-collapse: collapse;
+    
+}
+
+table caption{ 
+    color: blue;
+}
+
+table tbody tr td { 
+    color: green;
+}
+
+table tbody tr td strong { 
+    color:rgb(214, 214, 38);
+}
+
+table tfoot tr th{
+    color: red;
+}
+
+table tbody tr ~ tr th {
+    color: red;
+}
+
+#adicional{
+    color: greenyellow;
+} 
+
+div p span{
+    color: greenyellow;
+}
+
+div p+p span{
+    color: purple;
+}
+
+div p +p+p a{
+    color: green;
+}

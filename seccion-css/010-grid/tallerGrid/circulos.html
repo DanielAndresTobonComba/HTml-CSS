@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+        
+
+
+        body{
+            display: flex;
+            box-sizing: border-box;
+            height: 1000px;
+            
+            
+        }
+        .grid-container{
+            flex-basis: 700px;
+            display: grid;
+            box-sizing: border-box;
+            padding: 20px;
+            background-color: rgb(225, 216, 216);
+            height: 70%;
+            margin: 10px auto;
+            width: 100%;
+            gap: 10px;
+            grid-template-areas:    "uno uno dos tres"
+                                    "uno uno cuatro cinco "
+                                    "seis siete ocho nueve"
+                                    
+                                    ;
+        }
+
+        .itemPrincipal{
+            grid-area: uno;
+            background-color: black;
+            border-radius: 20px;
+            color: white;
+            
+            
+        }
+        .grid-items{
+            box-sizing: border-box;
+            padding: 20px;
+            font-size: 10px;
+            text-align: center;
+            height: 200px;
+            width: 200px;
+
+        }
+
+
+        .itemPrincipal h1{
+            text-align: left;
+            margin: 20px 30px;
+            font-size: 50px;
+            
+            
+        }
+
+        .itemPrincipal p {
+            align-items: left;
+            word-break: break-all;
+            font-size: 20px;
+            text-align: left;
+            margin: 10px 30px;
+            line-height: 40px;
+           
+        }
+
+        .item2{
+            grid-area: dos;
+            background-color: orange;
+            border-radius: 50px;
+            
+        }
+
+        .item3{
+            box-sizing: border-box;
+            grid-area: tres;
+            border-radius: 50px;
+            background-color: gray;
+            padding: 5px;
+            
+            
+        }
+
+        .item4{
+            box-sizing: border-box;
+            padding: 5px;
+            grid-area: cuatro;
+            border-radius: 50px;
+            background-color: black;
+        }
+
+        .item5{
+            grid-area: cinco;
+            border-radius: 50px;
+            background-color: gray;
+        }
+
+        .item6{
+            grid-area: seis;
+            border-radius: 50px;
+            background-color: orange;
+        }
+
+        .item7{
+            grid-area: siete;
+            border-radius: 50px;
+            background-color: black;
+        }
+
+        .item8{
+            grid-area: ocho;
+            border-radius: 50px;
+            background-color: gray;
+        }
+
+        .item9{
+            grid-area: nueve;
+            border-radius: 50px;
+            background-color: black;
+        }
+
+        .icono{
+            width: 100px;
+            margin: 20% auto;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="grid-container">
+
+        <div class="itemPrincipal item1">  
+             <h1>Grid <br> Layout IV</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis recusandae asperiores amet molestiae, molestias sit nemo eos voluptatem fuga tenetur adipisci quae, magnam fugiat.</p> 
+        </div>
+        <div class="grid-items item2 ">
+            
+        </div>
+
+        <div class="grid-items item3">
+            <img class="icono" src="icon-megaphone.png" alt="">
+        </div>
+
+        <div class="grid-items item4">4
+            <img class="icono" src="icon-bicycle.png" alt="">
+        </div>
+
+        <div class="grid-items item5">
+            <img class="icono" src="icon-bug.png" alt="">
+        </div>
+
+        <div class="grid-items item6">
+            <img class="icono" src="icon-fast-food.png" alt="">
+        </div>
+        <div class="grid-items item7">7</div>
+
+        <div class="grid-items item8">
+            <img  class="icono" src="icon-game-controller.png" alt="">
+        </div>
+        <div class="grid-items item9">9</div>
+        
+        
+        
+    </div>
+    
+    
+</body>
+</html>

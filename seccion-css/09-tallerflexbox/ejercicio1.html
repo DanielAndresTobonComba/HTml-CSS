@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        main{
+
+            
+            margin: 20px;
+            height: 900px;
+            display: flex;
+            justify-content: center;   
+            padding: 20px;     
+            text-align: center;
+    }
+
+        .tarjeta{
+            border: solid chocolate;
+            flex-basis: 200px;
+            height: 140px;
+            width: 25%;
+            margin: 0px 30px;
+
+
+        }
+
+        .titulo{
+            background-color: rgb(40, 39, 39);
+            width: 100%;
+            height: 40px;
+            color: white;
+            
+            padding: 5px;
+
+        }
+
+        .contenido{
+            
+            height: 50%;
+        }
+
+        .pie{
+            background-color: gray;
+            color: white;
+            height: 30px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <main>
+
+        <div class="tarjeta">
+            <div class="titulo">Tarjeta Izquierda</div>
+            <div class="contenido">Contenido del cuerpo</div>
+            <div class="pie">Pie</div>
+        </div>
+
+        <div class="tarjeta">
+            <div class="titulo">Tarjeta Centro</div>
+            <div class="contenido">Contenido del cuerpo <br> Contenido del cuerpo <br> Contenido del cuerpo</div>
+            <div class="pie">Pie</div>
+        </div>
+
+        <div class="tarjeta">
+            <div class="titulo">Tarjeta Derecha</div>
+            <div class="contenido">Contenido del cuerpo</div>
+            <div class="pie">Pie</div>
+        </div>
+
+
+    </main>
+    
+</body>
+</html>

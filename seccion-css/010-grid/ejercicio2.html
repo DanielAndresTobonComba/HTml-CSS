@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        section {
+        display: grid; 
+        background-color: gray;
+        margin: 0px auto;
+        width: 80%;
+        height: 600px;
+       
+        gap: 5px;
+
+        grid-template-columns: auto auto auto;
+        
+
+        grid-template-areas: "uno dos tres "
+                            "cuatro dos seis"
+                            "cuatro cinco seis"
+                             ;
+
+
+        }
+
+        .grid-items{
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(0, 0, 0 , 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .item1{
+            grid-area: uno;
+            background-color: orange;
+        }
+
+        .item2{
+
+            grid-area: dos;
+            background-color: orange;
+        }
+
+        .item3{
+            grid-area: tres;
+            background-color: brown;
+        }
+
+        .item4{
+            grid-area: cuatro;
+            background-color: teal ;
+        }
+
+        .item5{
+            grid-area: cinco;
+            background-color: orange;
+        }
+
+        .item6{
+            grid-area: seis;
+            background-color: brown;
+
+        }
+
+        .item7{
+            grid-area: siete;
+            background-color: teal;
+
+        }
+
+        .item8{
+            grid-area: ocho;
+            background-color: brown;
+
+        } 
+
+        .item9{
+            grid-area: nueve;
+            background-color: brown;
+
+        }
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+    <section>
+        <div class="grid-items item1"></div>
+        <div class="grid-items item2"></div>
+        <div class="grid-items item3"></div>
+        <div class="grid-items item4"></div>
+        <div class="grid-items item5"></div>
+        <div class="grid-items item6"></div>
+        
+        
+    </section>
+    
+</body>
+</html>

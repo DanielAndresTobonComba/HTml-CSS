@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .grid-container {
+            margin: 0px auto;
+            background-color: #2196f3;
+            padding: 10px;
+            display: grid;
+
+            width: 90%;
+            height: 700px;
+            
+            column-gap: 3px;
+            row-gap: 3px;
+            gap: 20px;
+            
+            /* el contenedor muArea ocupara 5 areas */
+
+            grid-template-areas: "Encabezado Encabezado Encabezado"
+                                    "Menu Menu Menu "
+                                    "Aside-L Principal Aside-R"
+                                    "Footer Footer Footer";
+
+            grid-template-columns: 20% auto 20%;
+            grid-template-rows: 20% 10% auto 20%;
+        }
+
+        .grid-items{
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(0, 0, 0 , 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .item1{
+            grid-area: Encabezado;
+        }
+
+        .item2{
+            grid-area: Menu;
+        }
+
+        .item3{
+            grid-area: Aside-R;
+        }
+
+        .item4{
+            grid-area: Principal;
+        }
+
+        .item5{
+            grid-area: Aside-L;
+        }
+
+        .item6{
+            grid-area: Footer;
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+    <!-- .grid-container>grid-items{Item $}*9 -->
+
+    <div class="grid-container">
+
+        <div class="grid-items item1">Encabezado</div>
+        <div class="grid-items item2">Menu</div>
+        <div class="grid-items item3">Aside-L</div>
+        <div class="grid-items item4">Principal</div>
+        <div class="grid-items item5">Aside-R</div>
+        <div class="grid-items item6" >Footer</div>
+        
+        
+        
+    </div>
+
+
+</body>
+
+</html>

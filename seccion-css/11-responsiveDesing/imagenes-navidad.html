@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        img{
+            width: 200px;
+        }
+
+        body{
+            display: grid;
+            box-sizing: border-box;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr ;
+            text-align: center;
+        }
+
+        @media (max-width:420px){
+            #noel{
+                grid-column: 1 / 4;
+                grid-row: 1 / 2;
+                
+            }
+
+            #arbol-noel{
+                grid-column: 1 / 4;
+                grid-row: 2 / 4 ;
+
+            }
+
+            #cerdo{
+                grid-column: 1 / 4 ;
+                grid-row: 3 / 4;
+            }
+
+
+            #duende{
+                grid-column: 1 / 4;
+                grid-row: 4 / -1
+            }
+            
+
+        }
+
+
+        @media (min-width:420px) and (max-width:720px){
+            body{
+                grid-template-columns: 1fr 1fr ;
+            grid-template-rows: 1fr 1fr ;
+            }
+            #noel{
+                grid-column: 1 / 1;
+                grid-row: 1 / 2;
+                
+            }
+
+            #arbol-noel{
+                grid-column: 2 / 2;
+                grid-row: 1 / 2 ;
+
+            }
+
+            #cerdo{
+                grid-column: 1 / 2 ;
+                grid-row: 3 / 4;
+            }
+
+
+            #duende{
+                grid-column: 2/ 2;
+                grid-row: 3 / 4;
+            }
+            
+
+        }
+
+
+        @media  (min-width:720px){
+
+            body {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+            }
+            #noel{
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+                
+            }
+
+            #arbol-noel{
+                grid-column: 2 / 3;
+                grid-row: 1 / 2 ;
+
+            }
+
+            #cerdo{
+                grid-column: 3 / 4 ;
+                grid-row: 1 / 2;
+            }
+
+
+            #duende{
+                grid-column: 4 / 4;
+                grid-row: 1 / 2;
+            }
+            
+
+        }
+
+
+
+
+        
+
+    </style>
+
+
+</head>
+<body>
+
+    <div id="noel">
+       <img src="noel.png" alt="">
+    </div>
+
+    <div id="arbol-noel">
+        <img src="noel-arbol.png" alt="">
+    </div>
+
+    <div id="cerdo">
+        <img src="duende.png" alt="">
+    </div>
+
+    <div id="duende">
+        <img src="cerdo.png" alt="">
+    </div>
+    
+</body>
+</html>

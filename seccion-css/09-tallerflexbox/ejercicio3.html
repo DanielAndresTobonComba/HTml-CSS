@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        body {
+            height: 1000px;
+            display: flex;
+            justify-content: center;
+        }
+
+        section { 
+            height: 90%;
+            width: 90%;
+            flex-basis: 600px;
+            
+        }
+
+        #cabezera{
+            background-color: orange;
+            height: 5%;
+            font-weight: bold;
+            font-family: sans-serif;
+            padding: 12px;
+            flex-basis: 300px;
+
+        }
+
+        #principal{
+            display: flex;
+            height: 50% ;
+        }
+
+        #centro{
+            padding: 10px;
+            height: 100%;
+            flex-grow: 2;
+
+        }
+
+        .laterales{
+            background-color: gray;
+            height: 100%;
+            flex-grow: 1;
+            padding: 10px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <section>
+
+        <div id="cabezera">Titulo de la pagina</div>
+
+        <div id="principal">
+            <div class="laterales">Lado Izquierdo</div>
+            <div id="centro">Centro</div>
+            <div class="laterales">Lado derecho</div>
+        </div>
+
+
+
+    </section>
+    
+</body>
+</html>

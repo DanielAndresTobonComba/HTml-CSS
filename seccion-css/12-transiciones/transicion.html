@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .caja{
+            margin-top: 50px;
+            height: 100px;
+            width: 100px;
+            background-color: brown;
+            transition: all 1.5s 0.3s;
+        }
+
+        .caja:hover{
+            background-color: orange;
+            width: 200px;
+            height: 200px;
+            border-radius: 10%;
+
+             
+         
+            /*  
+            /* rotate se usa para rotar en un numero de grados el contenedor */
+            rotate: 180deg;
+
+            /* que queremos afectar */
+            transition-property:  background-color, width , height;
+
+            /* cuanto timpo dura la transicion */
+            transition-duration: 2s;
+
+            /* cuanto tiempo se demora en iniciar la transition */
+            transition-delay: 0.1s;
+
+
+            /* que afecte a todos los elementos */
+            transition-property: all;
+
+
+            /* para colocar todos los parametros en un solo codigo property  duration  delay */
+            transition: all 1.5s 0.5s;
+
+ 
+            
+           
+            
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Aprendiendo transiciones</h1>
+    <br>
+
+    <div class="caja"></div>
+</body>
+</html>

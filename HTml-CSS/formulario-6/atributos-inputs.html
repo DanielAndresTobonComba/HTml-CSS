@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos Input</title>
+</head>
+
+<body>
+    <h1>Atributos Input</h1>
+    <hr>
+    <br>
+
+    <form action="https://www.google.com/search">
+
+        <!-- Size es el tamaño de input con respecto a la pagina web -->
+        <!-- value coloca el valor por defecto cuando se inicia el formulario -->
+        <!-- patter para dar un patron de escritura [patron sea numeros o letras]{cantidad de digitos maximos en el input}-->
+        <!-- readonly solo deja visualizar no editar -->
+
+        <label for="fnombre">Usuario</label>
+        <input type="text" name="fnombre" id="fnombre" maxlength="15" minlength="1" placeholder="Navegador:" size="10"
+            list="browser" value="Chrome" pattern="[a-zA-Z]{1,15}">
+
+        <!-- <datalist id="browser">
+            <option value="Chrome"></option>
+            <option value="Edge"></option>
+            <option value="Opera"></option>
+            <option value="FireFox"></option>
+        </datalist> -->
+
+
+        <br><br>
+        <label for="pass">Contraseña:</label>
+        <input type="password" name="pass" id="pass">
+
+        <br><br>
+
+        Lenguaje de programacion favorito:
+
+        <br>
+        <!-- checked seleccionara por defecto ese input -->
+
+        <input type="radio" name="lengProg" id="ada" value="Ada">
+        <label for="lengProg">Ada</label>
+        <br>
+        <input type="radio" name="lengProg" id="Python" value="Python" checked>
+        <label for="lengProg">Python</label>
+        <br>
+        <input type="radio" name="lengProg" id="Java" value="Java">
+        <label for="lengProg">Java</label>
+        <br>
+        <input type="radio" name="lengProg" id="JavaScript" value="JavaScript">
+        <label for="lengProg">JavaScript</label>
+
+        <br><br>
+        Pasatiempos
+        <br>
+        <input type="checkbox" name="Pasatiempos" id="leer" value="leer">
+        <label for="leer">Leer</label>
+        <br>
+        <input type="checkbox" name="Pasatiempos" id="cine" value="cine">
+        <label for="cine">Cine</label>
+        <br>
+        <input type="checkbox" name="Pasatiempos" id="gym" value="gym">
+        <label for="gym">Gym</label>
+        <br>
+        <input type="checkbox" name="Pasatiempos" id="comer" value="comer">
+        <label for="comer">Comer</label>
+        <br>
+        <input type="checkbox" name="Pasatiempos" id="bailar" value="bailar">
+        <label for="bailar">Bailar</label>
+        <br>
+        <input type="checkbox" name="Pasatiempos" id="programar" value="programar" checked>
+        <label for="programar">Programar</label>
+
+
+
+        <br><br>
+        <input type="button" value="Ver mensaje" onclick="alert('Amamos python')">
+
+        <!-- Escoja un color -->
+        <br>
+        <label for="colorFav">Escoja un color</label>
+        <input type="color" name="colorFav" id="">
+
+
+        <!-- calendario -->
+        <br><br>
+        <label for="fechaNac">Fecha de nacimiento</label>
+        <input type="date" name="fechaNac" id="">
+
+
+        <!-- Calendario con limites -->
+        <br><br>
+        <label for="fechaNac">Ingrese una fecha anterior al 2000/01/01</label>
+        <input type="date" name="fechaNac" id="" max="2000-01-01">
+
+        <br><br>
+        <label for="fechaNac">Ingrese una fecha posterior al 2020/01/01</label>
+        <input type="date" name="fechaNac" id="" min="2020-01-02">
+
+        <br><br>
+        <label for="fechaNac">Ingrese una fecha posterior al 2020/01/01</label>
+        <input type="date" name="fechaNac" id="" min="2020-01-02">
+
+        <!-- tiempo  -->
+        <br><br>
+        <label for="fecha-hora-nac">Fecha y hora de nacimiento</label>
+        <input type="datetime-local" name="fecha-hora-nac" id="fecha-hora-nac">
+
+        <!-- correo electronico -->
+        <!-- required si se envia vacio sale error -->
+        <br><br>
+        <label for="iemail">Ingrese su correo electronico</label>
+        <input type="email" name="iemail" id="">
+
+        <!-- para colocar una imagen como input -->
+
+        <br><br>
+        <input type="image" src="img-6/pop2-CvyHJA0SxTxGx3llTKSSz6W74IZiG6DF.jpg" alt="icono spiderman" width="100"
+            onclick="alert('No me quiero ir señor stark')">
+
+        <!-- acceder a un archivo de su computadora -->
+        <!-- accept se usa para decir que tipo de archivos  acepta -->
+        <br><br>
+        <label for="archivo">Escoja un archivo</label>
+        <input type="file" name="archivo" id="" accept=".png, .png , .gif">
+
+        <!-- hidden para enviar unos datos con el formulario pero que el usuario no se vea -->
+        <br><br>
+        <input type="hidden" name="estadoForm" value="completado">
+
+        <!-- para escoger un mes especifico -->
+        <br><br>
+        <label for="mesnac">Mes de nacimiento</label>
+        <input type="month" name="mesnac" id="mesnac">
+
+
+        <!-- number solo acepta numeros de parte del usuario -->
+        <!-- step cada cuanto brinca el dato en este caso de dos en dos  -->
+        <label for="edad">Edad</label>
+        <input type="number" name="edad" id="edad" min="18" max="40" value="20" step="2">
+
+        <!-- barra de volumen -->
+        <br><br>
+        <label for="volumen">Selecione el volumen</label>
+        <input type="range" name="volumen" id="" min="10" max="50" step="2">
+
+        <!-- search para usar el buscador de google el action del from debe ser la direccion de google/search para obtener el metodo de busqueda de google  -->
+        <br><br>
+        <!-- crea un marco y el legend es el titulo del marco -->
+        <fieldset>
+            <legend>Busqueda</legend>
+            <br><br>
+            <label for="busqueda">Buscar en Google:</label>
+            <input type="search" name="q" id="busqueda">
+        </fieldset>
+
+        <!-- para colocar una entrada de texto , varios renglones -->
+        <br><br>
+        <label for="comentarios">Escriba sus comentarios:</label>
+        <br>
+        <textarea name="comentarios" id="" cols="30" rows="10"></textarea>
+
+
+
+
+        <br><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+
+
+
+
+
+
+
+    </form>
+</body>
+
+</html>

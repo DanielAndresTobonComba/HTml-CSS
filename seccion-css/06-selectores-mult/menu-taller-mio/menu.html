@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        nav{
+            display:inline-flex ;
+            flex-direction: column;
+            margin: 50px 50px ;
+        }
+
+        label{
+            
+            border: solid 2px gray; 
+            width: 150px;
+            font-size: 20px;
+            padding: 4px;
+            margin: 2px 5px; 
+        }
+
+        
+        label[for^= "elemento"]::before{
+            content: url("flecha\ inactiva.png");
+        }
+
+
+        label[for^= "elemento"]:hover::before{
+            content: url(flecha\ activa.png);
+            
+        }
+
+        label:hover {
+            background-color: #E4E4E4;
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav>
+            <label for="elemento1">Elemento1</label>
+            <input type="hidden" name="elemento1">
+
+            <label for="elemento2">Elemento2</label>
+            <input type="hidden" name="elemento2">
+
+            <label for="elemento3">Elemento3</label>
+            <input type="hidden" name="elemento3">
+
+            <label for="elemento4">Elemento4</label>
+            <input type="hidden" name="elemento4">
+
+            <label for="elemento5">Elemento5</label>
+            <input type="hidden" name="elemento5">
+
+            <label for="elemento6">Elemento6</label>
+            <input type="hidden" name="elemento6">
+            
+    </nav>
+    
+</body>
+</html>

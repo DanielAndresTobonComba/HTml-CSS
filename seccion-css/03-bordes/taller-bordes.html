@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller bordes</title>
+
+    <style>
+        * { 
+            text-align: center;
+        }
+        #caja1{ 
+            border-style:dotted dashed ; 
+            border-color: green rgb(202, 202, 8) red blueviolet;
+            border-width: 5px;
+        }
+
+        #caja2{
+            margin-top: 20px;
+            border-style: solid outset; 
+            border-width: 5px 10px 5px 10px;
+            border-color: aqua black pink black;
+        }
+
+        #caja3{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            
+            border-style:dotted dashed ; 
+            border-color: green rgb(202, 202, 8) red blueviolet;
+            border-width: 5px;
+            padding: 10px;
+
+        } 
+
+        #subcaja3-1{
+
+            border-style: solid outset; 
+            border-width: 5px 10px 5px 10px;
+            border-color: aqua black pink black;
+            
+        }
+
+        section{
+            border: solid; 
+            padding: 5px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="caja1">
+        <p>Esta es una caja con diferentes tipos de bordes</p>
+    </div>
+
+    <div id="caja2">
+        <p>Esta es una caja con diferentes tipos de bordes</p>
+    </div> 
+
+    <div id="caja3">
+        
+        <section id="subcaja3-1">
+
+            <p>Caja dentro de una caja</p>
+
+        </section>
+    </div>
+
+    <div>
+        <section>
+            <section>
+                <section>
+                    <section>
+                        <section>
+                            <section>
+                                <p>Caja dentro de cajas</p>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+    </div>
+
+    
+</body>
+</html>

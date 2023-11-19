@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: antiquewhite;
+        }
+
+        img {
+            width: 40%;
+            
+        }
+
+        @media screen and (max-width:480px) {
+
+            body {
+                background-color:tomato;
+
+            }
+
+            h1{
+                text-align: center;
+                /* tranforme el texto en mayuscula */
+                text-transform: uppercase;
+            }
+
+            img {
+            width: 30%;
+            border-radius: 50%;
+            
+            }
+            
+            
+        }
+
+
+        @media (min-width:768px) {
+
+            body{
+                background-color: lightcoral;
+            }
+
+            h1{
+                text-align: center;
+                text-transform:capitalize ;
+            }
+            
+            img {
+            width: 60%;
+            
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <h1>Aprendiendo diseño responsivo <br>
+        <img src="imagen.jpg" alt="">
+    </h1>
+    
+    
+</body>
+</html>
