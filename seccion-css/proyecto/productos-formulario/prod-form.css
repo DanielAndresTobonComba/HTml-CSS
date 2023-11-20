@@ -1,0 +1,217 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.bordeNegro{
+    border: solid 1px;
+}
+
+body{
+    height: 2100px;
+    
+}
+
+header{
+    display: flex;
+    height: 6%;
+    justify-content: center;
+}
+
+.contactos{
+    display: flex;
+    height: 80%;
+    width: 30%;
+    margin: 0px 30% 0px 0px ;
+}
+
+.contactos p{
+    margin: auto ;
+}
+
+
+
+.redesSociales{
+    height: 80%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+
+}
+
+.redesSociales article{
+    width: 8%;
+    margin: 0px 2% ;
+    height: 70%;
+    background-color: blue;
+    border-radius: 20%;
+
+}
+
+.logoNav{
+    padding: 0.5%;
+    display: flex;
+    height: 9%;
+}
+
+.logo{
+    height: 100%;
+    width: 13%;
+    margin: 0px 40% 0px 0px ;
+    background-color: blue;
+
+}
+
+
+.menu{
+    
+    display: flex;
+   
+    width: 40%;
+    height: 90%;
+    margin: 0px 0px 0px 10% ;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+nav a{
+    
+    color: black;
+    text-decoration: none;
+    margin: 0px 15px;
+}
+
+
+.tituloEscogernos{
+    margin: 3% ;
+    font-size: xx-large;
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    height: 50%;
+    border: solid;
+}
+
+main h2{
+    margin-left:1.5% ;
+    text-align: center;
+}
+
+
+.productos{
+    
+    display: flex;
+    height: 38%;
+    margin-bottom: 5%;
+
+}
+
+
+.imagenEscogernos{
+    border: solid;
+    text-align: center;
+    height: 75%;
+    margin: 0px;
+    padding: 0px;
+    width: 20%;
+    margin: 0px auto;
+}
+
+
+
+.tarjeta {
+   height: 100%;
+    width: 30% ;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    
+    
+
+}
+
+.textoTarjeta{
+    text-align: center;
+    height: 20%;
+    margin: 0px 1%;
+    padding: 0px;
+    
+    
+}
+
+.imagenTarjeta{
+    border: solid;
+    margin: 0px auto;
+    text-align: center;
+    height: 70%;
+    margin: 0px 1%;
+    padding: 0px;
+    
+}
+
+.textoTarjeta{
+    border: solid;
+    padding: 5%;
+    height: 30%;
+    text-align: center;
+    margin: 0px 1%;
+    
+    
+}
+
+.textoTarjeta h1{
+    margin: 2%;
+    color: white;
+    font-family: var(--e-global-typography-primary-font-family) , sans-serif;
+    font-weight: var(    --e-global-typography-secondary-font-weight);
+}
+
+form{
+    text-align: center;
+    margin: 1% auto;
+    width: 40%;
+    border: solid;
+}
+
+.formularioDatos{
+    padding: 4%;
+    width: 70%;
+    margin: 0px auto;
+}
+
+.seccionFacturacion{
+   
+    border-top: solid;
+}
+
+input[type="text"]{
+    
+    border-radius: 7%;
+    width: 90%;
+    border: solid;
+}
+
+
+
+footer{
+    display: flex;
+    background-color: gray;
+    width: 100%;
+    height: 10%;
+    align-items:  last baseline;
+    justify-content: center;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: large;
+    padding: 2%;
+    
+
+}
+
