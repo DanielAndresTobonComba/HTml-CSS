@@ -18,6 +18,10 @@ header{
     justify-content: center;
 }
 
+.buscador{
+    width: 5%;
+}
+
 .contactos{
     display: flex;
     height: 80%;
@@ -180,20 +184,21 @@ form{
 }
 
 .formularioDatos{
-    padding: 4%;
-    width: 70%;
+    padding: 4% 10%;
+    width: 60%;
     margin: 0px auto;
 }
 
 .seccionFacturacion{
    
     border-top: solid;
+    padding: 1%;
 }
 
 input[type="text"]{
     
     border-radius: 7%;
-    width: 90%;
+    width: 80%;
     border: solid;
 }
 
@@ -215,3 +220,164 @@ footer{
 
 }
 
+
+@media (min-width:480px) and (max-width:768px){
+
+    body{
+        max-height: 2000px;
+        
+    }
+
+    .logoNav{
+        height: 6%;
+        
+    }
+
+    .contactos{
+
+        width: 50%;
+        margin: 0px;
+    }
+
+    .redesSociales{
+        width: 70%;
+    }
+
+    .redesSociales article{
+        width: 9.5%;
+        margin: 0px 0.5% ;
+    }
+
+    .buscadorSeccion{
+        display: flex;
+        margin-right: 1%;
+    }
+
+    .buscadorSeccion{
+        line-height: 30px;
+    }
+
+    
+
+    .logo{
+
+        width: 20%;
+        margin: 0px 10% 0px 0px ;
+    }
+
+    .menu{
+        width: 63%;
+        height: 100%;
+    }
+    
+    main h2{
+        margin-top: 8%;
+    }
+
+    .imagenTarjeta{
+        height: 50%;
+    }
+
+
+    form{
+       margin-top: 10%;
+       padding: 5px;
+       width: 50%;
+    }
+
+    .formularioDatos{
+        padding: 0px;
+        width: 80%;
+    }
+}
+
+
+@media (max-width:480px) {
+        
+    header{
+        display: flex;
+        flex-direction: column;
+        height: 10%;
+    }
+
+    .contactos{
+
+        width: 100%;
+        height: 50%;
+    }
+
+    .redesSociales{
+        width: 100%;
+        height: 40%;
+    }
+
+    .redesSociales article{
+        width: 12%;
+        margin: 0px 1% ;
+        height: 50%;
+        border-radius: 30%;
+    }
+
+    .logoNav{
+        height: 6%;
+        margin: 0px;
+    }
+
+
+    .logo{
+
+        width: 35%;
+        
+    }
+
+    .menu{
+        width: 63%;
+        margin: 0%;
+        height: 100%;
+    }
+
+    nav{
+        width: 100%;
+        height: 70%;
+        display: grid;
+        gap: 10%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    main{
+        height: 65% ;
+        margin: 0px;
+    }
+
+    main h2{
+        margin: 30px 0px;
+    }
+
+    .productos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10%;
+        height: 43%;
+    }
+
+    .tarjeta{
+        width: 90%;
+        height: 100%;
+
+    }
+
+
+    form{
+        width: 80%;
+        margin-top: 5%;
+    }
+
+    footer{
+        text-align: center;
+        font-size: small;
+    }
+
+
+}
