@@ -69,6 +69,16 @@ header{
 
 }
 
+.buscadorSeccion{
+    display: flex;
+}
+
+.buscador form input{
+    margin-right: 10%;
+}
+
+
+
 
 .menu{
     
@@ -77,8 +87,15 @@ header{
     width: 40%;
     height: 90%;
     margin: 0px 0px 0px 10% ;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+nav{
+    display: flex;
+    width: 100%; 
+    justify-content: space-evenly;
+    
 }
 
 
@@ -297,86 +314,86 @@ footer{
     }
 
 
-    @media (max-width:480px) {
-        
-        header{
-            display: flex;
-            flex-direction: column;
-            height: 10%;
-        }
-
-        .contactos{
-
-            width: 100%;
-            height: 50%;
-        }
-
-        .redesSociales{
-            width: 100%;
-        }
-
-        .redesSociales article{
-            width: 12%;
-            margin: 0px 1% ;
-            height: 50%;
-            border-radius: 30%;
-        }
-
-
-        .logo{
-
-            width: 25%;
-            margin: 0px 0px 0px 0px ;
-        }
-
-        .menu{
-            width: 83%;
-            margin: 1%;
-        }
-
-        nav{
-            width: 80%;
-            height: 70%;
-            display: grid;
-            gap: 30%;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-        }
-
-        main div{
-            font-size: 15px;
-            height: 60%;
-            width: 65%
-        }
-
-
-        .seccionClientes{
-
-            display: grid;
-            gap: 5%;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            height: 15%;
-            
-            
-        }
-
-        .imagenCliente{
-            height: 95%; 
-            width: 60%;
-            
-        }
-
-        footer{
-            font-size: 12px;
-            height: 5%;
-            margin-top: 3%;
-        }
-
-        
-        
-
+@media (max-width:480px) {
+    
+    header{
+        display: flex;
+        flex-direction: column;
+        height: 10%;
     }
+
+    .contactos{
+
+        width: 100%;
+        height: 50%;
+    }
+
+    .redesSociales{
+        width: 100%;
+    }
+
+    .redesSociales article{
+        width: 12%;
+        margin: 0px 1% ;
+        height: 50%;
+        border-radius: 30%;
+    }
+
+
+    .logo{
+
+        width: 25%;
+        margin: 0px 0px 0px 0px ;
+    }
+
+    .menu{
+        width: 83%;
+        margin: 1%;
+    }
+
+    nav{
+        width: 80%;
+        height: 70%;
+        display: grid;
+        gap: 30%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    main div{
+        font-size: 15px;
+        height: 60%;
+        width: 65%
+    }
+
+
+    .seccionClientes{
+
+        display: grid;
+        gap: 5%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 15%;
+        
+        
+    }
+
+    .imagenCliente{
+        height: 95%; 
+        width: 60%;
+        
+    }
+
+    footer{
+        font-size: 12px;
+        height: 5%;
+        margin-top: 3%;
+    }
+
+    
+    
+
+}
 
 
     
