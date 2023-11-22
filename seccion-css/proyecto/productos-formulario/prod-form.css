@@ -16,6 +16,7 @@ header{
     display: flex;
     height:5%;
     justify-content: center;
+    background-color: #386499;
 }
 
 .buscador{
@@ -26,7 +27,7 @@ header{
     display: flex;
     height: 80%;
     width: 30%;
-    margin: 0px 30% 0px 0px ;
+    
     margin: 0px 20% 0px 0px ;
     justify-content: space-between;
 }
@@ -61,14 +62,19 @@ header{
     padding: 0.5%;
     display: flex;
     height: 9%;
+    
 }
 
 .logo{
+    display: flex;
     height: 100%;
     width: 13%;
     margin: 0px 40% 0px 0px ;
-    display: flex;
+    
     align-items: center;
+    background-image: url(../imagenes/LOGO\ SURTITIENDAS.jpg);
+    background-size: cover;
+    justify-content: space-between;
     
 
 
@@ -76,7 +82,8 @@ header{
 
 .logo p {
     font-size: 25px;
-    margin-left: 60%;
+    margin-left: 130% ;
+    
 }
 
 .menu{
@@ -117,7 +124,7 @@ nav a{
 
 main {
     height: 50%;
-    border: solid;
+   
     
     
 }
@@ -148,8 +155,9 @@ main h2{
     margin: 0px auto;
     display: flex;
     flex-direction: column;
-    border: solid;
+    border: solid ;
     margin: 5px;
+    
     
     
 
@@ -164,6 +172,7 @@ main h2{
     justify-content: center;
     flex-direction: column;
     font-size: 20px;
+    
     
     
 }
@@ -231,7 +240,25 @@ form{
     text-align: center;
     margin: 2% auto 2% auto;
     width: 40%;
-    border: solid;
+    border-radius: 30px;
+    background-color: #386499;
+    
+}
+
+form section input , textarea {
+
+    background-color: #144c90;
+    border: none;
+    border-radius: 20px;
+}
+
+form section input[type="submit"] , input[type="reset"]{
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #0b4388;
+    color: white;
+    font-weight: bold;
 }
 
 .formularioDatos{
@@ -242,7 +269,7 @@ form{
 
 .seccionFacturacion{
    
-    border-top: solid;
+    
     padding: 1%;
 }
 
@@ -285,9 +312,10 @@ footer{
     }
 
     .contactos{
-
-        width: 50%;
-        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: 1% 2% 0px 0px ;
     }
 
     .redesSociales{
@@ -317,19 +345,25 @@ footer{
     }
 
     .logo p {
-        font-size: 20px;
-        margin-left: 20%;
+        font-size: 18px;
+        margin-left: 95%;
         margin-bottom: 20%;
     }
 
     .menu{
-        width: 63%;
-        height: 100%;
+        width: 70%;
+        
     }
     
+    main {
+        height: 40%;
+    }
+
     main h2{
         margin-top: 8%;
     }
+
+    
 
     .imagenTarjeta{
         height: 50%;
@@ -337,7 +371,7 @@ footer{
 
 
     form{
-       margin-top: 10%;
+       
        padding: 5px;
        width: 50%;
     }
@@ -358,7 +392,7 @@ footer{
     }
 
     .contactos{
-
+        flex-direction: row;
         width: 100%;
         height: 50%;
     }
@@ -376,30 +410,36 @@ footer{
     }
 
     .logoNav{
+        display: flex;
+        justify-content: space-evenly;
         height: 6%;
         margin: 0px;
     }
 
+    nav{
+        
+        width: 5%;
+        height: 100%;
+        
+        flex-direction: column;
+    }
 
+    nav a{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 4px 0px;
+    }
     .logo{
 
-        width: 35%;
+        width: 25%;
+        margin: 0px 0px 0px 0px ;
         
     }
 
     .menu{
-        width: 63%;
-        margin: 0%;
+        width: 70%;
         height: 100%;
-    }
-
-    nav{
-        width: 100%;
-        height: 70%;
-        display: grid;
-        gap: 10%;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
     }
 
     main{

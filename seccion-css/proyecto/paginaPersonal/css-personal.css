@@ -17,6 +17,7 @@ header{
     display: flex;
     height: 6%;
     justify-content: center;
+    background-color: #386499;
 }
 
 .contactos{
@@ -64,13 +65,14 @@ header{
     height: 100%;
     width: 13%;
     margin: 0px 40% 0px 0px ;
-    
+    background-image: url("../imagenes/LOGO\ SURTITIENDAS.jpg");
+    background-size: cover;
 
 }
 
 .logo p {
     font-size: 25px;
-    margin-left: 60%;
+    margin-left: 130%;
 }
 
 .buscadorSeccion{
@@ -113,6 +115,7 @@ nav a{
 h2 {
     text-align: center;
     margin: 3% 0px;
+    font-size: 30px;
 }
 
 
@@ -129,10 +132,10 @@ h2 {
 .tarjetaEmpleados{
     display: flex;
     width: 70%;
-    
+    background-color: #386499;
     margin: 2% auto ;
     height: 35%;
-    
+    color: white;
     border-radius: 20px;
     
 }
@@ -159,7 +162,7 @@ h2 {
     text-align: center;
     flex-direction: column;
     align-items: center;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 
@@ -236,8 +239,7 @@ h2 {
 .textoTarjeta h1{
     margin: 2%;
     color: white;
-    font-family: var(--e-global-typography-primary-font-family) , sans-serif;
-    font-weight: var(    --e-global-typography-secondary-font-weight);
+    
 }
 
 
@@ -271,9 +273,10 @@ footer{
     }
 
     .contactos{
-
-        width: 40%;
-        margin: 0px 5% 0px 0px ;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin: 1% 1% 0px 0px ;
     }
 
     .redesSociales{
@@ -297,8 +300,8 @@ footer{
     }
 
     .logo p {
-        font-size: 20px;
-        margin-left: 20%;
+        font-size: 18px;
+        margin-left: 95%;
         margin-bottom: 20%;
     }
 
@@ -310,11 +313,13 @@ footer{
     .empleados{
         width: 100%;
         height: 35%;
+        font-size: 15px;
     }
 
     .tarjetaEmpleados{
+        
         width: 80%;
-        height: 25%;
+        height: 45%;
         
     }
 
@@ -332,20 +337,22 @@ footer{
 
     .productos{
         display: grid;
-        gap: 5%;
+        gap: 1%;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        height: 30%;
+        height: 25%;
+        margin-bottom: 30%;
     }
 
     .tarjeta{
         width: 70%;
+        height: 80%;
     }
     
 
 
     footer{
-        height: 10%;
+        height: 5%;
     }
 }
 
@@ -360,7 +367,7 @@ footer{
     }
 
     .contactos{
-
+        flex-direction: row;
         width: 100%;
         height: 50%;
     }
@@ -377,24 +384,33 @@ footer{
     }
 
 
+    .logoNav{
+        padding: 0.5%;
+        display: flex;
+        height: 7%;
+        justify-content: space-between;
+    }
+    
+
     .logo{
 
         width: 25%;
         margin: 0px 0px 0px 0px ;
     }
 
+    
+
     .menu{
-        width: 83%;
-        margin: 1%;
+        
+        width: 40%;
+        
     }
 
     nav{
-        width: 80%;
-        height: 70%;
-        display: grid;
-        gap: 30%;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     .tituloNuestro{
@@ -403,6 +419,7 @@ footer{
 
     .empleados{
         justify-content: center;
+        
     }
 
     .tarjetaEmpleados{
@@ -412,10 +429,10 @@ footer{
 
     .productos{
         display: grid;
-        gap: 5%;
         grid-template-columns: 1fr ;
         grid-template-rows: 1fr 1fr 1fr 1fr ;
         height: 50%;
+        margin-bottom: 55%;
     }
 
     .tarjeta{
@@ -426,7 +443,7 @@ footer{
 
 
     footer{
-        font-size: 12px;
+        font-size: 10px;
         height: 5%;
         margin-top: 3%;
     }

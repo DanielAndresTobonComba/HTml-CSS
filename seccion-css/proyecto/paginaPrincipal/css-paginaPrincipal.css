@@ -20,6 +20,7 @@ header{
     display: flex;
     height: 4%;
     justify-content: center;
+    background-color: #386499;
     
 }
 
@@ -46,7 +47,7 @@ header{
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-color: white;
+    
     
 
 }
@@ -71,13 +72,15 @@ header{
     margin: 0px 40% 0px 0px ;
     display: flex;
     align-items: center;
+    background-image: url("../imagenes/LOGO\ SURTITIENDAS.jpg");
+    background-size: cover;
     
 
 }
 
 .logo p {
     font-size: 25px;
-    margin-left: 60%;
+    margin-left: 130%;
 }
 
 .buscadorSeccion{
@@ -317,8 +320,8 @@ footer{
 
 
     .logo p {
-        font-size: 20px;
-        margin-left: 20%;
+        font-size: 18px;
+        margin-left: 95%;
         margin-bottom: 20%;
     }
 
@@ -375,7 +378,7 @@ footer{
     }
 
     .contactos{
-
+        flex-direction: row;
         width: 100%;
         height: 50%;
     }
@@ -435,7 +438,7 @@ footer{
 
     main div{
         font-size: 15px;
-        height: 50%;
+        height: 55%;
         width: 65%;
         background-color: rgb(255, 255, 255 , 0.7);
         margin: 40% 0px  0px 30%;
@@ -465,6 +468,8 @@ footer{
     }
 
     
+
+    
     .imagenCliente{
         height: 80%; 
         width: 80%;
@@ -472,7 +477,7 @@ footer{
     }
 
     footer{
-        font-size: 12px;
+        font-size: 11px;
         height: 5%;
         margin-top: 10%;
     }
