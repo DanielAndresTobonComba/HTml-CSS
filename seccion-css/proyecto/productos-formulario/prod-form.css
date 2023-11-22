@@ -66,6 +66,8 @@ header{
     width: 13%;
     margin: 0px 40% 0px 0px ;
     background-color: blue;
+    background-image: url("logoSurtitiendas.jpg");
+    background-size: cover;
 
 }
 

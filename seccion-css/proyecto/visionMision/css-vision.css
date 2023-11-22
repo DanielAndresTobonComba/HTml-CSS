@@ -10,13 +10,13 @@
 }
 
 body{
-    height: 1500px;
+    height: 1000px;
     
 }
 
 header{
     display: flex;
-    height: 6%;
+    height: 8%;
     justify-content: center;
 }
 
@@ -56,7 +56,8 @@ header{
 .logoNav{
     padding: 0.5%;
     display: flex;
-    height: 9%;
+    height: 15%;
+    
 }
 
 .logo{
@@ -64,6 +65,8 @@ header{
     width: 13%;
     margin: 0px 40% 0px 0px ;
     background-color: blue;
+    background-image: url("../imagenes/LOGO\ SURTITIENDAS.jpg") ;
+    background-size: cover;
 
 }
 
@@ -88,10 +91,13 @@ nav a{
 }
 
 main{
+    text-align: center;
     margin-top: 1%;
     display: flex;
-    flex-direction: column;
-    height: 49%;
+    
+    height: 30%;
+    /* background-image: url("../imagenes/img-quienes\ somos.png"); */
+    background-size: cover;
     
 }
 
@@ -130,8 +136,8 @@ main div h2{
 .seccionEscogernos{
     
     display: flex;
-    height: 15%;
-    margin-bottom: 6%;
+    height: 18%;
+    margin-bottom: 4%;
     
 }
 
@@ -160,7 +166,7 @@ main div h2{
     padding: 0px;
     width: 70%;
     margin: 0px auto;
-    background-color: blue;
+   
 }
 
 
@@ -168,7 +174,7 @@ footer{
     display: flex;
     background-color: gray;
     width: 100%;
-    height: 10%;
+    height: 13%;
     align-items:  last baseline;
     justify-content: center;
     color: white;
