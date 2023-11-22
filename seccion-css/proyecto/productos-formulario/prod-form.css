@@ -50,7 +50,7 @@ header{
     width: 8%;
     margin: 0px 2% ;
     height: 50%;
-    background-color: blue;
+    
     border-radius: 20%;
 
 }
@@ -97,6 +97,9 @@ nav a{
     margin: 0px 15px;
 }
 
+.buscador form{
+    border: none;
+}
 
 .tituloEscogernos{
     margin: 3% ;
@@ -173,6 +176,35 @@ main h2{
     padding: 0px;
     
 }
+
+
+/* .compota{
+    background-image: url("compota.jpg");
+    background-size: cover;
+    
+} */
+
+/* .yogurt{
+    background-image: url("yogurt.png");
+    background-size: cover;
+} */
+
+/* .activia{
+    background-image: url("activia.png");
+    background-size: cover;
+} */
+
+/* .leche{
+    background-image: url("leche.png");
+    background-size: cover;
+    
+    
+} */
+
+/* .gelatina{
+    background-image: url("gelatina.png");
+    background-size: cover;
+} */
 
 .textoTarjeta{
     border: solid;
