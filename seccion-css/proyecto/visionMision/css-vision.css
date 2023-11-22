@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: sans-serif;
    
     
 }
@@ -24,7 +24,8 @@ header{
     display: flex;
     height: 80%;
     width: 30%;
-    margin: 0px 30% 0px 0px ;
+    margin: 0px 20% 0px 0px ;
+    justify-content: space-between
 }
 
 .contactos p{
@@ -48,7 +49,6 @@ header{
     width: 8%;
     margin: 0px 2% ;
     height: 70%;
-    background-color: blue;
     border-radius: 20%;
 
 }
@@ -61,20 +61,32 @@ header{
 }
 
 .logo{
+    display: flex;
+    align-items: center;
     height: 100%;
     width: 13%;
     margin: 0px 40% 0px 0px ;
-    background-color: blue;
-    background-image: url("../imagenes/LOGO\ SURTITIENDAS.jpg") ;
-    background-size: cover;
+    
 
+}
+
+.logo p {
+    font-size: 25px;
+    margin-left: 60%;
+}
+
+
+.buscadorSeccion{
+    display: flex;
+}
+
+.buscador form input{
+    margin-right: 10%;
 }
 
 
 .menu{
-    
     display: flex;
-   
     width: 40%;
     height: 90%;
     margin: 0px 0px 0px 10% ;
@@ -88,42 +100,33 @@ nav a{
     color: black;
     text-decoration: none;
     margin: 0px 15px;
+    font-weight: bold;
 }
 
 main{
     text-align: center;
     margin-top: 1%;
     display: flex;
-    
-    height: 30%;
-    /* background-image: url("../imagenes/img-quienes\ somos.png"); */
+    height: 35%;
+     background-image: url("../imagenes/img-quienes\ somos.png"); 
     background-size: cover;
     
 }
 
-main div h2{
+main div{
+    height: 100%;
+    background-color: rgb(255, 255, 255 , 0.7);
     text-align: center;
-}
-
-.quienesSomos{
-    margin: 1% 0px;
-    height: 30%;
+    height: 80%;
+    margin: 2% 1%;
+    border-radius: 10%;
     padding: 1%;
+    
 }
 
-
-.contenedorVision{
-    height: 30%;
-    margin: 1% 0px;
-    padding: 1%;
+main div p{
+    line-height: 150%;
 }
-
-.contenedorMision{
-    height: 30%;
-    margin: 1% 0px;
-    padding: 1%;
-}
-
 
 .tituloEscogernos{
     margin: 3% ;
@@ -145,7 +148,6 @@ main div h2{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    
     text-align: center;
     height: 100%;
     margin: 0px;
@@ -167,6 +169,11 @@ main div h2{
     width: 70%;
     margin: 0px auto;
    
+}
+
+.textoEscogernos{
+    font-size: larger;
+    font-weight: 500;
 }
 
 
@@ -218,6 +225,12 @@ footer{
 
         width: 20%;
         margin: 0px 10% 0px 0px ;
+    }
+
+    .logo p {
+        font-size: 20px;
+        margin-left: 20%;
+        margin-bottom: 20%;
     }
 
     .menu{

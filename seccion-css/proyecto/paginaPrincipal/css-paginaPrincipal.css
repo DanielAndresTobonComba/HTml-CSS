@@ -3,7 +3,7 @@
 
 *{
     box-sizing: border-box;
-   
+    font-family: sans-serif;
     
 }
 
@@ -20,13 +20,16 @@ header{
     display: flex;
     height: 4%;
     justify-content: center;
+    
 }
 
 .contactos{
+    
     display: flex;
     height: 80%;
     width: 30%;
-    margin: 0px 30% 0px 0px ;
+    margin: 0px 20% 0px 0px ;
+    justify-content: space-between;
 }
 
 .contactos p{
@@ -36,12 +39,14 @@ header{
 
 
 .redesSociales{
+    margin: auto 0px;
     height: 80%;
     width: 50%;
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
+    background-color: white;
     
 
 }
@@ -50,7 +55,6 @@ header{
     width: 8%;
     margin: 0px 2% ;
     height: 70%;
-    background-color: blue;
     border-radius: 20%;
 
 }
@@ -65,8 +69,15 @@ header{
     height: 100%;
     width: 13%;
     margin: 0px 40% 0px 0px ;
+    display: flex;
+    align-items: center;
     
 
+}
+
+.logo p {
+    font-size: 25px;
+    margin-left: 60%;
 }
 
 .buscadorSeccion{
@@ -77,13 +88,9 @@ header{
     margin-right: 10%;
 }
 
-
-
-
 .menu{
     
     display: flex;
-   
     width: 40%;
     height: 90%;
     margin: 0px 0px 0px 10% ;
@@ -96,6 +103,7 @@ nav{
     width: 100%; 
     justify-content: space-evenly;
     
+    
 }
 
 
@@ -104,6 +112,7 @@ nav a{
     color: black;
     text-decoration: none;
     margin: 0px 15px;
+    font-weight: bold;
 }
 
 
@@ -122,7 +131,8 @@ main{
 
 main div{
     font-size: x-large ;
-    
+    background-color: rgb(255, 255, 255 , 0.7);
+    border-radius: 10%;
     height: 60%;
     width: 55%;
     display: flex;
@@ -132,6 +142,16 @@ main div{
     
     
     
+}
+
+main div a{
+    background-color: rgb(233, 36, 36);
+    border-radius: 10%;
+    margin: 10px;
+    padding: 10px;
+    color: black;
+   
+    text-decoration: none; 
 }
 
 main div h3{
@@ -145,9 +165,7 @@ main div p {
     
 }
 
-main div  a{
-    text-decoration: none; 
-}
+
 
 
 
@@ -163,11 +181,12 @@ main div  a{
 }
 
 .tarjeta {
-    border: solid;
+    
     width: 30% ;
     margin: 0px auto;
     display: flex;
     flex-direction: column;
+    color: black;
     
 
 }
@@ -180,16 +199,17 @@ main div  a{
     padding: 0px;
     
     
+    
 }
 
 .textoTarjeta{
-    background-color: blue;
+    
     padding: 5%;
 }
 
 .textoTarjeta h1{
     margin: 2%;
-    color: white;
+    
     font-family: var(--e-global-typography-primary-font-family) , sans-serif;
     font-weight: var(    --e-global-typography-secondary-font-weight);
 }
@@ -202,9 +222,12 @@ main div  a{
 
 .textoTarjeta a {
     text-decoration: none;
-    color: white;
-    border: solid white;
+    color: black;
     padding: 3%;
+    background-color: rgb(233, 36, 36);
+    border-radius: 10%;
+    margin: 10px;
+    padding: 10px;
     
 }
 
@@ -262,7 +285,7 @@ footer{
 
     .contactos{
 
-        width: 40%;
+        width: 50%;
         margin: 0px 5% 0px 0px ;
     }
 
@@ -286,18 +309,37 @@ footer{
         margin: 0px 10% 0px 0px ;
     }
 
+    .logoNav{
+        padding: 0.5%;
+        display: flex;
+        height: 9%;
+    }
+
+
+    .logo p {
+        font-size: 20px;
+        margin-left: 20%;
+        margin-bottom: 20%;
+    }
+
     .menu{
         width: 63%;
     }
 
     main{
         justify-content: center;
+        background-image: url("../imagenes/logoalquieria768.png");
+        
     }
 
     main div{
-        font-size: 20px;
+        font-size: 19px;
+        height: 70%;
+        background-color: rgb(255, 255, 255 , 0.4);
     }
 
+    
+    
     .seccionServicios{
         
         height: 25%;
@@ -320,6 +362,8 @@ footer{
     footer{
         height: 10%;
     }
+
+    
 
 
 @media (max-width:480px) {
@@ -347,6 +391,13 @@ footer{
         border-radius: 30%;
     }
 
+    
+    .logoNav{
+        padding: 0.5%;
+        display: flex;
+        height: 7%;
+        justify-content: space-between;
+    }
 
     .logo{
 
@@ -355,47 +406,75 @@ footer{
     }
 
     .menu{
-        width: 83%;
-        margin: 1%;
+        width: 40%;
+        
     }
 
     nav{
-        width: 80%;
-        height: 70%;
-        display: grid;
-        gap: 30%;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        
+
+    }
+
+    nav a{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 4px 0px;
+    }
+
+    main{
+        
+        background-image: url("../imagenes/logo468alquerias.jpg");
+        background-size: cover;
     }
 
     main div{
         font-size: 15px;
-        height: 60%;
-        width: 65%
+        height: 50%;
+        width: 65%;
+        background-color: rgb(255, 255, 255 , 0.7);
+        margin: 40% 0px  0px 30%;
     }
 
+    .seccionServicios {
+        flex-direction: column;
+        margin-bottom: 200%;
+    }
+
+    .tarjeta{
+        width: 60%;
+        margin: 3% auto;
+        /* background-color: rgb(245, 7, 7); */
+        
+    }
 
     .seccionClientes{
 
         display: grid;
-        gap: 5%;
+        gap: 1%;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        height: 15%;
+        height: 20%;
         
         
     }
 
+    
     .imagenCliente{
-        height: 95%; 
-        width: 60%;
+        height: 80%; 
+        width: 80%;
         
     }
 
     footer{
         font-size: 12px;
         height: 5%;
-        margin-top: 3%;
+        margin-top: 10%;
     }
 
     
