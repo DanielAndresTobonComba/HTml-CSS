@@ -8,13 +8,13 @@
 }
 
 body{
-    height: 1800px;
+    height: 1400px;
     margin: 0px;
     
 }
 header{
     display: flex;
-    height: 4%;
+    height: 6%;
     justify-content: center;
     background-color: #386499;
     margin: 7px;
@@ -231,12 +231,14 @@ nav a{
 }
 
 main {
-    height: 20%;
+    height: 25%;
     background-color: #083c64;
    
     
     
 }
+
+
 
 main h2{
     margin-left:1.5% ;
@@ -273,6 +275,7 @@ main h2{
 
 .imagenDañada{
     height: 110%;
+    width: 100%;
 }
 
 .textoTarjeta{
@@ -354,7 +357,7 @@ form{
     width: 40%;
     border-radius: 30px;
     background-color: #386499;
-    height: 40%;
+    height: 50%;
     
 }
 
