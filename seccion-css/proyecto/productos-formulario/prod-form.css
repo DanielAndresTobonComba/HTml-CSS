@@ -12,8 +12,109 @@ body{
     margin: 0px;
     
 }
-
 header{
+    display: flex;
+    height: 4%;
+    justify-content: center;
+    background-color: #386499;
+    margin: 7px;
+    
+}
+
+.contactos{
+    
+    display: flex;
+    height: 80%;
+    width: 30%;
+    margin: 0px 20% 0px 0px ;
+    justify-content: space-between;
+}
+
+.contactos p{
+    margin: auto ;
+}
+
+
+
+.redesSociales{
+    margin: auto 0px;
+    height: 80%;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    
+    
+
+}
+
+.redesSociales article{
+    width: 8%;
+    margin: 0px 2% ;
+    height: 70%;
+    border-radius: 20%;
+
+}
+
+.logoNav{
+    padding: 0.5%;
+    display: flex;
+    height: 7.5%;
+    margin: 5px;
+}
+
+.logo{
+    height: 100%;
+    width: 13%;
+    margin: 0px 40% 0px 0px ;
+    display: flex;
+    align-items: center;
+    
+    
+
+}
+
+.logo p {
+    font-size: 25px;
+    margin-left: 40%;
+}
+
+.buscadorSeccion{
+    display: flex;
+}
+
+.buscador form input{
+    margin-right: 10%;
+}
+
+.menu{
+    
+    display: flex;
+    width: 40%;
+    height: 90%;
+    margin: 0px 0px 0px 5% ;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    width: 100%; 
+    justify-content: space-evenly;
+    
+    
+}
+
+
+nav a{
+    
+    color: black;
+    text-decoration: none;
+    margin: 0px 15px;
+    font-weight: bold;
+}
+/* header{
     display: flex;
     height:5%;
     justify-content: center;
@@ -110,10 +211,16 @@ nav a{
     color: black;
     text-decoration: none;
     margin: 0px 15px;
-}
+} */
+
+
 
 .buscador form{
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
 }
 
 .tituloEscogernos{
@@ -306,16 +413,16 @@ footer{
 }
 
 
-@media (min-width:480px) and (max-width:768px){
+@media (min-width:521px) and (max-width:768px){
 
     body{
-        max-height: 2000px;
+        max-height: 1500px;
         
         
     }
 
     .logoNav{
-        height: 6%;
+        height: 9%;
         
     }
 
@@ -353,18 +460,19 @@ footer{
     }
 
     .logo p {
-        font-size: 18px;
-        margin-left: 15%;
-        margin-bottom: 20%;
+        font-size: 17px;
+        margin-left: 1%;
+        margin-bottom: 32%;
     }
 
     .menu{
         width: 70%;
         
+        
     }
     
     main {
-        height: 15%;
+        height: 20%;
     }
 
     main h2{
@@ -381,10 +489,11 @@ footer{
 
 
     form{
-       
+       margin-top: 14%;
        padding: 5px;
        width: 50%;
        margin-bottom: 11%;
+       height: 45%;
     }
 
     .formularioDatos{
@@ -396,7 +505,7 @@ footer{
 }
 
 
-@media (max-width:480px) {
+@media (max-width:520px) {
     
     body {
         height: 1500px;
@@ -404,7 +513,7 @@ footer{
     header{
         display: flex;
         flex-direction: column;
-        height: 8%;
+        height: 7%;
     }
 
     .contactos{
@@ -430,6 +539,11 @@ footer{
         justify-content: space-evenly;
         height: 6%;
         margin: 0px;
+    }
+
+    .logo p {
+        font-size: 20px;
+        margin-left: 20%;
     }
 
     nav{
@@ -473,6 +587,10 @@ footer{
 
     .imagenTarjeta{
         height: 100%;
+    }
+
+    .imagenDañada2{
+        height: 110%;
     }
 
     .textoTarjeta{

@@ -1,6 +1,4 @@
 
-
-
 *{
     box-sizing: border-box;
     font-family: sans-serif;
@@ -13,7 +11,7 @@
 
 body{
     height: 2000px;
-    
+    padding: 0px;
 }
 
 header{
@@ -61,7 +59,7 @@ header{
 }
 
 .logoNav{
-    padding: 0.5%;
+    
     display: flex;
     height: 7%;
 }
@@ -278,7 +276,7 @@ footer{
 
 
 
-@media  (min-width:480px) and (max-width:768px) {
+@media  (min-width:521px) and (max-width:768px) {
 
 
     *{
@@ -371,10 +369,11 @@ footer{
         height: 10%;
     }
 
-    
+}
 
 
-@media (max-width:480px) {
+
+@media (max-width:520px) {
     
     header{
         display: flex;
@@ -411,6 +410,12 @@ footer{
 
         width: 25%;
         margin: 0px 0px 0px 0px ;
+    }
+
+
+    .logo p {
+        font-size: 20px;
+        margin-left: 20%;
     }
 
     .menu{
@@ -472,9 +477,6 @@ footer{
         
     }
 
-    
-
-    
     .imagenCliente{
         height: 80%; 
         width: 80%;
@@ -490,13 +492,5 @@ footer{
     
     
 
-}
-
-
-    
-
-
-
-    
 }
 

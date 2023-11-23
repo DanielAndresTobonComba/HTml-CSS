@@ -195,7 +195,7 @@ footer{
 }
 
 
-@media  (min-width:480px) and (max-width:768px) {
+@media  (min-width:521px) and (max-width:768px) {
 
     body{
         max-height: 1600px;
@@ -305,7 +305,7 @@ footer{
 }
 
 
-@media (max-width:479px) {
+@media (max-width:520px) {
         
     
     header{
@@ -353,7 +353,7 @@ footer{
 
     .menu{
         
-        width: 30%;
+        width: 40%;
         margin: 1%;
     }
 
@@ -439,7 +439,7 @@ footer{
 
     footer{
         font-size: 12px;
-        height: 5%;
+        height: 10%;
         margin-top: 3%;
     }
 

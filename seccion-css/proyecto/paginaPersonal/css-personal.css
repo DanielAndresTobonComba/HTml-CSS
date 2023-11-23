@@ -15,6 +15,111 @@ body{
 
 header{
     display: flex;
+    height: 5%;
+    justify-content: center;
+    background-color: #386499;
+    
+}
+
+.contactos{
+    
+    display: flex;
+    height: 80%;
+    width: 30%;
+    margin: 0px 20% 0px 0px ;
+    justify-content: space-between;
+}
+
+.contactos p{
+    margin: auto ;
+}
+
+
+
+.redesSociales{
+    margin: auto 0px;
+    height: 80%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+    
+
+}
+
+.redesSociales article{
+    width: 8%;
+    margin: 0px 2% ;
+    height: 70%;
+    border-radius: 20%;
+
+}
+
+.logoNav{
+    
+    display: flex;
+    height: 8.5%;
+}
+
+.logo{
+    height: 100%;
+    width: 13%;
+    margin: 0px 40% 0px 0px ;
+    display: flex;
+    align-items: center;
+    
+    
+
+}
+
+.logo p {
+    font-size: 25px;
+    margin-left: 40%;
+}
+
+.buscadorSeccion{
+    display: flex;
+}
+
+.buscador{
+    margin-right: 10%;
+}
+
+.buscador form input{
+    margin-right: 10%;
+}
+
+.menu{
+    
+    display: flex;
+    width: 40%;
+    height: 90%;
+    margin: 0px 0px 0px 5% ;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    width: 100%; 
+    justify-content: space-evenly;
+    
+    
+}
+
+
+nav a{
+    
+    color: black;
+    text-decoration: none;
+    margin: 0px 15px;
+    font-weight: bold;
+}
+
+/* header{
+    display: flex;
     height: 6%;
     justify-content: center;
     background-color: #386499;
@@ -109,7 +214,7 @@ nav a{
     text-decoration: none;
     margin: 0px 15px;
     font-weight: bold;
-}
+} */
 
 h2 {
     text-align: center;
@@ -214,7 +319,6 @@ h2 {
 }
 
 .imagenTarjeta{
-    border: solid;
     margin: 0px auto;
     text-align: center;
     height: 70%;
@@ -226,7 +330,6 @@ h2 {
 
 
 .textoTarjeta{
-    border: solid;
     padding: 5%;
     height: 30%;
     text-align: center;
