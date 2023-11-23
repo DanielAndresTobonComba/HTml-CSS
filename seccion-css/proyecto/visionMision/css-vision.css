@@ -18,6 +18,7 @@ header{
     display: flex;
     height: 8%;
     justify-content: center;
+    background-color: #386499;
 }
 
 .contactos{
@@ -228,9 +229,10 @@ footer{
     }
 
     .logo p {
-        font-size: 20px;
-        margin-left: 20%;
-        margin-bottom: 20%;
+        font-size: 18px;
+        margin-left: 10%;
+        margin-bottom: 23%;
+
     }
 
     .menu{
@@ -254,6 +256,16 @@ footer{
         height: 40%;
     }
 
+    .contenedorVision{
+        height: 90%;
+    }
+    .contenedorMision{
+        height: 90%;
+    }
+
+    .quienesSomos{
+        height: 90%;
+    }
     .tarjetasEscogernos{
         display: flex;
         justify-content: center;
@@ -275,7 +287,7 @@ footer{
         padding: 0px;
         width: 100%;
         margin: 0px auto;
-        background-color: blue;
+        
     }
     footer{
         height: 10%;
@@ -288,6 +300,7 @@ footer{
 
 @media (max-width:480px) {
         
+    
     header{
         display: flex;
         flex-direction: column;
@@ -295,13 +308,14 @@ footer{
     }
 
     .contactos{
-
+        flex-direction: row;
         width: 100%;
         height: 50%;
     }
 
     .redesSociales{
         width: 100%;
+        
     }
 
     .redesSociales article{
@@ -311,34 +325,55 @@ footer{
         border-radius: 30%;
     }
 
+    .logoNav{
+        padding: 0.5%;
+        display: flex;
+        height: 9%;
+        justify-content: space-around;
+    }
 
     .logo{
 
-        width: 40%;
+        width: 50%;
         margin: 0px 0px 0px 0px ;
     }
 
+    .logo p {
+        margin-top: 20%;
+    }
+
     .menu{
-        width: 80%;
+        
+        width: 30%;
         margin: 1%;
     }
 
     nav{
-        width: 80%;
-        height: 70%;
-        display: grid;
-        gap: 10%;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
 
+    nav a{
+        margin: 2px;
+    }
 
-
+    main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 60%;
+        
+    }
     main div{
         text-align: center;
         font-size: 15px;
-        height: 60%;
-        width: 100%
+        height: 50%;
+        width: 90%;
+        font-size: 13px;
+        
     }
 
     main div h2{
@@ -352,11 +387,10 @@ footer{
 
     .seccionEscogernos{
 
-        display: grid;
-        gap: 5%;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        height: 20%;
+        display: flex;
+        flex-direction: column;
+        height: 30%;
+        margin-bottom: 200%;
         
         
     }
@@ -372,6 +406,10 @@ footer{
         width: 60%;
         margin: 0px auto;
     }
+
+    .tituloEscogernos{
+        font-size: 30px;
+    }
     
     
     
@@ -380,12 +418,12 @@ footer{
     .imagenEscogernos{
         
         text-align: center;
-        height: 75%;
+        height: 55%;
         margin: 0px;
         padding: 0px;
         width: 100%;
         margin: 0px auto;
-        background-color: blue;
+        
     }
 
     

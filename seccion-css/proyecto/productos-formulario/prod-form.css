@@ -9,6 +9,7 @@
 
 body{
     height: 1800px;
+    margin: 0px;
     
 }
 
@@ -16,7 +17,7 @@ header{
     display: flex;
     height:5%;
     justify-content: center;
-    background-color: #386499;
+   
 }
 
 .buscador{
@@ -72,8 +73,7 @@ header{
     margin: 0px 40% 0px 0px ;
     
     align-items: center;
-    background-image: url(../imagenes/LOGO\ SURTITIENDAS.jpg);
-    background-size: cover;
+    
     justify-content: space-between;
     
 
@@ -82,7 +82,7 @@ header{
 
 .logo p {
     font-size: 25px;
-    margin-left: 130% ;
+    margin-left: 50% ;
     
 }
 
@@ -124,6 +124,7 @@ nav a{
 
 main {
     height: 50%;
+    background-color: #083c64;
    
     
     
@@ -155,7 +156,7 @@ main h2{
     margin: 0px auto;
     display: flex;
     flex-direction: column;
-    border: solid ;
+    
     margin: 5px;
     
     
@@ -304,6 +305,7 @@ footer{
     body{
         max-height: 2000px;
         
+        
     }
 
     .logoNav{
@@ -346,7 +348,7 @@ footer{
 
     .logo p {
         font-size: 18px;
-        margin-left: 95%;
+        margin-left: 15%;
         margin-bottom: 20%;
     }
 
@@ -374,32 +376,38 @@ footer{
        
        padding: 5px;
        width: 50%;
+       margin-bottom: 11%;
     }
 
     .formularioDatos{
         padding: 0px;
         width: 70%;
     }
+
+    
 }
 
 
 @media (max-width:480px) {
-        
+    
+    body {
+        height: 1500px;
+    }
     header{
         display: flex;
         flex-direction: column;
-        height: 10%;
+        height: 8%;
     }
 
     .contactos{
         flex-direction: row;
         width: 100%;
-        height: 50%;
+        height: 20%;
     }
 
     .redesSociales{
         width: 100%;
-        height: 40%;
+        height: 60%;
     }
 
     .redesSociales article{
@@ -418,9 +426,12 @@ footer{
 
     nav{
         
-        width: 5%;
+        width: 50%;
         height: 100%;
-        
+        margin-left: 100px;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
     }
 
@@ -443,26 +454,37 @@ footer{
     }
 
     main{
-        height: 65% ;
+        height: 40% ;
         margin: 0px;
     }
 
     main h2{
         margin: 30px 0px;
+        color: white;
+    }
+
+    .imagenTarjeta{
+        height: 100%;
+    }
+
+    .textoTarjeta{
+        margin-top: 5%;
+        color: white;
     }
 
     .productos{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 10%;
-        height: 43%;
+        gap: 1%;
+        height: 53%;
     }
 
     .tarjeta{
         width: 90%;
         height: 100%;
-
+        background-color: #386499;
+        border-radius: 30px;
     }
 
 

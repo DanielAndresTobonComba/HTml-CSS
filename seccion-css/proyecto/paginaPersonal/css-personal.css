@@ -65,8 +65,7 @@ header{
     height: 100%;
     width: 13%;
     margin: 0px 40% 0px 0px ;
-    background-image: url("../imagenes/LOGO\ SURTITIENDAS.jpg");
-    background-size: cover;
+    
 
 }
 
@@ -301,8 +300,8 @@ footer{
 
     .logo p {
         font-size: 18px;
-        margin-left: 95%;
-        margin-bottom: 20%;
+        margin-left: 15%;
+        margin-bottom: 22%;
     }
 
     .menu{
@@ -392,6 +391,9 @@ footer{
     }
     
 
+    nav{
+        align-items: center;
+    }
     .logo{
 
         width: 25%;
@@ -423,8 +425,14 @@ footer{
     }
 
     .tarjetaEmpleados{
-        width: 100%;
+        width: 90%;
+        height: 30%;
+
         
+    }
+
+    .informacionTarjetas{
+        font-size: 15px ;
     }
 
     .productos{
