@@ -72,15 +72,14 @@ header{
     margin: 0px 40% 0px 0px ;
     display: flex;
     align-items: center;
-    background-image: url("../imagenes/LOGO\ SURTITIENDAS.jpg");
-    background-size: cover;
+    
     
 
 }
 
 .logo p {
     font-size: 25px;
-    margin-left: 130%;
+    margin-left: 40%;
 }
 
 .buscadorSeccion{
@@ -96,7 +95,7 @@ header{
     display: flex;
     width: 40%;
     height: 90%;
-    margin: 0px 0px 0px 10% ;
+    margin: 0px 0px 0px 5% ;
     justify-content: space-evenly;
     align-items: center;
 }

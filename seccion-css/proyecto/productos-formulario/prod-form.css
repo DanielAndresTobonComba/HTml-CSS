@@ -17,6 +17,7 @@ header{
     display: flex;
     height:5%;
     justify-content: center;
+    background-color: #386499;
    
 }
 
@@ -91,8 +92,8 @@ header{
     display: flex;
    
     width: 40%;
-    height: 90%;
-    margin: 0px 0px 0px 10% ;
+    height: 100%;
+    margin: 0px 0px 0px 5% ;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -123,7 +124,7 @@ nav a{
 }
 
 main {
-    height: 50%;
+    height: 20%;
     background-color: #083c64;
    
     
@@ -133,6 +134,7 @@ main {
 main h2{
     margin-left:1.5% ;
     text-align: center;
+    color: white;
     
 }
 
@@ -151,17 +153,19 @@ main h2{
 
 
 .tarjeta {
-   height: 100%;
+    color: white;
+    height: 200%;
     width: 30% ;
     margin: 0px auto;
     display: flex;
     flex-direction: column;
-    
     margin: 5px;
     
     
-    
+}
 
+.imagenDañada{
+    height: 110%;
 }
 
 .textoTarjeta{
@@ -185,7 +189,7 @@ main h2{
 .imagenTarjeta{
     margin: 0px auto;
     text-align: center;
-    height: 70%;
+    height: 80%;
     margin: 0px 1%;
     padding: 0px;
     
@@ -243,6 +247,7 @@ form{
     width: 40%;
     border-radius: 30px;
     background-color: #386499;
+    height: 40%;
     
 }
 
@@ -295,6 +300,7 @@ footer{
     font-weight: 600;
     font-size: large;
     padding: 2%;
+    margin-top: 10%;
     
 
 }
@@ -358,17 +364,19 @@ footer{
     }
     
     main {
-        height: 40%;
+        height: 15%;
     }
 
     main h2{
         margin-top: 8%;
     }
 
-    
+    .imagenDañada{
+        height: 100%;
+    }
 
     .imagenTarjeta{
-        height: 50%;
+        height: 70%;
     }
 
 
@@ -483,7 +491,7 @@ footer{
     .tarjeta{
         width: 90%;
         height: 100%;
-        background-color: #386499;
+        
         border-radius: 30px;
     }
 
@@ -491,6 +499,7 @@ footer{
     form{
         width: 80%;
         margin-top: 5%;
+        height: 45%;
     }
 
     footer{
