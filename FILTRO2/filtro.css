@@ -1,0 +1,313 @@
+/* menu de navegacion */
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    position: fixed;
+}
+
+.contenedorLogo{
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+
+
+.contenedorMenu{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 50%;
+    width: 30%;
+    justify-content: space-evenly;
+}
+.menu{
+    list-style: none;
+
+}
+
+.menu:hover{
+    color: #4A4959;
+}
+
+/* Gran imagen */
+
+.contenedorImagenGrande{
+    background-image: url("imgs/enium-fondo.jpg");
+    height: 450px;
+    width: 100%;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+
+
+.imagenMediana{
+    background-image: url("imgs/ENIUNLogotipo.png");
+    background-size: cover;
+    height: 300px;
+    width: 30%;
+    margin: 0px auto;
+    
+    
+    
+}
+
+/* contenedorBoton */
+
+.contenedorBoton{
+    
+    text-align: center;
+    margin: 0px auto;
+    width: 50%;
+    margin-bottom: 100px;
+}
+
+.tituloBoton {
+        text-align: center;
+        font-size: 40px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    
+}
+
+.contenedorBoton p{
+    margin-bottom: 40px;
+    line-height: 1.5em;
+}
+
+.contenedorBoton a{
+   
+    padding: 15px 40px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    font-size: 1em;
+    
+    /* falta transicion */
+}
+
+.contenedorBoton a:hover{
+    background-color: #4A4959;
+    
+    transition: background-color 1s 0.5s ;
+
+}
+
+
+/* info-box */
+
+
+.tituloInfo{
+    background-color: black ;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    padding-top: 40px;
+}
+.contenedorInfo{
+    text-align: center;
+    background-color:  black;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    font-size: 17px;
+}
+
+.contenedor{
+    color: white;
+    width: 25%;
+    margin: 20px auto;
+}
+
+.contenedor i{
+    margin-bottom: 20px;
+}
+
+
+.fa-star, .fa-thumbs-up, .fa-check{
+    font-size: 2.7em;
+    color: white;
+
+}
+
+
+/* articles */
+.tituloArticles{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 100px;
+    
+    
+}
+.contenedorArticle{
+    display: flex;
+    margin: 0px auto;
+    height: 600px;
+}
+
+.tarjetaArticle{
+    margin: 0px auto;
+    width: 35%;
+    margin-top: 80px;
+    height: 300px;
+    font-size: 20px;
+}
+.tarjetaArticle img{
+   width: 100%;
+    margin: 0px auto;
+    
+}
+
+
+/* footer */
+
+footer{
+    margin-top: 30px;
+    background-color: #5E5D6E;
+    height: 100px;
+}
+
+/* tamaño celular */
+@media (max-width:425px){
+   
+    .contenedorMenu{
+        margin-left: 30%
+    }
+
+    .imagenMediana{
+        width: 90%;
+    }
+
+    .contenedorInfo{
+        flex-direction: column;
+        height: 1000px;
+    }
+
+    .contenedor{
+        width: 70%;
+    }
+
+    .contenedorArticle{
+        flex-direction: column;
+        height: 700px;
+    }
+
+    .tarjetaArticle{
+        width: 75%;
+    }
+}
+
+@media (min-width:426px) and (max-width:768px) {
+
+    
+    .imagenMediana{
+        width: 60%;
+    }
+
+    .contenedorBoton {
+        width: 90%;
+    }
+
+    .contenedorInfo{
+        padding-top: 100px;
+        height: 600px;
+        display: grid;
+
+        grid-template-areas: "estrella pulgar"
+                                "chulo chulo";
+
+        
+    }
+
+    .contenedor{
+        width: 90%;
+    }
+
+    .grid1{
+        grid-area:estrella;
+        
+    }
+
+    .grid2{
+        grid-area:pulgar;
+    }
+
+    .grid3{
+        grid-area:chulo;
+        width: 50%;
+        
+        
+    }
+
+    .contenedorArticle{
+        height: 500px;
+    }
+
+    .tarjetaArticle{
+
+        width: 45%;
+        line-height: 150%;
+
+    }
+
+
+}
+
+
+/* portatil */
+
+@media (min-width:769px) and (max-width:1024px) {
+
+    .imagenMediana{
+        width: 50%;
+    }
+    
+    .contenedorBoton {
+        width: 70%;
+    }
+
+    .contenedorInfo{
+        padding-top: 100px;
+        height: 600px;
+        display: grid;
+
+        grid-template-areas: "estrella pulgar"
+                                "chulo chulo";
+
+        
+    }
+
+    .contenedor{
+        width: 60%;
+    }
+
+    .grid1{
+        grid-area:estrella;
+        
+    }
+
+    .grid2{
+        grid-area:pulgar;
+    }
+
+    .grid3{
+        grid-area:chulo;
+        width: 30%;
+        
+        
+    }
+
+    .tarjetaArticle{
+
+        width: 45%;
+        line-height: 150%;
+
+    }
+}
