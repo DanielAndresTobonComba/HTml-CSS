@@ -175,6 +175,26 @@ footer{
     height: 100px;
 }
 
+@media (max-width:340px){
+
+    .contenedorMenu{
+         margin-left: 0%;
+         width: 50%;
+    }
+    .contenedorBoton{
+        width: 70%;
+
+    }
+
+    .contenedorImagenGrande{
+        padding-top: 150px;
+    }
+
+    .imagenMediana{
+        height: 150px;
+    }
+}
+
 /* tamaño celular */
 @media (max-width:425px){
    
