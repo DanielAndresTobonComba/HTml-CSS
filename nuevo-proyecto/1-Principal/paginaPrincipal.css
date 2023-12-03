@@ -69,6 +69,10 @@ body {
     background-color:  rgb(233, 36, 36);
 }
 
+.registrarte p {
+    display: none;
+}
+
 /* menu de busqueda */
 
 .seccionMenu{
@@ -256,8 +260,6 @@ footer p{
 @media (min-width:350px) and (max-width:440px){
     .seccionInicio{
         min-width: 200px;
-        
-        
         margin: 20px 0px 20px 30%;
     }
 
@@ -349,8 +351,9 @@ footer p{
 
 
 
-@media (min-width:769px) and (max-width:1100px){
+@media (min-width:769px) and (max-width:1250px){
 
+    
     .seccionInicio{
 
         min-width: 200px;
@@ -388,6 +391,64 @@ footer p{
     .seccionServicios{
         flex-direction: row;
     }
+}
+
+
+@media (min-width:1250px) {
+
+    .tituloEmpresa{
+        height: 80px;
+        padding: 25px;
+        font-size: 30px;
+    }
+
+    .seccionInicio{
+        min-width: 300px;
+        margin: 20px 0px 20px 70%;
+    }
+
+
+    .buscador input{
+        height: 25px;
+        width: 89%;
+     
+    }
+
+    .buscador input[type = "submit"]{
+        margin-left: 0%;
+        border-radius: 30px;
+        background-color:  rgb(233, 36, 36);
+        border: none;
+        width: 10%;
+    }
+
+    main{
+        padding-top: 30%;
+        height: 800px;
+    }
+
+    .mayorAliado{
+        width: 50%;
+        height: 100%;
+        margin: 0px 0px 0px 50%;
+        line-height: 200%;
+        font-size: 25px;
+    }
+
+    .seccionServicios{
+        flex-direction: row;
+    }
+
+    .tarjeta{
+        min-width: 200px;
+        max-width: 300px;
+        font-size: 20px;
+        height: 400px;
+        background-color:rgb(233, 36, 36) ;
+        border-radius: 15px;
+        padding: 10px;
+    }
+
 }
 
 
