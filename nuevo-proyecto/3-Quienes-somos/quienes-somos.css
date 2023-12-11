@@ -1,0 +1,501 @@
+/* Header logo */
+
+*{
+    box-sizing: border-box;
+}
+
+.tituloEmpresa{
+    background-color:rgb(233, 36, 36) ;
+    color: white;
+    height: 50px;
+    font-size: large;
+    text-align: center;
+    padding: 15px;
+    
+    
+    
+}
+
+.tituloEmpresa p{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+
+body {
+    
+    margin: 0px;
+    padding: 0px;
+}
+.bordeNegro{
+    border: solid black;
+}
+.seccionLogo{
+  display: flex;  
+  height: 80px;
+  
+  
+}
+
+.logo{
+    background-image: url("imagenes/logoSurtitiendas.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 80px;
+}
+
+/* Seccion de los logos de inicio de sesion */
+
+.seccionInicio {
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0px 20px 25%;
+}
+
+.iniciarSesion {
+    width: 40px;
+    border-radius: 30px;
+    background-color:  rgb(233, 36, 36);
+    
+}
+
+.registrarte{
+    width: 40px;
+    border-radius: 30px;
+    background-color:  rgb(233, 36, 36);
+}
+
+.registrarte p {
+    display: none;
+}
+
+/* menu de busqueda */
+
+.seccionMenu{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:  rgb(233, 36, 36) ;
+    height: 40px;
+    width: 100%;
+    
+}
+
+.opcionMenu{
+    text-decoration: none;
+    color: white;
+    margin: auto;
+    
+}
+
+
+/* seccion del buscador */
+.seccionBuscador{
+    
+    display: flex;
+    
+    height: 30px;
+    width: 100%;
+    padding: 1px;
+}
+
+.buscador{
+    width: 100%;
+    padding: 2px;
+}
+
+.logoLupa{
+    
+    border-radius: 30px;
+    background-color:  rgb(233, 36, 36);
+}
+
+
+.buscador input{
+    height: 25px;
+    width: 50%;
+    
+}
+
+
+.buscador input[type = "submit"]{
+    margin-left: 10%;
+    border-radius: 30px;
+    background-color:  rgb(233, 36, 36);
+    border: none;
+    width: 30%;
+}
+
+
+/* seccion vision-mision-quienes somos */
+
+main{
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 20px;
+    display: flex;
+    height: 35%;
+    background-image: url("imagenes/img-quienes\ somos.png"); 
+    background-size: cover;
+    
+}
+
+main div{
+    height: 100%;
+    background-color:  rgb(255, 255, 255 , 0.7);
+    text-align: center;
+    height: 80%;
+    margin: 2% 1%;
+    border-radius: 10%;
+    padding: 1%;
+    
+}
+
+main div p{
+    line-height: 150%;
+    
+}
+
+
+/* seccion porque escogernos  */
+
+
+
+.tituloEscogernos{
+    font-size: xx-large;
+    width: 100%;
+    text-align: center;
+}
+
+.seccionEscogernos{
+    
+    display: flex;
+    margin-bottom: 4%;
+}
+
+
+.tarjetasEscogernos{
+    display: flex;
+    
+    flex-direction: column;
+    text-align: center;
+    height: 20%;
+    margin: 0px;
+    padding: 0px;
+    width: 20%;
+    margin: 0px auto;
+}
+
+.imagenEscogernos{
+    text-align: center;
+    width: 100%;
+}
+
+.textoEscogernos{
+    font-size: 20px;
+    
+}
+
+
+
+
+
+/* seccion footer */
+
+footer{
+    background-color: rgb(233, 36, 36) ;
+    height: 220px;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+footer p{
+    font-size: large;
+}
+
+
+.logoAlqueria{
+    background-image: url("imagenes/logo-alqueria-blanco.png");
+    background-size: cover;
+    width: 200px;
+    height: 60px;
+    margin: 0px auto;
+    
+}
+
+
+.seccionRedesSociales{
+    display: flex;
+    width: 80%;
+    margin: 10px auto;
+    justify-content: space-evenly;
+}
+
+
+@media (min-width: 0px) and (max-width:349px) {
+    main {
+        flex-direction: column;
+    }
+
+    main div {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .seccionEscogernos{
+
+        display: flex;
+        flex-direction: column;
+        height: 30%;
+         
+    }
+
+    .tarjetasEscogernos{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        width: 60%;
+        margin: 0px auto;
+    }
+
+    .tituloEscogernos{
+        font-size: 30px;
+    }
+    
+    .imagenEscogernos{
+        
+        text-align: center;
+        height: 55%;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        margin: 0px auto;
+        
+    }
+}
+
+
+
+
+@media (min-width:350px) and (max-width:440px){
+    .seccionInicio{
+        min-width: 200px;
+        margin: 20px 0px 20px 30%;
+    }
+
+
+    main {
+        flex-direction: column;
+    }
+
+    main div {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .seccionEscogernos{
+
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .tarjetasEscogernos{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        width: 60%;
+        margin: 0px auto;
+    }
+
+    .tituloEscogernos{
+        font-size: 30px;
+    }
+    
+    .imagenEscogernos{
+        
+        text-align: center;
+        height: 55%;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        margin: 0px auto;
+        
+    }
+    
+    
+}
+
+
+@media(min-width:440px) and (max-width:600px){
+
+    .tituloEmpresa{
+        height: 80px;
+        padding: 25px;
+        font-size: 25px;
+    }
+    .seccionInicio{
+
+        min-width: 200px;
+        margin: 20px 0px 20px 40%;
+
+    }
+
+     .buscador input{
+        height: 25px;
+        width: 60%;
+     
+    }
+
+    
+
+    .buscador input[type = "submit"]{
+        margin-left: 10%;
+        border-radius: 30px;
+        background-color:  rgb(233, 36, 36);
+        border: none;
+        width: 20%;
+    }
+
+
+    main {
+        flex-direction: column;
+    }
+
+    main div {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    
+    
+
+}
+
+@media (min-width:600px) and (max-width:768px) {
+    
+    .seccionInicio{
+
+        min-width: 200px;
+        margin: 20px 0px 20px 60%;
+
+    }
+
+    .buscador input{
+        height: 25px;
+        width: 60%;
+     
+    }
+
+    .buscador input[type = "submit"]{
+        margin-left: 10%;
+        border-radius: 30px;
+        background-color:  rgb(233, 36, 36);
+        border: none;
+        width: 20%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    main div {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+
+
+}
+
+
+
+@media (min-width:769px) and (max-width:1250px){
+
+    
+    .seccionInicio{
+
+        min-width: 200px;
+        margin: 20px 0px 20px 65%;
+
+    }
+
+    .buscador input{
+        height: 25px;
+        width: 60%;
+     
+    }
+
+    .buscador input[type = "submit"]{
+        margin-left: 20%;
+        border-radius: 30px;
+        background-color:  rgb(233, 36, 36);
+        border: none;
+        width: 15%;
+    }
+
+    .imagenEscogernos{
+        
+        width: 80%;
+        margin: 0px auto;
+        
+    }
+
+   
+}
+
+
+@media (min-width:1250px) {
+
+    .tituloEmpresa{
+        height: 80px;
+        padding: 25px;
+        font-size: 30px;
+    }
+
+    .seccionInicio{
+        min-width: 300px;
+        margin: 20px 0px 20px 70%;
+    }
+
+
+    .buscador input{
+        height: 25px;
+        width: 89%;
+     
+    }
+    .seccionMenu{
+        font-size: 25px;
+    }
+
+    .buscador input[type = "submit"]{
+        margin-left: 0%;
+        border-radius: 30px;
+        background-color:  rgb(233, 36, 36);
+        border: none;
+        width: 10%;
+        font-size: 20px;
+    }
+
+    .imagenEscogernos{
+        
+        width: 60%;
+        margin: 0px auto;
+        
+    }
+
+   
+
+}
