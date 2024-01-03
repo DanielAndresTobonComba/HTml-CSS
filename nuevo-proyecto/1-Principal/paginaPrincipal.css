@@ -260,7 +260,7 @@ footer p{
 @media (min-width:350px) and (max-width:440px){
     .seccionInicio{
         min-width: 200px;
-        margin: 20px 0px 20px 30%;
+        margin: 20px 0px 20px 20%;
     }
 
     main{
@@ -357,7 +357,7 @@ footer p{
     .seccionInicio{
 
         min-width: 200px;
-        margin: 20px 0px 20px 65%;
+        margin: 20px 0px 20px 60%;
 
     }
 
@@ -429,7 +429,7 @@ footer p{
 
     main{
         padding-top: 30%;
-        height: 800px;
+        height: 1000px;
     }
 
     .mayorAliado{
