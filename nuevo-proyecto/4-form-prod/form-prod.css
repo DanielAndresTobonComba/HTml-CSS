@@ -133,6 +133,7 @@ body {
 /* seccion productos */
 
 main {
+    
     height: 350px;
     background-color: #083c64;
     margin-bottom: 100px;
@@ -148,7 +149,9 @@ main {
 
 .productos{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    
 }
 
 .tarjeta {
