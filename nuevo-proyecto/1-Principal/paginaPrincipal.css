@@ -269,11 +269,14 @@ footer p{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 0px;
+    width: 300px;
     border-radius: 20px;
-    height: 0px;
+    height: 200px;
     visibility: hidden;
-    background-color:  rgb(233, 36, 36);
+    background-color:  rgb(241, 90, 90);
+    left: 38%;
+    top: 38%;
+    position: fixed;
    
 }
 
@@ -285,6 +288,24 @@ footer p{
     width: 200px;
     margin: 20px auto;
 }
+
+#seccionMostrarDatos{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    border-radius: 20px;
+    height: 200px;
+    visibility: hidden;
+    background-color:  rgb(241, 90, 90);
+    left: 38%;
+    top: 38%;
+    position: fixed;
+}
+
+
+/* Mostrar Datos */
 
 
 
