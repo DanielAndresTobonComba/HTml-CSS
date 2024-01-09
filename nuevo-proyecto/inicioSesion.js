@@ -1,4 +1,6 @@
-
+function cerrarSesion(){
+    
+}
  
 function mostrarDatos (){
 
@@ -8,13 +10,10 @@ function mostrarDatos (){
     let nombre = document.getElementById("nombre")
     let acceso = document.getElementById("acceso")
 
-    
-
     nombre.innerHTML = usuario 
     acceso.innerHTML = contraseña
 
     let elemento = document.getElementById("seccionMostrarDatos")
-
 
     if (elemento.style.visibility == "visible") {
         elemento.style.visibility = "hidden"
@@ -25,40 +24,76 @@ function mostrarDatos (){
 
 
 } 
-
+ 
 function informacionUsuario(){
 
-    let usuario = document.getElementById("usuario").value
-    let contraseña = document.getElementById("contraseña").value
 
-    if(usuario == "" || contraseña == ""){
+    let referencia = document.getElementsByTagName("header")[0]
+    let hijos = referencia.children
+
+    
+
+    if(hijos.length < 4 ){
         iniciarSesion()
     }else{
-        mostrarDatos(usuario , contraseña)
+        let usuario = document.getElementById("usuario").value
+        let contraseña = document.getElementById("contraseña").value
+
+        if(usuario == "" && contraseña == "" ){
+            iniciarSesion()
+        }else{
+            mostrarDatos()
+        }
+        
     }
 } 
+  
+
+function salir (boton){
+   let tarjeta = boton.parentElement.parentElement
+   tarjeta.style.visibility = "hidden"
+}
 
 function iniciarSesion() {
 
+    let contenido = ` 
+        <h2 style="color: black;">Iniciar Sesion</h2>
+        <section id="entradaDatos">
+            <input id="usuario" type="text" placeholder="Nombre de usuario">
+            <input id="contraseña" type="text" placeholder="Contraseña"> 
+        </section>
+        
+        <section id="botones">
+            <button onclick ="salir(this)" id="botonSalir">Cerrar</button>
+            <button onclick="mostrarDatos() , salir(this)" id="botonIngresar">Ingresar</button>
+        </section> `
     
+   
+    let referencia = document.getElementsByTagName("header")[0]
+    let elemento = document.createElement("div")
+    let hijos = referencia.children
 
-    let elemento = document.getElementById("tarjetaIniciarSesion")
-    let usuario = document.getElementById("usuario").value
-    let contraseña = document.getElementById("contraseña").value
+    if(hijos.length < 4 ){
+      
+        elemento.setAttribute("id" , "tarjetaIniciarSesion")
+        elemento.innerHTML = contenido
+        referencia.appendChild(elemento)
 
-    if(usuario != "" && contraseña !="" || elemento.style.visibility == "visible" ){
-        mostrarDatos()
-        elemento.style.visibility = "hidden"
-
-    } else if (elemento.style.visibility == "visible"){
-        elemento.style.visibility = "hidden"
+        
+        
     }else{
-        elemento.style.visibility = "visible"
-    }
-    
-    
 
-    
+        let usuario = document.getElementById("usuario").value
+        let contraseña = document.getElementById("contraseña").value
+
+        if(usuario == "" && contraseña == ""){
+            let tarjeta = document.getElementById("tarjetaIniciarSesion")
+            tarjeta.style.visibility = "visible"
+        }else{
+            mostrarDatos()
+        }
+
+    }
 }
 
 
