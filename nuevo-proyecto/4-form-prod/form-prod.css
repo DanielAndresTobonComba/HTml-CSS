@@ -179,15 +179,38 @@ main {
    
 }
 
+.seccionBotonOrdenar{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.tarjeta button {
+    text-decoration: none;
+    color: white;
+    padding: 2px;
+    margin:10px 15px 0px 15px;
+    background-color: rgb(233, 36, 36) ;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+}
+
+.seccionBotones{
+    display: flex;
+    justify-content: center;
+}
+
 
 /* formulario */
 
 form {
+    
     width: 40%;
     margin: 0px auto 50px auto;
     text-align: center;
     background-color: #083c64;
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
     
 }
@@ -236,7 +259,7 @@ footer p{
     }
 
     main{
-        height: 900px;
+        height: 1100px;
         padding: 20px;
         width: 80%;
         margin: 0px auto;
@@ -306,7 +329,7 @@ footer p{
 
 
     main{
-        height: 1000px;
+        height: 1150px;
         padding: 50px;
         width: 80%;
         margin: 0px auto;
@@ -368,7 +391,7 @@ footer p{
     }
 
     main{
-        height: 1000px;
+        height: 1300px;
         padding: 20px;
         width: 80%;
         margin:  auto;
@@ -381,7 +404,7 @@ footer p{
     }
 
     .tarjeta{
-        height: 25%;
+        height: 300px;
         
     }
 
@@ -432,7 +455,7 @@ footer p{
     }
 
     main{
-        height: 1100px;
+        height: 1300px;
         padding: 50px;
         width: 80%;
         margin: 0px auto;
@@ -505,7 +528,7 @@ footer p{
 
 
     main{
-        height: 400px;
+        height: 450px;
         padding: 50px;
         border-radius: 20px;
         margin-bottom: 100px;

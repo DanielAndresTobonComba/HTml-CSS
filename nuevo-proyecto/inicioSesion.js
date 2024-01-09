@@ -1,5 +1,4 @@
-let botonIngresar = document.getElementById("botonIngresar")
-botonIngresar.addEventListener("click" , agregar)
+
  
 function mostrarDatos (){
 
@@ -29,7 +28,6 @@ function mostrarDatos (){
 
 function informacionUsuario(){
 
-
     let usuario = document.getElementById("usuario").value
     let contraseña = document.getElementById("contraseña").value
 
@@ -41,6 +39,8 @@ function informacionUsuario(){
 } 
 
 function iniciarSesion() {
+
+    
 
     let elemento = document.getElementById("tarjetaIniciarSesion")
     let usuario = document.getElementById("usuario").value
@@ -64,25 +64,6 @@ function iniciarSesion() {
 
 
 
-/* function agregar (){
-    let elemento = document.getElementById("tarjetaIniciarSesion")
-    let usuario = document.getElementById("usuario").value
-    let contraseña = document.getElementById("contraseña").value
-    alert("entre")
 
-    mostrarDatos(usuario , contraseña)
-} */
-
-
-
-/* 
-function iniciarSesion() {
-    var tarjetaIniciarSesion = document.getElementById('tarjetaIniciarSesion');
-    tarjetaIniciarSesion.style.display = 'block';
-    tarjetaIniciarSesion.style.position = 'fixed';
-    tarjetaIniciarSesion.style.top = '50%';
-    tarjetaIniciarSesion.style.left = '50%';
-    tarjetaIniciarSesion.style.transform = 'translate(-50%, -50%)';
-} */
     
     
