@@ -26,6 +26,7 @@ function restar(boton) {
 
     if (numero <= 0) {
         padre.remove(); // Utiliza el método remove para eliminar el elemento padre
+        numero = 0
     } else {
         parrafo.textContent = --numero;
     }
@@ -47,12 +48,14 @@ function sumar(boton) {
 function identificar(boton) {
     //console.log(boton);
     let padre = boton.parentElement.parentElement;
+    
     //console.log(padre);
     let padreCercano = boton.parentElement
+    
     //console.log(padreCercano)
 
     if(padreCercano.children.length  <= 1){
-
+        numero = 0
         let seccionBotones =
         `
             <button onclick="restar(this)" >Retirar</button>
