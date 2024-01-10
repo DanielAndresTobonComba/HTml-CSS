@@ -271,7 +271,7 @@ footer p{
     justify-content: center;
     width: 300px;
     border-radius: 20px;
-    height: 200px;
+    padding: 5px;
     background-color:  rgb(241, 90, 90);
     left: 38%;
     top: 38%;
@@ -288,6 +288,8 @@ footer p{
     margin: 20px auto;
 }
 
+/* Mostrar datos ususario */
+
 #seccionMostrarDatos{
     text-align: center;
     display: flex;
@@ -302,6 +304,36 @@ footer p{
     top: 38%;
     position: fixed;
 }
+
+/* Registro de usuario */
+
+#enlaceRegistro{
+    margin-top: 10px;
+}
+
+#seccionRegistro{
+    text-align: center;
+    width: 300px;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #083c64; 
+    left: 38%;
+    top: 10%;
+    position: fixed;
+}
+
+#seccionRegistro  input{
+    width: 50%;
+    
+}
+
+#botonesRegistro{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 0px auto;
+}
+
 
 
 /* Mostrar Datos */

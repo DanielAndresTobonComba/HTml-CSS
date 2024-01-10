@@ -79,24 +79,6 @@
     </header>
 
     
-
-   <!--  <div id="tarjetaIniciarSesion">
-
-         
-        <h2 style="color: black;">Iniciar Sesion</h2>
-        <section id="entradaDatos">
-            <input id="usuario" type="text" placeholder="Nombre de usuario">
-            <input id="contraseña" type="text" placeholder="Contraseña"> 
-        </section>
-        
-        <section id="botones">
-            <button id="botonSalir">Salir</button>
-            <button onclick="mostrarDatos()" id="botonIngresar">Ingresar</button>
-        </section> 
-
-    </div> -->
-
-
     <div id="seccionMostrarDatos">
 
         <h2>Datos del usuario</h2>
@@ -104,6 +86,13 @@
         <p>Contraseña: <span id="acceso"></span></p> 
 
 
+    </div>
+
+    <div id="seccionRegistro" style="visibility: hidden;">
+
+        <button onclick="salirRegistro(this)">Cerrar</button>
+        <button type="submit">Enviar</button>
+        
     </div>
 
     

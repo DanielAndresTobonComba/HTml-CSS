@@ -11,7 +11,7 @@ let botonGelatina = document.getElementById("botonGelatina")
 botonGelatina.addEventListener("click", agregarBtn4) */
 
 
-let numero = 0
+
 
 function restar(boton) {
     
