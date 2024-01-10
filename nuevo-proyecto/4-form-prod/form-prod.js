@@ -27,6 +27,7 @@ function restar(boton) {
     if (numero <= 0) {
         padre.remove(); // Utiliza el método remove para eliminar el elemento padre
         numero = 0
+        
     } else {
         parrafo.textContent = --numero;
     }
@@ -56,6 +57,7 @@ function identificar(boton) {
 
     if(padreCercano.children.length  <= 1){
         numero = 0
+        boton.style.display = "none"
         let seccionBotones =
         `
             <button onclick="restar(this)" >Retirar</button>
@@ -73,8 +75,10 @@ function identificar(boton) {
     // Alternativamente, si quieres agregar el div como el último hijo del padre, puedes usar:
     // padre.appendChild(div);
 
+    
+
     }else{
-        return
+        boton.style.display = "flex"
     }
     
 
