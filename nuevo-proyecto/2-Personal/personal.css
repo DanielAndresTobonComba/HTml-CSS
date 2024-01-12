@@ -1,22 +1,22 @@
 /* Header logo */
 
-*{
+* {
     box-sizing: border-box;
 }
 
-.tituloEmpresa{
-    background-color:rgb(233, 36, 36) ;
+.tituloEmpresa {
+    background-color: rgb(233, 36, 36);
     color: white;
     height: 50px;
     font-size: large;
     text-align: center;
     padding: 15px;
-    
-    
-    
+
+
+
 }
 
-.tituloEmpresa p{
+.tituloEmpresa p {
     margin: 0px;
     padding: 0px;
 }
@@ -26,21 +26,23 @@
 
 
 body {
-    
+
     margin: 0px;
     padding: 0px;
 }
-.bordeNegro{
+
+.bordeNegro {
     border: solid black;
 }
-.seccionLogo{
-  display: flex;  
-  height: 80px;
-  
-  
+
+.seccionLogo {
+    display: flex;
+    height: 80px;
+
+
 }
 
-.logo{
+.logo {
     background-image: url("imagenes/logoSurtitiendas.jpg");
     background-size: cover;
     height: 100%;
@@ -53,21 +55,19 @@ body {
     width: 150px;
     display: flex;
     justify-content: space-evenly;
-    margin: 20px 0px 20px 25%;
+    margin: 20px 0px 20px 5%;
 }
 
-.iniciarSesion {
-    width: 40px;
+.iniciarSesion,
+.registrarte {
+    width: 50px;
+    height: 50px;
     border-radius: 30px;
-    background-color:  rgb(233, 36, 36);
-    
+    background-color: rgb(233, 36, 36);
+
 }
 
-.registrarte{
-    width: 40px;
-    border-radius: 30px;
-    background-color:  rgb(233, 36, 36);
-}
+
 
 .registrarte p {
     display: none;
@@ -75,56 +75,54 @@ body {
 
 /* menu de busqueda */
 
-.seccionMenu{
+.seccionMenu {
     display: flex;
     justify-content: space-evenly;
-    background-color:  rgb(233, 36, 36) ;
-    height: 40px;
+    background-color: rgb(233, 36, 36);
     width: 100%;
-    
+
 }
 
-.opcionMenu{
+.opcionMenu {
     text-decoration: none;
     color: white;
     margin: auto;
-    
+
 }
 
 
 /* seccion del buscador */
-.seccionBuscador{
-    
+.seccionBuscador {
+
     display: flex;
-    
+
     height: 30px;
     width: 100%;
     padding: 1px;
 }
 
-.buscador{
+.buscador {
     width: 100%;
     padding: 2px;
 }
 
-.logoLupa{
-    
+.logoLupa {
+
     border-radius: 30px;
-    background-color:  rgb(233, 36, 36);
+    background-color: rgb(233, 36, 36);
 }
 
 
-.buscador input{
+.buscador input {
     height: 25px;
     width: 50%;
-    
+
 }
 
 
-.buscador input[type = "submit"]{
-    margin-left: 10%;
+.buscador input[type="submit"] {
     border-radius: 30px;
-    background-color:  rgb(233, 36, 36);
+    background-color: rgb(233, 36, 36);
     border: none;
     width: 30%;
 }
@@ -139,38 +137,38 @@ body {
 
 
 
-.empleados{
+.empleados {
     display: flex;
     flex-direction: column;
     height: 45%;
     width: 100%;
     margin: 0px auto;
-    
+
 }
 
-.tarjetaEmpleados{
+.tarjetaEmpleados {
     display: flex;
     width: 70%;
     background-color: #386499;
-    margin: 2% auto ;
+    margin: 2% auto;
     height: 35%;
     color: white;
     border-radius: 20px;
-    
+
 }
 
 
 .tarjetaEmpleados img {
     width: 30%;
-    
-    
+
+
     margin: 5%;
-    border-radius:10px;
+    border-radius: 10px;
 }
 
 
 
-.informacionTarjetas{
+.informacionTarjetas {
     margin: 0px auto;
     display: flex;
     justify-content: space-evenly;
@@ -185,33 +183,33 @@ body {
 /* seccion beneficio */
 
 .tituloBeneficios {
-     text-align: center;
-     font-size: 30px;
+    text-align: center;
+    font-size: 30px;
 }
 
-.seccionBeneficios{
-    
-    display: flex;   
+.seccionBeneficios {
+
+    display: flex;
     margin-bottom: 5%;
 
 }
 
 .tarjetaBeneficios {
-     width: 20% ;
-     margin: 0px auto;
-     display: flex;
-     flex-direction: column;
-     
- }
+    width: 20%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
 
- .imagenTarjeta{
+}
+
+.imagenTarjeta {
     margin: 0px auto;
     text-align: center;
     height: 60%;
 }
 
 
- .textoTarjeta{
+.textoTarjeta {
     display: flex;
     text-align: center;
     height: 30%;
@@ -220,41 +218,41 @@ body {
     justify-content: center;
     flex-direction: column;
     font-weight: bold;
-    
-    
+
+
 }
 
-.textoTarjeta p{
+.textoTarjeta p {
     margin: 4px;
     font-size: 25px;
 }
 
 /* seccion footer */
 
-footer{
-    background-color: rgb(233, 36, 36) ;
+footer {
+    background-color: rgb(233, 36, 36);
     height: 220px;
     color: white;
     text-align: center;
     width: 100%;
 }
 
-footer p{
+footer p {
     font-size: large;
 }
 
 
-.logoAlqueria{
+.logoAlqueria {
     background-image: url("imagenes/logo-alqueria-blanco.png");
     background-size: cover;
     width: 200px;
     height: 60px;
     margin: 0px auto;
-    
+
 }
 
 
-.seccionRedesSociales{
+.seccionRedesSociales {
     display: flex;
     width: 80%;
     margin: 10px auto;
@@ -262,244 +260,343 @@ footer p{
 }
 
 
-@media (min-width:0px) and (max-width:350px){
-    .tituloNuestro{
+@media (min-width:0px) and (max-width:350px) {
+
+
+    .seccionInicio {
+        min-width: 100px;
+        margin: 20px 0px 20px 0%;
+    }
+
+    .iniciarSesion,
+    .registrarte {
+        width: 30px;
+        height: 35px;
+    }
+
+    .simboloInicioSesion {
+        width: 30px;
+        height: 30px;
+    }
+
+    .seccionMenu {
+        flex-direction: column;
+    }
+
+    .seccionMenu a {
+        margin: 10px auto;
+
+    }
+
+    .buscador input {
+        width: 60%;
+    }
+
+    .buscador input[type="submit"] {
+
+        border-radius: 30px;
+        background-color: rgb(233, 36, 36);
+        border: none;
+        width: 30%;
+    }
+
+    .tituloNuestro {
         margin-top: 8%;
     }
 
-    .empleados{
+    .empleados {
         justify-content: space-evenly;
         align-items: center;
         height: 30%;
-        
+
     }
 
-    .tarjetaEmpleados{
+    .tarjetaEmpleados {
         width: 90%;
         height: 30%;
 
-        
+
     }
 
-    .informacionTarjetas{
-        font-size: 15px ;
+    .informacionTarjetas {
+        font-size: 15px;
     }
 
 
-    .seccionBeneficios{
+    .seccionBeneficios {
         display: grid;
-        grid-template-columns: 1fr ;
-        grid-template-rows: 1fr 1fr 1fr 1fr ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         gap: 20px;
-        
+
     }
 
-    .tarjetaBeneficios{
+    .tarjetaBeneficios {
         width: 45%;
-        
+
     }
 
-    .textoTarjeta p{
+    .textoTarjeta p {
         font-size: 15px;
     }
 }
 
 
 
-@media (min-width:350px) and (max-width:440px){
-    .seccionInicio{
-        min-width: 200px;
-        margin: 20px 0px 20px 30%;
-    }
+@media (min-width:350px) and (max-width:440px) {
 
-
-    .tituloNuestro{
-        margin-top: 8%;
-    }
-
-    .empleados{
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-        
-    }
-
-    .tarjetaEmpleados{
-        width: 100%;
-        height: 30%;
-
-        
-    }
-
-    .informacionTarjetas{
-        font-size: 15px ;
-    }
-
-    .seccionBeneficios{
-        display: grid;
-        grid-template-columns: 1fr ;
-        grid-template-rows: 1fr 1fr 1fr 1fr ;
-        gap: 20px;
-        
-    }
-
-    .tarjetaBeneficios{
-        width: 45%;
-        
-    }
-
-    .textoTarjeta p{
-        font-size: 15px;
-    }
-    
-}
-
-
-@media(min-width:440px) and (max-width:600px){
-
-    .tituloEmpresa{
+    .tituloEmpresa {
         height: 80px;
         padding: 25px;
         font-size: 25px;
     }
-    .seccionInicio{
+
+    .seccionInicio {
 
         min-width: 200px;
-        margin: 20px 0px 20px 40%;
-
+        margin: 20px 0px 20px 10%;
     }
 
-     .buscador input{
+    .iniciarSesion,
+    .registrarte {
+        width: 35px;
+        height: 35px;
+    }
+
+    .simboloInicioSesion {
+        width: 35px;
+        height: 30px;
+    }
+
+    .buscador input {
         height: 25px;
         width: 60%;
-     
+
     }
 
-    
 
-    .buscador input[type = "submit"]{
-        margin-left: 10%;
+
+    .buscador input[type="submit"] {
+
         border-radius: 30px;
-        background-color:  rgb(233, 36, 36);
+        background-color: rgb(233, 36, 36);
         border: none;
         width: 20%;
     }
-    
 
-    .textoTarjeta p{
+    .seccionMenu {
+        flex-direction: column;
+    }
+
+    .seccionMenu a {
+        margin: 10px auto;
+    }
+
+
+    .tituloNuestro {
+        margin-top: 8%;
+    }
+
+    .empleados {
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .tarjetaEmpleados {
+        width: 100%;
+        height: 30%;
+
+
+    }
+
+    .informacionTarjetas {
         font-size: 15px;
     }
-    
+
+    .seccionBeneficios {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+
+    }
+
+    .tarjetaBeneficios {
+        width: 45%;
+
+    }
+
+    .textoTarjeta p {
+        font-size: 15px;
+    }
+
+}
+
+
+@media(min-width:440px) and (max-width:600px) {
+
+    .tituloEmpresa {
+        height: 80px;
+        padding: 25px;
+        font-size: 25px;
+    }
+
+    .seccionInicio {
+
+        min-width: 200px;
+        margin: 20px 0px 20px 30%;
+    }
+
+    .buscador input {
+        height: 25px;
+        width: 60%;
+
+    }
+
+
+
+    .buscador input[type="submit"] {
+
+        border-radius: 30px;
+        background-color: rgb(233, 36, 36);
+        border: none;
+        width: 20%;
+    }
+
+    .seccionMenu {
+        flex-direction: column;
+    }
+
+    .seccionMenu a {
+        margin: 10px auto;
+    }
+
+
+    .textoTarjeta p {
+        font-size: 15px;
+    }
+
 
 }
 
 @media (min-width:600px) and (max-width:768px) {
-    
-    .seccionInicio{
 
+    .seccionInicio {
         min-width: 200px;
-        margin: 20px 0px 20px 60%;
-
+        margin: 20px 0px 20px 50%;
     }
 
-    .buscador input{
+    .seccionMenu{
+        height: 40px ;
+    }
+
+    .buscador input {
         height: 25px;
         width: 60%;
-     
     }
 
-    .buscador input[type = "submit"]{
-        margin-left: 10%;
-        border-radius: 30px;
-        background-color:  rgb(233, 36, 36);
-        border: none;
-        width: 20%;
+    .buscador input[type="submit"] {
+        width: 80px;
     }
 
-
-    
-
-
-    .textoTarjeta p{
+    .textoTarjeta p {
         font-size: 20px;
     }
-
-
 
 }
 
 
 
-@media (min-width:769px) and (max-width:1250px){
+@media (min-width:769px) and (max-width:1250px) {
 
-    
-    .seccionInicio{
 
-        min-width: 200px;
-        margin: 20px 0px 20px 65%;
+    .tituloEmpresa {
+        font-size: x-large;
+    }
+
+    a.opcionMenu {
+        font-size: x-large;
+    }
+
+    .seccionInicio {
+        margin: 20px 0px 20px 45%;
+        width: 400px;
+    }
+
+    .buscador input {
+        width: 20%;
+    }
+
+    .buscador input[type="submit"] {
+
+        font-size: large;
+        width: 100px;
 
     }
 
-    .buscador input{
-        height: 25px;
-        width: 60%;
-     
+    .seccionMenu {
+        height: 40px;
     }
 
-    .buscador input[type = "submit"]{
-        margin-left: 20%;
-        border-radius: 30px;
-        background-color:  rgb(233, 36, 36);
-        border: none;
-        width: 15%;
-    }
-
-    .informacionTarjetas{
+    .informacionTarjetas {
         font-size: 25px;
     }
 
-   
+
 }
 
 
 @media (min-width:1250px) {
 
-    .tituloEmpresa{
+    .tituloEmpresa {
         height: 80px;
         padding: 25px;
-        font-size: 35px;
+        font-size: 30px;
     }
 
-    .seccionInicio{
+    
+
+
+    .seccionInicio {
         min-width: 300px;
         margin: 20px 0px 20px 70%;
     }
 
 
-    .buscador input{
+    .buscador input {
         height: 25px;
-        width: 89%;
-     
-    }
-    
-    .seccionMenu{
-        font-size: 25px;
+        width: 300px;
+
     }
 
-    .buscador input[type = "submit"]{
+    
+
+    .buscador input[type="submit"] {
         margin-left: 0%;
         border-radius: 30px;
-        background-color:  rgb(233, 36, 36);
+        background-color: rgb(233, 36, 36);
         border: none;
         width: 10%;
         font-size: 20px;
     }
 
+    .seccionMenu {
+       
+        height: 40px;
+    }
 
-    .informacionTarjetas{
+    a.opcionMenu {
+        font-size: x-large;
+        
+    }
+
+
+    .informacionTarjetas {
         font-size: 35px;
-    }   
+    }
 
-   
+
 
 }
