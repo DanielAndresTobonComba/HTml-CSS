@@ -126,8 +126,6 @@ body {
 
 main {
     
-    height: 350px;
-    background-color: #083c64;
     margin-bottom: 100px;
     padding-top: 50px;
 }
@@ -283,8 +281,7 @@ footer p{
     }
 
     main{
-        height: 1100px;
-        padding: 20px;
+        padding: 5px;
         width: 80%;
         margin: 0px auto;
         border-radius: 20px;
@@ -292,20 +289,19 @@ footer p{
     }
 
     .productos{
-        flex-direction: column;
-        
+        flex-direction: column;  
+    }
+
+    .productos img{
+        width: 150px;
+        height: 150px;
     }
 
     .tarjeta{
         margin: auto;
     }
 
-
-
-    .imagenTarjeta{
-        width: 90%;
-        
-    }
+    
 
     .textoTarjeta{
         font-size: 18px;
@@ -352,8 +348,6 @@ footer p{
 
     }
 
-
-
     .buscador input[type="submit"] {
         width: 20%;
     }
@@ -368,28 +362,20 @@ footer p{
 
 
     main{
-        height: 1150px;
-        padding: 50px;
-        width: 80%;
+        padding: 5px;
+        width: 100%;
         margin: 0px auto;
         border-radius: 20px;
-        margin-bottom: 100px;
-    }
-
-    .productos{
-        flex-direction: column;
-        
+        margin-bottom: 50px;
     }
 
     .tarjeta{
         margin: auto;
     }
 
-
-
-    .imagenTarjeta{
-        width: 90%;
-        
+    .productos img{
+        width: 200px;
+        height: 200px;
     }
 
     .textoTarjeta{
@@ -430,7 +416,7 @@ footer p{
     }
 
     main{
-        height: 1300px;
+        
         padding: 20px;
         width: 80%;
         margin:  auto;
@@ -438,8 +424,9 @@ footer p{
         margin-bottom: 100px;
     }
 
-    .productos{
-        flex-direction: column;
+    .productos img{
+        width: 200px;
+        height: 200px;
     }
 
     .tarjeta{
@@ -501,26 +488,21 @@ footer p{
     }
 
     main{
-        height: 1300px;
-        padding: 50px;
+        padding: 20px;
         width: 80%;
         margin: 0px auto;
         border-radius: 20px;
         margin-bottom: 100px;
     }
 
-    .productos{
-        flex-direction: column;
-        
+    .productos img{
+        width: 250px;
+        height: 250px;
     }
 
     .tarjeta{
         margin: auto;
     }
-
-
-
-    
 
     .textoTarjeta{
         font-size: 18px;
@@ -583,14 +565,14 @@ footer p{
 
 
     main{
-        height: 450px;
         padding: 50px;
         border-radius: 20px;
         margin-bottom: 100px;
     }
 
-    .productos{
-        height: 300px;
+    .productos img{
+        width: 250px;
+        height: 250px;
     }
 
     

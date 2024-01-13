@@ -1,17 +1,50 @@
-/* let botonLeche = document.getElementById("botonLeche")
-botonLeche.addEventListener("click", agregarBtn1)
 
-let botonActivia = document.getElementById("botonActivia")
-botonActivia.addEventListener("click", agregarBtn2)
+function insertarProductos() {
 
-let botonYogurt = document.getElementById("botonYogurt")
-botonYogurt.addEventListener("click", agregarBtn3)
+    let contenedor = document.querySelector(".productos")
 
-let botonGelatina = document.getElementById("botonGelatina")
-botonGelatina.addEventListener("click", agregarBtn4) */
+    fetch("productos.json")
+        .then(data => data.json())
+        .then(json => {
+
+            json.productos.forEach(producto => {
+                console.log(producto)
+
+                let elemento = `
+
+                <div class="tarjeta" >
+
+                    <div class="textoTarjeta">
+                        
+                        <p>${producto.nombre}</p>
+                        
+                    </div>
+
+                   
+                    <img src="${producto.imagen}" alt="">
+                    
+                    
+                    <div class="seccionBotonOrdenar">
+
+                        <button onclick="identificar(this)" >Ordenar</button>
+
+        
+                    </div>
+
+                </div>
+            `
+            contenedor.innerHTML += elemento
+
+            })
+        })
 
 
 
+
+
+}
+
+insertarProductos()
 
 function restar(boton) {
     
@@ -27,7 +60,7 @@ function restar(boton) {
     if (numero <= 0) {
         padre.remove(); // Utiliza el método remove para eliminar el elemento padre
         numero = 0
-        
+
     } else {
         parrafo.textContent = --numero;
     }
@@ -35,7 +68,7 @@ function restar(boton) {
 
 
 function sumar(boton) {
-    
+
     //console.log(boton);
     let padre = boton.parentElement;
     //console.log(padre);
@@ -49,40 +82,40 @@ function sumar(boton) {
 function identificar(boton) {
     //console.log(boton);
     let padre = boton.parentElement.parentElement;
-    
+
     //console.log(padre);
     let padreCercano = boton.parentElement
-    
+
     //console.log(padreCercano)
 
-    if(padreCercano.children.length  <= 1){
+    if (padreCercano.children.length <= 1) {
         numero = 0
         boton.style.display = "none"
         let seccionBotones =
-        `
+            `
             <button onclick="restar(this)" >Retirar</button>
             <p>0</p>
             <button onclick="sumar(this)" >Añadir</button>
         `;
 
-    let div = document.createElement("div");
-    
-    div.setAttribute("class", "seccionBotones");
-    div.innerHTML = seccionBotones; // Utiliza innerHTML para asignar el contenido HTML
+        let div = document.createElement("div");
 
-    boton.parentElement.appendChild(div); // Usa parentElement para acceder al padre del botón
+        div.setAttribute("class", "seccionBotones");
+        div.innerHTML = seccionBotones; // Utiliza innerHTML para asignar el contenido HTML
 
-    // Alternativamente, si quieres agregar el div como el último hijo del padre, puedes usar:
-    // padre.appendChild(div);
+        boton.parentElement.appendChild(div); // Usa parentElement para acceder al padre del botón
 
-    
+        // Alternativamente, si quieres agregar el div como el último hijo del padre, puedes usar:
+        // padre.appendChild(div);
 
-    }else{
+
+
+    } else {
         boton.style.display = "flex"
     }
-    
 
-   
+
+
 }
 
 
