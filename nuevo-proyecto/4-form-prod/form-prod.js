@@ -1,4 +1,14 @@
 
+/* function mostrar(boton){
+    
+    let elemento = boton.pa
+    if(elemento.style.display == "none"){
+        elemento.style.display = "block"
+    }else{
+        elemento.style.display = "none"
+    }
+} */
+
 function insertarProductos() {
 
     let contenedor = document.querySelector(".productos")
@@ -23,7 +33,28 @@ function insertarProductos() {
                    
                     <img src="${producto.imagen}" alt="">
                     
+
                     
+
+                    <div class="detalleProducto">
+                        
+                        <button class="botonDetalles" onclick="mostrar(this)" >Detalles </button>
+
+                        <section
+                         
+                            class="detalles" >
+                            <p>Tamaño: ${producto.caracteristicas}</p>
+
+                            <p>Precio: $ ${producto.precio}</p>
+
+                            <p></p>
+
+                        </section>
+                       
+                        
+                    </div>
+                    
+
                     <div class="seccionBotonOrdenar">
 
                         <button onclick="identificar(this)" >Ordenar</button>
