@@ -336,7 +336,7 @@ footer p {
 /* Mostrar Datos */
 
 
-@media (min-width:0px) and (max-width:350px) {
+@media (min-width:0px) and (max-width:320px) {
 
 
     .seccionInicio {
@@ -415,11 +415,48 @@ footer p {
     .textoTarjeta p {
         font-size: 15px;
     }
+
+    
+    /* iniciar sesion */
+
+    #tarjetaIniciarSesion {
+        left: 5%;
+        top: 18%;
+        width: 200px;
+        text-align: center;
+    
+    }
+
+    #tarjetaIniciarSesion input{
+        width: 140px;
+    }
+
+    #enlaceRegistro{
+        width: 150px;
+    }
+
+    /* iniciar sesion */
+
+    #tarjetaIniciarSesion {
+        left: 5%;
+        top: 18%;
+        width: 200px;
+        text-align: center;
+    
+    }
+
+    #tarjetaIniciarSesion input{
+        width: 140px;
+    }
+
+    #enlaceRegistro{
+        width: 150px;
+    }
 }
 
 
 
-@media (min-width:350px) and (max-width:440px) {
+@media (min-width:321px) and (max-width:440px) {
 
     .tituloEmpresa {
         height: 80px;
@@ -508,6 +545,24 @@ footer p {
         font-size: 15px;
     }
 
+     /* iniciar sesion */
+
+     #tarjetaIniciarSesion {
+        left: 5%;
+        top: 18%;
+        width: 300px;
+        text-align: center;
+    
+    }
+
+    #tarjetaIniciarSesion input{
+        width: 200px;
+    }
+
+    #enlaceRegistro{
+        width: 200px;
+    }
+
 }
 
 
@@ -554,6 +609,23 @@ footer p {
         font-size: 15px;
     }
 
+     /* iniciar sesion */
+
+     #tarjetaIniciarSesion {
+        left: 20%;
+        top: 18%;
+        width: 300px;
+        text-align: center;
+    
+    }
+
+    #tarjetaIniciarSesion input{
+        width: 200px;
+    }
+
+    #enlaceRegistro{
+        width: 200px;
+    }
 
 }
 
@@ -579,6 +651,24 @@ footer p {
 
     .textoTarjeta p {
         font-size: 20px;
+    }
+
+     /* iniciar sesion */
+
+     #tarjetaIniciarSesion {
+        left: 30%;
+        top: 18%;
+        width: 300px;
+        text-align: center;
+    
+    }
+
+    #tarjetaIniciarSesion input{
+        width: 200px;
+    }
+
+    #enlaceRegistro{
+        width: 200px;
     }
 
 }

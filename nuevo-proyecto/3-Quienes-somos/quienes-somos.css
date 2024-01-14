@@ -386,6 +386,24 @@ footer p{
         margin: 0px auto;
         
     }
+
+    /* iniciar sesion */
+
+    #tarjetaIniciarSesion {
+        left: 5%;
+        top: 18%;
+        width: 300px;
+        text-align: center;
+    
+    }
+
+    #tarjetaIniciarSesion input{
+        width: 200px;
+    }
+
+    #enlaceRegistro{
+        width: 200px;
+    }
 }
 
 
@@ -471,6 +489,24 @@ footer p{
         margin: 0px auto;
         
     }
+
+    /* iniciar sesion */
+
+    #tarjetaIniciarSesion {
+        left: 10%;
+        top: 18%;
+        width: 300px;
+        text-align: center;
+    
+    }
+
+    #tarjetaIniciarSesion input{
+        width: 200px;
+    }
+
+    #enlaceRegistro{
+        width: 200px;
+    }
     
     
 }
@@ -524,7 +560,23 @@ footer p{
         margin: 20px auto;
     }
 
+    /* iniciar sesion */
+
+    #tarjetaIniciarSesion {
+        left: 20%;
+        top: 18%;
+        width: 300px;
+        text-align: center;
     
+    }
+
+    #tarjetaIniciarSesion input{
+        width: 200px;
+    }
+
+    #enlaceRegistro{
+        width: 200px;
+    }
     
 
 }
@@ -560,7 +612,17 @@ footer p{
         margin: 20px auto;
     }
 
+    /* iniciar sesion */
 
+    #tarjetaIniciarSesion {
+        left: 30%;
+        top: 18%;
+        width: 300px;
+        text-align: center;
+    
+    }
+
+    
 
 }
 

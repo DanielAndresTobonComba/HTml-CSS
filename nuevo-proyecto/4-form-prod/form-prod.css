@@ -400,11 +400,30 @@ footer p{
         
     }
     
+    /* iniciar sesion */
+
+    #tarjetaIniciarSesion {
+        left: 5%;
+        top: 18%;
+        width: 200px;
+        text-align: center;
+    
+    }
+
+    #tarjetaIniciarSesion input{
+        width: 150px;
+        margin: 0px auto;
+    }
+
+    #enlaceRegistro{
+        width: 200px;
+    }
+
     
 }
 
 
-@media(min-width:321px) and (max-width:599px){
+@media(min-width:321px) and (max-width:500px){
 
     .tituloEmpresa {
         height: 80px;
@@ -473,11 +492,30 @@ footer p{
         
         
     }
+
     
+
+    /* iniciar sesion */
+
+    #tarjetaIniciarSesion {
+        left: 5%;
+        top: 18%;
+        width: 300px;
+        text-align: center;
+    
+    }
+
+    #tarjetaIniciarSesion input{
+        width: 200px;
+    }
+
+    #enlaceRegistro{
+        width: 200px;
+    }
 
 }
 
-@media (min-width:600px) and (max-width:768px) {
+@media (min-width:501px) and (max-width:768px) {
     
     .seccionInicio {
         min-width: 200px;
@@ -531,6 +569,13 @@ footer p{
         
     }
     
+    /* iniciar sesion */
+
+    #tarjetaIniciarSesion {
+        left: 30%;
+        top: 30%;
+    }
+     
 
 
 }
