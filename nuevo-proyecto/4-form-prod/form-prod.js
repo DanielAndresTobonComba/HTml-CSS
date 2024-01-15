@@ -1,4 +1,32 @@
 
+function crearFactura (tarjeta , cantidad){
+    let contenedor = document.querySelector(".facturaActual")
+    //console.log(tarjeta)
+    console.log(cantidad)
+
+
+    
+    let hijos = tarjeta.children
+    let padre = hijos[0]
+    let parrafo = padre.children
+    let nombreProducto = parrafo[0].textContent
+
+    console.log(nombreProducto)
+    fetch("productos.json")
+    .then(data => data.json())
+    .then(json => {
+        
+        json.productos.forEach(producto=>{
+            if(producto.nombre == nombreProducto){
+                console.log(producto)
+            }
+        })
+
+    })
+
+}
+
+
 function filtrar(contenido){
     console.log("entre a filtrar con : " + contenido )
     let contenedor = document.querySelector(".productos")
@@ -152,18 +180,20 @@ function insertarProductos() {
 
 function restar(boton) {
    
-   
-    let padre = boton.parentElement;
+
+    
     let seccionBotonOrdenar = boton.parentElement.parentElement;
     let hijosSeccionBotonOrdenar = seccionBotonOrdenar.children
     let botonOrdenar = hijosSeccionBotonOrdenar[0]
+
+    let padre = boton.parentElement;
     let hijos = padre.children;
     let parrafo = hijos[1];
 
-    let numero = parseInt(parrafo.textContent, 10); // Asegúrate de convertir el texto a un número
+    let numero = parseInt(parrafo.textContent, 10); // Asegúrase de convertir el texto a un número
 
     if (numero <= 0) {
-        padre.remove(); // Utiliza el método remove para eliminar el elemento padre
+        padre.remove(); 
         numero = 0
         botonOrdenar.style.display = "block"
 
@@ -174,14 +204,17 @@ function restar(boton) {
 
 
 function sumar(boton) {
-
+    let tarjeta = boton.parentElement.parentElement.parentElement;
+    //console.log(tarjeta)
     //console.log(boton);
     let padre = boton.parentElement;
     //console.log(padre);
 
     let hijos = padre.children;
     let parrafo = hijos[1]
-    parrafo.textContent = ++numero
+    let cantidad = parrafo.textContent = ++numero
+
+    crearFactura(tarjeta , cantidad )
 }
 
 
