@@ -58,7 +58,7 @@ function filtrar(contenido){
                     `
                     contenedor.innerHTML += elemento
                     
-                }else if (contenedor.innerHTML.trim() === ""){
+                }else if (contenedor.innerHTML === ""){
                    contenedor.innerHTML = ` 
                    <h1>No hay productos con su preferencias de filtro</h1>`
                 }

@@ -391,6 +391,12 @@ footer p{
         height: 150px;
     }
 
+    .seccionBotones p{
+        margin: 0px 2px;
+        height: 30px;
+        padding-top: 5px;
+    }
+
     
 
     
@@ -493,6 +499,12 @@ footer p{
         padding: 0px;
     }
 
+    .seccionBotones p{
+        margin: 0px 2px;
+        height: 30px;
+        padding-top: 5%;
+    }
+
     form {
         width: 60%;
         
@@ -570,6 +582,12 @@ footer p{
         padding: 0px;
     }
 
+    .seccionBotones p{
+        margin: 0px 2px;
+        height: 30px;
+        padding-top: 5%;
+    }
+
     
     form {
         width: 40%;
@@ -634,6 +652,11 @@ footer p{
         height: 250px;
     }
 
+    .seccionBotones p{
+        margin: 0px 2px;
+        height: 30px;
+        padding-top: 5%;
+    }
     
 
     .textoTarjeta{
@@ -706,6 +729,12 @@ footer p{
     .textoTarjeta{
         font-size: 18px;
         padding: 0px;
+    }
+
+    .seccionBotones p{
+        margin: 0px 2px;
+        height: 30px;
+        padding-top: 5%;
     }
 
     form {
