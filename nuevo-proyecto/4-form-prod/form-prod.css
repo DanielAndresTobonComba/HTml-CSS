@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+h1{
+    margin-bottom: 300px;
+}
+
 .tituloEmpresa {
     background-color: rgb(233, 36, 36);
     color: white;
@@ -126,7 +130,7 @@ body {
 
 main {
     
-    margin-bottom: 100px;
+    margin-bottom: 300px;
     padding-top: 50px;
 }
 
@@ -374,7 +378,8 @@ footer p{
         width: 80%;
         margin: 0px auto;
         border-radius: 20px;
-        margin-bottom: 100px;
+        margin-bottom: 300px;
+       
     }
 
     .productos{
@@ -472,7 +477,8 @@ footer p{
         width: 100%;
         margin: 0px auto;
         border-radius: 20px;
-        margin-bottom: 50px;
+        margin-bottom: 300px;
+        
     }
 
     
@@ -544,7 +550,8 @@ footer p{
         width: 80%;
         margin:  auto;
         border-radius: 20px;
-        margin-bottom: 100px;
+        margin-bottom: 300px;
+        
     }
 
     .productos img{
@@ -618,7 +625,8 @@ footer p{
         width: 80%;
         margin: 0px auto;
         border-radius: 20px;
-        margin-bottom: 100px;
+        margin-bottom: 300px;
+        
     }
 
     .productos img{
@@ -685,7 +693,7 @@ footer p{
     main{
         padding: 50px;
         border-radius: 20px;
-        margin-bottom: 100px;
+        margin-bottom: 300px;
     }
 
     .productos img{
