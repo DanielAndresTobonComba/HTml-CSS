@@ -1,6 +1,22 @@
 let ids = []
 
 
+console.log("Nombre: " + localStorage.getItem("nombre"))
+console.log("Contraseña: " + localStorage.getItem("contraseña"))
+
+function mostrarFactura (){
+    let contenedorFactura = document.querySelector("tbody")
+    let botonCompra = document.getElementById("botonConfirmarCompra")
+
+    if(contenedorFactura.style.visibility == "visible"){
+        contenedorFactura.style.visibility = "hidden"
+        botonCompra.style.visibility = "hidden"
+    }else {
+        contenedorFactura.style.visibility = "visible"
+        botonCompra.style.visibility = "visible"
+    }
+}
+
 function crearFactura(tarjeta, cantidad , accion) {
     console.log(accion)
     let contenedor = document.querySelector(".facturaActual");
@@ -32,12 +48,12 @@ function crearFactura(tarjeta, cantidad , accion) {
                         
 
                         let fila = tabla.insertRow();
-                        let celdaCodigo = fila.insertCell(0);
-                        let celdaNombre = fila.insertCell(1);
-                        let celdaCantidad = fila.insertCell(2);
-                        let celdaPrecio = fila.insertCell(3);
+                        
+                        let celdaNombre = fila.insertCell(0);
+                        let celdaCantidad = fila.insertCell(1);
+                        let celdaPrecio = fila.insertCell(2);
     
-                        celdaCodigo.textContent = codigo;
+                      
                         celdaNombre.textContent = nombre;
                         celdaPrecio.textContent = precio * cantidad;
                         celdaCantidad.textContent = cantidad;
@@ -50,8 +66,8 @@ function crearFactura(tarjeta, cantidad , accion) {
                     }else{
                         let precio = producto.precio;
                         let fila = document.getElementById(id)
-                        let casillaPrecio = fila.children[3]
-                        let cant = fila.children[2]
+                        let casillaPrecio = fila.children[2]
+                        let cant = fila.children[1]
                         
                         let nuevoPrecio = parseFloat(precio) * cantidad;
                         
@@ -77,8 +93,8 @@ function crearFactura(tarjeta, cantidad , accion) {
                     
                     let precio = producto.precio;
                     let fila = document.getElementById(id)
-                    let casillaPrecio = fila.children[3]
-                    let cant = fila.children[2]
+                    let casillaPrecio = fila.children[2]
+                    let cant = fila.children[1]
                     
                     let nuevoPrecio = parseFloat(precio) * (cantidad);
                     
@@ -190,7 +206,6 @@ function datos(){
 }
 
 
-
 function insertarProductos() {
 
     let contenedor = document.querySelector(".productos")
@@ -256,8 +271,6 @@ function insertarProductos() {
 
 
 }
-
-
 
 function restar(boton) {
    

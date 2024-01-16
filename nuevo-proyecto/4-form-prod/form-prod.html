@@ -12,6 +12,7 @@
     </div>
     
     
+    
 
     <header id="header">
         <div class="seccionLogo ">
@@ -92,14 +93,12 @@
         <p>Nombre:<span id="nombre"></span></p>
         <p>Contraseña: <span id="acceso"></span></p> 
 
+        
 
     </div>
 
     <div id="seccionRegistro" style="visibility: hidden;">
 
-        <button onclick="salirRegistro(this)">Cerrar</button>
-        <button type="submit">Enviar</button>
-        
     </div>
 
     
@@ -114,12 +113,15 @@
     
     </section> 
 
+    <button onclick="mostrarFactura()" id="botonMostrarFactura" >Mostrar Factura</button>
+
     <section class="facturaActual">
+
+        <button style="visibility: hidden;" id="botonConfirmarCompra">Confirmar Compra</button>
 
         <table border="1" style="visibility: hidden;">
 
             <tr>
-                <th>Codigo</th>
                 <th>Nombre</th>
                 <th>Cant</th>
                 <th>Valor</th>
@@ -129,6 +131,8 @@
 
 
         </table>
+
+        
 
     </section>
         
