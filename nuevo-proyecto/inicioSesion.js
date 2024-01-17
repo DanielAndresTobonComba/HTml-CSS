@@ -276,7 +276,7 @@ function tomarDatosRegistro() {
                     console.log("existe esa contraseña")
                     document.getElementById("contraseñaRegistro").value = "ya existe esa contraseña"
 
-                }else{
+                }else if(tamaño == usuario.id + 1){
 
                     console.log("datos tomados");
                     console.log(nombreUsuario + correoUsuario + telefonoUsuario + contraseñaUsuario)
