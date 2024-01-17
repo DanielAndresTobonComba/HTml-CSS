@@ -166,7 +166,7 @@ main {
 }
 
 .tarjeta {
-    min-width: 200px;
+    min-width: 100px;
     max-width: 240px;
     margin: 10px auto;
     height: 330px;
@@ -251,6 +251,92 @@ footer p {
 }
 
 
+/* Inicio de sesion */ 
+/* Mostrar datos ususario */
+/* Registro de usuario */
+
+
+#tarjetaIniciarSesion , #seccionMostrarDatos , #tarjetaCerrarSesion  {
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: rgb(241, 90, 90);
+    left: 38%;
+    top: 38%;
+    position: fixed;
+    visibility: hidden;
+
+}
+
+#seccionMostrarDatos button , #tarjetaCerrarSesion button {
+    width: 30%;
+    margin: 0PX auto;
+}
+
+#entradaDatos {
+
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 200px;
+    margin: 20px auto;
+}
+
+#enlaceRegistro {
+    margin-top: 10px;
+}
+
+
+#seccionRegistro input {
+    width: 50%;
+
+}
+
+#botonesRegistro {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 0px auto;
+}
+
+
+
+
+/* #seccionMostrarDatos {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    border-radius: 20px;
+    height: 200px;
+    visibility: hidden;
+    background-color: rgb(241, 90, 90);
+    left: 38%;
+    top: 38%;
+    position: fixed;
+} */
+
+
+#seccionRegistro {
+    text-align: center;
+    width: 300px;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #083c64;
+    left: 38%;
+    top: 38%;
+    position: fixed;
+}
+
+/* tarjeta cerrar sesion */
+
+
 
 
 
@@ -309,9 +395,48 @@ footer p {
         margin: 0px;
     }
 
-    /* iniciar sesion */
+    /* nuestros clientes */
 
-    #tarjetaIniciarSesion {
+    .imagenTarjeta1 {
+        height: 30%;
+    }
+    
+    .imagenTarjeta2 {
+        height: 30%;
+        
+    }
+    
+    .imagenTarjeta3 {
+        height: 30%;
+        width: 100%;
+        background-image: url("imagenes/almacenesArreglado.png");
+        background-size: cover;
+        border-radius: 10px;
+    
+    }
+
+    .tarjeta {
+        width: 150px;
+        margin: 10px auto;
+        background-color: rgb(233, 36, 36);
+        border-radius: 15px;
+        padding: 10px;
+    }
+
+    /* footer */
+
+    footer p{
+        font-size: 12px;
+    }
+
+    .seccionRedesSociales{
+        flex-direction: column;
+    }
+
+
+    /* iniciar sesion *//* registro usuarios */
+
+    #tarjetaIniciarSesion , #seccionMostrarDatos , #seccionRegistro , #tarjetaCerrarSesion  {
         left: 5%;
         top: 18%;
         width: 200px;
@@ -328,16 +453,9 @@ footer p {
         width: 200px;
     }
 
-
-    /* footer */
-
-    footer p{
-        font-size: 12px;
-    }
-
-    .seccionRedesSociales{
-        flex-direction: column;
-    }
+    
+    
+    
 
     
 }
@@ -394,9 +512,13 @@ footer p {
     }
 
 
+    
+
+
+
     /* iniciar sesion */
 
-    #tarjetaIniciarSesion {
+    #tarjetaIniciarSesion , #seccionMostrarDatos , #seccionRegistro  {
         left: 5%;
         top: 18%;
         width: 300px;
@@ -446,7 +568,7 @@ footer p {
     
     /* iniciar sesion */
 
-    #tarjetaIniciarSesion {
+    #tarjetaIniciarSesion , #seccionMostrarDatos , #seccionRegistro {
         left: 30%;
         top: 30%;
     }

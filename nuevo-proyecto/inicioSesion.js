@@ -1,4 +1,15 @@
 
+function mostrarTarjeta (){
+    let tarjeta = document.getElementById("tarjetaCerrarSesion")
+
+    if(tarjeta.style.visibility == "hidden"){
+        tarjeta.style.visibility = "visible"
+    }else {
+        tarjeta.style.visibility = "hidden"
+    }
+
+   
+}
 
 /* Seccion tarjeta incio sesion */
 
