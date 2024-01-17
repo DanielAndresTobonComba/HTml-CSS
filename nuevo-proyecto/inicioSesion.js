@@ -288,7 +288,7 @@ function tomarDatosRegistro() {
                     localStorage.setItem("nombre", nombreUsuario)
                     localStorage.setItem("contraseña", contraseñaUsuario);
 
-
+                    
                     fetch("usuarios.json", {
                         method: "POST",
                         headers: {
@@ -302,8 +302,9 @@ function tomarDatosRegistro() {
                             correo: correoUsuario
                         })
                     })
-                        
-                        
+                        .then(response => response.json())
+                        .then(json => console.log(json))
+                        .catch(error => console.error("Error !!!" + error));
                     
                 }
             })
