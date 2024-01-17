@@ -1,59 +1,37 @@
 
-/* function informacionUsuario() {
-
-    let usuario = document.getElementById("nombreMD").textContent
-    let contraseña = document.getElementById("contraseñaMD").textContent
-
-    console.log("usuario: " + usuario)
-    console.log("contraseña: " + contraseña)
-
-    if (usuario != "" && contraseña != "") {
-        
-        let tarjeta = document.getElementById("tarjetaIniciarSesion")
-        tarjeta.style.visibility = "hidden"
-
-        let contenedor = document.getElementById("seccionMostrarDatos")
-        contenedor.style.visibility = "visible"
-        
-
-    }
-
-    } */
-
-
 
 /* Seccion tarjeta incio sesion */
 
 function iniciarSesion() {
-    
+
     let tarjetaInicioSesion = document.getElementById("tarjetaIniciarSesion")
 
-    console.log(localStorage.getItem("nombreIS"))
-    console.log(localStorage.getItem("contraseñaIS"))
+    console.log(localStorage.getItem("nombre"))
+    console.log(localStorage.getItem("contraseña"))
 
-    if(localStorage.getItem("nombreIS") != null && localStorage.getItem("contraseñaIS") != null ){
+    if (localStorage.getItem("nombre") != null && localStorage.getItem("contraseña") != null) {
         console.log("Existen los datos")
-    }else{
+    } else {
         tarjetaInicioSesion.style.visibility = "visible"
     }
 
 
-    
-    
+
+
 }
 
 
 function cerrarInicioSesion() {
+
     let tarjetaInicioSesion = document.getElementById("tarjetaIniciarSesion")
     tarjetaInicioSesion.style.visibility = "hidden"
-
 
     document.getElementById("usuarioInicioSesion").value = ""
     document.getElementById("contraseñaInicioSesion").value = ""
 
 
 
-} 
+}
 
 
 /* Seccion mostrarDatosIS */
@@ -73,98 +51,136 @@ function mostrarDatosIS() {
     let spanUsuario = document.getElementById("spanUsuario")
     let spanContraseña = document.getElementById("spanContraseña")
 
-    
 
     console.log("usuarioIS: " + usuarioIS)
     console.log("contraseñaIS: " + contraseñaIS)
-    
+
+    /* inputs de la tarjeta inicio sesion */
+    let inputNombre = document.getElementById("usuarioInicioSesion")
+    let inputContraseña = document.getElementById("contraseñaInicioSesion")
 
 
-    if(usuarioIS != "" && contraseñaIS != ""){
+    if (usuarioIS != "" && contraseñaIS != "") {
 
-        localStorage.setItem("nombre" , usuarioIS)
-        localStorage.setItem("contraseña" , contraseñaIS)
+        fetch("../usuarios.json")
+            .then(data => data.json())
+            .then(json => {
 
+                json.usuarios.forEach(usuario => {
+
+                    if (usuario.nombre == usuarioIS && usuario.contraseña == contraseñaIS) {
+
+                        localStorage.setItem("nombre", usuarioIS)
+                        localStorage.setItem("contraseña", contraseñaIS)
+
+            
+                        cerrarInicioSesion()
+
+                        tarjetaMostrarDatos.style.visibility = "visible"
+                        spanUsuario.textContent = localStorage.getItem("nombre")
+
+                        spanContraseña.textContent = localStorage.getItem("contraseña")
+
+
+                        console.log("Datos de inicio de sesion Guardados")
+                        console.log(localStorage.getItem("nombre"))
+                        console.log(localStorage.getItem("contraseña"))
+                    }
+                    else if (usuario.nombre != usuarioIS && usuario.contraseña != contraseñaIS) {
+
+                        inputNombre.value = "el nombre no existe"
+
+                        inputContraseña.value = ""
+                        inputContraseña.placeholder = "la contraseña no existe"
+
+                        
+
+                        
+                
+
+
+                    } 
+                })
+            })
+
+            
+
+           
+
+
+    } else{
+        
         tarjetaMostrarDatos.style.visibility = "visible"
         spanUsuario.textContent = localStorage.getItem("nombre")
         spanContraseña.textContent = localStorage.getItem("contraseña")
-
-        
-        console.log("Datos de inicio de sesion Guardados")
-         
-        console.log(localStorage.getItem("nombre"))
-        console.log(localStorage.getItem("contraseña"))
-
-        
-
-    }else{
-
-        tarjetaMostrarDatos.style.visibility = "visible"
-        spanUsuario.textContent = localStorage.getItem("nombre")
-        spanContraseña.textContent = localStorage.getItem("contraseña")
-
-        console.log("datos de registro guardados")
-
-        console.log(localStorage.getItem("nombre"))
-        console.log(localStorage.getItem("contraseña"))
     }
+    /*  else {
 
-     
+        let nombreGuardado = localStorage.getItem("nombre")
+        let contraseñaGuardada = localStorage.getItem("contraseña")
 
-   /*let usuario = document.getElementById("usuarioIS").value;
-    let contraseña = document.getElementById("contraseñaIS").value;
+        console.log("entre a datosregistro")
+        console.log(nombreGuardado + contraseñaGuardada)
 
-    console.log(usuario);
-    console.log(contraseña);
+        fetch("../usuarios.json")
+            .then(data => data.json())
+            .then(json => {
 
-    let tarjetaIniciarSesion = document.getElementById("tarjetaIniciarSesion");
-    let nombre = document.getElementById("nombreMD");
-    let acceso = document.getElementById("contraseñaMD");
-    let elemento = document.getElementById("seccionMostrarDatos");
+                json.usuarios.forEach(usuario => {
 
-    tarjetaIniciarSesion.style.visibility = "hidden";
+                    console.log("nombre" + usuario.nombre)
 
-    if (usuario !== "" && contraseña !== "") {
-        nombre.innerHTML = "Nombre: " + usuario;
-        acceso.innerHTML = "Contraseña: " + contraseña;
+                    if (usuario.nombre.toLowerCase() == nombreGuardado.toLowerCase()) {
+                        
+                        let input = document.getElementById("nombreRegistro")
+                        input.value = "ese nombre ya existe"
 
-        localStorage.setItem("nombre", usuario);
-        localStorage.setItem("contraseña", contraseña);
 
-        if (elemento.style.visibility === "visible") {
-            elemento.style.visibility = "hidden";
-        } else {
-            elemento.style.visibility = "visible";
-        }
-    } else {
-        alert("Por favor, ingrese tanto usuario como contraseña.");
-    } */
 
-    /* else if (dato1 != "" && dato2 != ""){
-        let nombre = document.getElementById("nombre")
-        let acceso = document.getElementById("acceso")
+                    } else if (usuario.contraseña == contraseñaGuardada) {
+                        
+                        let input = document.getElementById("contraseñaRegistro")
+                        input.value = "ya existe esa contraseña"
 
-        nombre.innerHTML = dato1
-        acceso.innerHTML = dato2
+                    }
+                    else {
+                        console.log("usuario Valido")
 
-        localStorage.setItem("nombre" , dato1)
-        localStorage.setItem("contraseña" , dato2)
+                        cerrarInicioSesion()
 
-        let elemento = document.getElementById("seccionMostrarDatos")
+                        tarjetaMostrarDatos.style.visibility = "visible"
 
-        if (elemento.style.visibility == "visible") {
-            elemento.style.visibility = "hidden"
-        } else {
-            elemento.style.visibility = "visible"
-        }
-    } */
+                        spanUsuario.textContent = localStorage.getItem("nombre")
+
+                        spanContraseña.textContent = localStorage.getItem("contraseña")
+
+                        localStorage.setItem("nombre", usuarioIS)
+                        localStorage.setItem("contraseña", contraseñaIS)
+
+                        console.log("Datos de inicio de sesion Guardados")
+
+                        console.log(localStorage.getItem("nombre"))
+                        console.log(localStorage.getItem("contraseña"))
+                    }
+                })
+            }) 
+            
+        }*/
+
+
+      
+
+
+
+
+    
 }
 
 
-function cerrarDatos (){
+function cerrarDatos() {
     let padre = document.getElementById("seccionMostrarDatos")
     padre.style.visibility = "hidden"
-} 
+}
 
 
 
@@ -216,7 +232,7 @@ function registro(enlace) {
 
 
 
-function tomarDatosRegistro (){
+function tomarDatosRegistro() {
 
     let tarjetaRegistro = document.getElementById("seccionRegistro")
 
@@ -225,7 +241,7 @@ function tomarDatosRegistro (){
     let telefono = document.getElementById("Telefono").value;
     let contraseña = document.getElementById("contraseñaRegistro").value;
 
-    
+
 
     if (nombre === "") {
         document.getElementById("nombreRegistro").value = "Dato Invalido";
@@ -239,23 +255,50 @@ function tomarDatosRegistro (){
     } else if (contraseña === "") {
         document.getElementById("contraseñaRegistro").value = "Dato Invalido";
         return;
-    } else {
+    } else { 
 
+        fetch("../usuarios.json")
+        .then(data => data.json())
+        .then(json => {
+
+            json.usuarios.forEach(usuario => {
+
+                console.log("nombre" + usuario.nombre)
+
+                if (usuario.nombre.toLowerCase() == nombre.toLowerCase()) {
+                    console.log("esxiste ese nombre")
+                    document.getElementById("nombreRegistro").value = "ese nombre ya existe"
+
+                } else if (usuario.contraseña == contraseña) {
+                    console.log("existe esa contraseña")
+                    document.getElementById("contraseñaRegistro").value = "ya existe esa contraseña"
+
+                }else{
+
+                    console.log("datos tomados");
+                    console.log(nombre + correo + telefono + contraseña)
+            
+                    /* Escondo la tarjeta de registro */
+                    tarjetaRegistro.style.visibility = "hidden"
+            
+                    /* Guardo los datos */
+                    localStorage.setItem("nombre", nombre)
+                    localStorage.setItem("contraseña", contraseña);
+                }
+            })
+
+        })
         
+    
+    
+    
+       
 
-        console.log("datos tomados");
-        console.log(nombre + correo + telefono + contraseña)
 
-        /* Escondo la tarjeta de registro */
-        tarjetaRegistro.style.visibility = "hidden"
-
-        /* Envio los datos */
-        localStorage.setItem("nombre" , nombre)
-        localStorage.setItem("contraseña" , contraseña);
     }
-    
-    
-} 
+
+
+}
 
 
 function salirRegistro() {
@@ -263,13 +306,13 @@ function salirRegistro() {
     let tarjetaRegistro = document.getElementById("seccionRegistro")
     tarjetaRegistro.style.visibility = "hidden"
 
-} 
+}
 
 
 
 /* Seccion cerrar Sesion */
 
-function cerrarSesion (){
+function cerrarSesion() {
 
     localStorage.clear()
     console.log(localStorage.getItem("nombreIS"))
@@ -278,4 +321,8 @@ function cerrarSesion (){
 
     document.getElementById("usuarioInicioSesion").value = ""
     document.getElementById("contraseñaInicioSesion").value = ""
-} 
+}
+
+
+
+

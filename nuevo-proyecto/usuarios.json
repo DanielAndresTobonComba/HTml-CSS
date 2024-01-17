@@ -1,0 +1,11 @@
+{
+    "usuarios" : [
+        {
+           "id" : 0 ,
+           "nombre" : "Fernando",
+           "contraseña":"ff",
+           "telefono" : "3126578989",
+           "correo" : "fernando@gmail.com"
+        }
+    ]
+}
