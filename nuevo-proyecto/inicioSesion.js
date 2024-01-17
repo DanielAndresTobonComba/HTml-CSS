@@ -236,23 +236,23 @@ function tomarDatosRegistro() {
 
     let tarjetaRegistro = document.getElementById("seccionRegistro")
 
-    let nombre = document.getElementById("nombreRegistro").value;
-    let correo = document.getElementById("correo").value;
-    let telefono = document.getElementById("Telefono").value;
-    let contraseña = document.getElementById("contraseñaRegistro").value;
+    let nombreUsuario = document.getElementById("nombreRegistro").value;
+    let correoUsuario = document.getElementById("correo").value;
+    let telefonoUsuario = document.getElementById("Telefono").value;
+    let contraseñaUsuario = document.getElementById("contraseñaRegistro").value;
 
 
 
-    if (nombre === "") {
+    if (nombreUsuario === "") {
         document.getElementById("nombreRegistro").value = "Dato Invalido";
         return;
-    } else if (correo === "") {
+    } else if (correoUsuario === "") {
         document.getElementById("correo").value = "Dato Invalido";
         return;
-    } else if (telefono === "") {
+    } else if (telefonoUsuario === "") {
         document.getElementById("Telefono").value = "Dato Invalido";
         return;
-    } else if (contraseña === "") {
+    } else if (contraseñaUsuario === "") {
         document.getElementById("contraseñaRegistro").value = "Dato Invalido";
         return;
     } else { 
@@ -261,29 +261,50 @@ function tomarDatosRegistro() {
         .then(data => data.json())
         .then(json => {
 
+            let tamaño = json.usuarios.length
+            
+
             json.usuarios.forEach(usuario => {
 
                 console.log("nombre" + usuario.nombre)
 
-                if (usuario.nombre.toLowerCase() == nombre.toLowerCase()) {
+                if (usuario.nombre.toLowerCase() == nombreUsuario.toLowerCase()) {
                     console.log("esxiste ese nombre")
                     document.getElementById("nombreRegistro").value = "ese nombre ya existe"
 
-                } else if (usuario.contraseña == contraseña) {
+                } else if (usuario.contraseña == contraseñaUsuario) {
                     console.log("existe esa contraseña")
                     document.getElementById("contraseñaRegistro").value = "ya existe esa contraseña"
 
                 }else{
 
                     console.log("datos tomados");
-                    console.log(nombre + correo + telefono + contraseña)
+                    console.log(nombreUsuario + correoUsuario + telefonoUsuario + contraseñaUsuario)
             
                     /* Escondo la tarjeta de registro */
                     tarjetaRegistro.style.visibility = "hidden"
             
                     /* Guardo los datos */
-                    localStorage.setItem("nombre", nombre)
-                    localStorage.setItem("contraseña", contraseña);
+                    localStorage.setItem("nombre", nombreUsuario)
+                    localStorage.setItem("contraseña", contraseñaUsuario);
+
+
+                    fetch("usuarios.json", {
+                        method: "POST",
+                        headers: {
+                            "Content-type": "application/json; charset=UTF-8"
+                        },
+                        body: JSON.stringify({
+                            id: tamaño,
+                            nombre: nombreUsuario,
+                            contraseña: contraseñaUsuario,
+                            telefono: telefonoUsuario,
+                            correo: correoUsuario
+                        })
+                    })
+                        
+                        
+                    
                 }
             })
 
