@@ -222,7 +222,6 @@ main {
 
 footer {
     background-color: rgb(233, 36, 36);
-    height: 220px;
     color: white;
     text-align: center;
     width: 100%;
@@ -327,6 +326,17 @@ footer p {
 
     #enlaceRegistro{
         width: 200px;
+    }
+
+
+    /* footer */
+
+    footer p{
+        font-size: 12px;
+    }
+
+    .seccionRedesSociales{
+        flex-direction: column;
     }
 
     

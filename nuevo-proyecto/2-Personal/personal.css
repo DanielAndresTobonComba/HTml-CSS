@@ -231,7 +231,6 @@ body {
 
 footer {
     background-color: rgb(233, 36, 36);
-    height: 220px;
     color: white;
     text-align: center;
     width: 100%;
@@ -376,6 +375,8 @@ footer p {
         width: 30%;
     }
 
+    /* main */
+
     .tituloNuestro {
         margin-top: 8%;
     }
@@ -393,6 +394,13 @@ footer p {
 
 
     }
+
+    .tarjetaEmpleados img{
+        margin: auto;
+        height: 80px;
+    }
+
+    /* beneficios */
 
     .informacionTarjetas {
         font-size: 15px;
@@ -416,23 +424,14 @@ footer p {
         font-size: 15px;
     }
 
+    /* footer */
     
-    /* iniciar sesion */
-
-    #tarjetaIniciarSesion {
-        left: 5%;
-        top: 18%;
-        width: 200px;
-        text-align: center;
-    
+    footer p{
+        font-size: 12px;
     }
 
-    #tarjetaIniciarSesion input{
-        width: 140px;
-    }
-
-    #enlaceRegistro{
-        width: 150px;
+    .seccionRedesSociales{
+        flex-direction: column;
     }
 
     /* iniciar sesion */

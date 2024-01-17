@@ -197,9 +197,8 @@ main div p{
 
 /* seccion footer */
 
-footer{
-    background-color: rgb(233, 36, 36) ;
-    height: 220px;
+footer {
+    background-color: rgb(233, 36, 36);
     color: white;
     text-align: center;
     width: 100%;
@@ -343,6 +342,8 @@ footer p{
         width: 30%;
     }
 
+    /* main */
+    
     main {
         flex-direction: column;
     }
@@ -386,6 +387,18 @@ footer p{
         margin: 0px auto;
         
     }
+
+
+    /* footer */
+
+    footer p{
+        font-size: 12px;
+    }
+
+    .seccionRedesSociales{
+        flex-direction: column;
+    }
+
 
     /* iniciar sesion */
 

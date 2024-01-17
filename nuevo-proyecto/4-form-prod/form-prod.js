@@ -4,6 +4,20 @@ let valorTotal = 0
 console.log("Nombre: " + localStorage.getItem("nombre"))
 console.log("Contraseña: " + localStorage.getItem("contraseña"))
 
+let nombreUsuario = localStorage.getItem("nombre")
+let contraseñaUsuario = localStorage.getItem("contraseña")
+
+let aviso = document.getElementById("aviso")
+
+if(nombreUsuario == null || contraseñaUsuario == null){
+    
+    aviso.style.visibility = "visible"
+
+}else {
+
+    aviso.style.visibility = "hidden"
+}
+
 function mostrarFactura (){
     let factura = document.querySelector(".facturaActual")
     let contenedorFactura = document.querySelector("tbody")
@@ -21,13 +35,17 @@ function mostrarFactura (){
 }
 
 function generarFactura(){
+
+
+   
     console.log("entre a generar factura")
 
     let contenedor = document.querySelector("tbody")
     let hijos = contenedor.children
 
-    let nombreUsuario = localStorage.getItem("nombre")
-    let contraseñaUsuario = localStorage.getItem("contraseña")
+    
+
+    
     
     console.log("Usuario: " + localStorage.getItem("nombre"))
     console.log("Contraseña: " + localStorage.getItem("contraseña"))
