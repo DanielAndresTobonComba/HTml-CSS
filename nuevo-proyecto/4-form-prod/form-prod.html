@@ -113,25 +113,30 @@
     
     </section> 
 
-    <button onclick="mostrarFactura()" id="botonMostrarFactura" >Mostrar Factura</button>
 
-    <section class="facturaActual">
 
-        <button style="visibility: hidden;" id="botonConfirmarCompra">Confirmar Compra</button>
+    <button onclick="mostrarFactura()" id="botonMostrarFactura" >Generar Factura</button>
 
-        <table border="1" style="visibility: hidden;">
+    <section class="facturaActual" style="visibility: hidden;">
 
+        <button style="visibility: hidden;" id="botonConfirmarCompra" onclick="generarFactura()">Confirmar Compra</button>
+
+        <table border="0px" style="visibility: hidden;">
             <tr>
                 <th>Nombre</th>
                 <th>Cant</th>
                 <th>Valor</th>
             </tr>
 
-            
-
-
         </table>
 
+        <section id="seccionValorTotal">
+            <p>Total</p>
+            <span id="valorTotalCasilla">0</span>
+        </section>
+        
+            
+        
         
 
     </section>

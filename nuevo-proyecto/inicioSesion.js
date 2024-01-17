@@ -289,7 +289,7 @@ function tomarDatosRegistro() {
                     localStorage.setItem("contraseña", contraseñaUsuario);
 
                     
-                    fetch("usuarios.json", {
+                    fetch("http://localhost:3000/usuarios", {
                         method: "POST",
                         headers: {
                             "Content-type": "application/json; charset=UTF-8"
@@ -299,7 +299,8 @@ function tomarDatosRegistro() {
                             nombre: nombreUsuario,
                             contraseña: contraseñaUsuario,
                             telefono: telefonoUsuario,
-                            correo: correoUsuario
+                            correo: correoUsuario , 
+                            facturas:[]
                         })
                     })
                         .then(response => response.json())

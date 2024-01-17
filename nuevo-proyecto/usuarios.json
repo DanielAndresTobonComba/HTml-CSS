@@ -1,11 +1,27 @@
 {
-    "usuarios" : [
-        {
-           "id" : 0 ,
-           "nombre" : "Fernando",
-           "contraseña":"ff",
-           "telefono" : "3126578989",
-           "correo" : "fernando@gmail.com"
-        }
-    ]
+  "usuarios": [
+    {
+      "id": 0,
+      "nombre": "Fernando",
+      "contraseña": "ff",
+      "telefono": "3126578989",
+      "correo": "fernando@gmail.com",
+      "facturas": [
+        {}
+      ]
+    },
+    {
+      "id": 1,
+      "nombre": "Daniel",
+      "contraseña": "DATC2003",
+      "telefono": "1352352",
+      "correo": "oiasubvab@ocjnas",
+      "facturas": [
+        {}
+      ]
+    }
+  ],
+  "facturas": [
+    
+  ]
 }

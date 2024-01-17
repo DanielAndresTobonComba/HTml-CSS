@@ -1,23 +1,98 @@
 let ids = []
-
+let valorTotal = 0
 
 console.log("Nombre: " + localStorage.getItem("nombre"))
 console.log("Contraseña: " + localStorage.getItem("contraseña"))
 
 function mostrarFactura (){
+    let factura = document.querySelector(".facturaActual")
     let contenedorFactura = document.querySelector("tbody")
     let botonCompra = document.getElementById("botonConfirmarCompra")
 
     if(contenedorFactura.style.visibility == "visible"){
         contenedorFactura.style.visibility = "hidden"
         botonCompra.style.visibility = "hidden"
+        factura.style.visibility = "hidden"
     }else {
         contenedorFactura.style.visibility = "visible"
         botonCompra.style.visibility = "visible"
+        factura.style.visibility = "visible"
     }
 }
 
+function generarFactura(){
+    console.log("entre a generar factura")
+
+    let contenedor = document.querySelector("tbody")
+    let hijos = contenedor.children
+
+    let nombreUsuario = localStorage.getItem("nombre")
+    let contraseñaUsuario = localStorage.getItem("contraseña")
+    
+    console.log("Usuario: " + localStorage.getItem("nombre"))
+    console.log("Contraseña: " + localStorage.getItem("contraseña"))
+
+    for(let i = 1 ; i <= hijos.length ; i++){
+
+        let fila = hijos[i].children
+
+        let nombre = fila[0].textContent
+        let cantidad = fila[1].textContent
+        let precio = fila[2].textContent
+
+        console.log("Nombre: " + nombre)
+        console.log("Cantidad: "+ cantidad)
+        console.log("Precio: " + precio)
+
+        
+
+        
+        fetch("../usuarios.json")
+
+            .then(data => data.json())
+            .then(json => {
+
+              
+                json.usuarios.forEach(usuario => {
+                    if(usuario.nombre === nombreUsuario){
+
+                        let tamaño = json.facturas.length 
+
+                        fetch(`http://localhost:3000/facturas/`, {
+                            method: "POST",
+                            headers: {
+                                "Content-type": "application/json; charset=UTF-8"
+                            },
+                            body: JSON.stringify({
+                                
+                                id : tamaño,
+                                comprador: usuario.nombre,
+                                idComprador: usuario.id,
+                                nombreProducto: nombre,
+                                cantidadProducto: cantidad,
+                                pricioTotal: precio
+                            })
+                        })
+                            .then(response => response.json())
+                            .then(json => console.log(json))
+                            .catch(error => console.error("Error !!!" + error));
+                        
+                    }
+
+                })
+            })
+        
+    }
+
+
+
+    
+
+   
+}
+
 function crearFactura(tarjeta, cantidad , accion) {
+
     console.log(accion)
     let contenedor = document.querySelector(".facturaActual");
     let tabla = document.querySelector("table");
@@ -28,12 +103,14 @@ function crearFactura(tarjeta, cantidad , accion) {
     let nombreProducto = parrafo[0].textContent;
     let tbody = document.querySelector("tbody")
 
+    let casillaValorTotal = document.getElementById("valorTotalCasilla")
+
     fetch("productos.json")
         .then(data => data.json())
         .then(json => {
 
             if(accion === "sumar"){
-                tbody.style.visibility = "visible"
+                //tbody.style.visibility = "visible"
                 json.productos.forEach(producto => {
 
                 if(producto.nombre == nombreProducto){
@@ -58,24 +135,28 @@ function crearFactura(tarjeta, cantidad , accion) {
                         celdaPrecio.textContent = precio * cantidad;
                         celdaCantidad.textContent = cantidad;
                         
-                        
+                        valorTotal += precio
+                        casillaValorTotal.textContent = valorTotal
+
                         fila.setAttribute("id" , codigo)
-                        contenedor.appendChild(tabla);
+                        contenedor.prepend(tabla);
                         console.log("No esta en el arreglo")
                         ids.push(id)
+
                     }else{
                         let precio = producto.precio;
                         let fila = document.getElementById(id)
                         let casillaPrecio = fila.children[2]
                         let cant = fila.children[1]
                         
-                        let nuevoPrecio = parseFloat(precio) * cantidad;
+                        let nuevoPrecio = precio * cantidad;
                         
                         casillaPrecio.textContent = nuevoPrecio;
 
-                        cant.textContent = cantidad
-                        
-                        
+                        cant.textContent =  cantidad
+
+                        valorTotal += precio
+                        casillaValorTotal.textContent = valorTotal
                     }
 
                 }
@@ -101,6 +182,9 @@ function crearFactura(tarjeta, cantidad , accion) {
                     casillaPrecio.textContent = nuevoPrecio;
 
                     cant.textContent = cantidad
+
+                    valorTotal -= precio
+                    casillaValorTotal.textContent = valorTotal
 
                     if(cant.textContent == "0"){
                         fila.remove()
