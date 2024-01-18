@@ -255,12 +255,6 @@ footer p {
 
 
 
-
-/* Inicio de sesion */ 
-/* Mostrar datos ususario */
-/* Registro de usuario */
-
-
 #tarjetaIniciarSesion , #seccionMostrarDatos , #tarjetaCerrarSesion  {
 
     text-align: center;
@@ -270,7 +264,7 @@ footer p {
     width: 300px;
     border-radius: 20px;
     padding: 5px;
-    background-color: rgb(241, 90, 90);
+    background-color: rgb(231 221 221);
     left: 38%;
     top: 38%;
     position: fixed;
@@ -278,10 +272,40 @@ footer p {
 
 }
 
-#seccionMostrarDatos button , #tarjetaCerrarSesion button {
+#seccionMostrarDatos button , #tarjetaCerrarSesion button , #tarjetaIniciarSesion button {
     width: 30%;
     margin: 0PX auto;
+    border-radius: 3px ;
+    border: none;
+    background-color: #7FC7D9;
+    height: 20px;
 }
+
+
+#tarjetaIniciarSesion input{
+    background-color: #799cd9;
+    margin: 5px;
+    border-radius: 3px ;
+    border: none;
+    color: black;
+    height: 25px;
+}
+
+#tarjetaIniciarSesion a{
+    background-color: #799cd9;
+    width: 50%;
+    height: 20px;
+    margin: 5px auto;
+    border-radius: 3px ;
+}
+
+#botonesCerrarSesion{
+    display: flex;
+}
+
+
+
+
 
 #entradaDatos {
 
@@ -344,7 +368,7 @@ footer p {
 
 #contenedorHistorial{
     text-align: center;
-    background-color: wheat;
+    background-color: white;
     width: 80%;
     position: fixed;
     left: 10%;
@@ -674,7 +698,7 @@ footer p {
 
      /* iniciar sesion */
 
-     #tarjetaIniciarSesion , #seccionMostrarDatos , #seccionRegistro  {
+     #tarjetaIniciarSesion , #seccionMostrarDatos , #seccionRegistro ,#tarjetaCerrarSesion {
         left: 5%;
         top: 18%;
         width: 300px;
@@ -780,7 +804,7 @@ footer p {
 
     /* iniciar sesion */
 
-    #tarjetaIniciarSesion , #seccionMostrarDatos , #seccionRegistro {
+    #tarjetaIniciarSesion , #seccionMostrarDatos , #seccionRegistro , #tarjetaCerrarSesion{
         left: 30%;
         top: 30%;
     }

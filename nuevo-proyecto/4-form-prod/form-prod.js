@@ -2,7 +2,19 @@ let ids = []
 let valorTotal = 0
 let numero = 0
 
+function cerrarHistorial(){
 
+
+    let seccionHistorial = document.getElementById("contenedorHistorial")
+    let botonSumar = document.getElementById("botonSumar")
+    let botonRestar = document.getElementById("botonRestar")
+
+    seccionHistorial.style.visibility = "hidden"
+    botonRestar.style.visibility = "hidden"
+    botonSumar.style.visibility = "hidden"
+
+    
+}
 
 
 function historialFacturas(accion = "") {
@@ -16,6 +28,9 @@ function historialFacturas(accion = "") {
     let nombreUsuario = localStorage.getItem("nombre")
     let botonSumar = document.getElementById("botonSumar")
     let botonRestar = document.getElementById("botonRestar")
+
+    botonRestar.style.visibility = "visible"
+    botonSumar.style.visibility = "visible"
 
     
 
