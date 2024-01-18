@@ -258,10 +258,7 @@ footer p {
     justify-content: space-evenly;
 }
 
-/* Inicio de sesion */
-
-
-#tarjetaIniciarSesion {
+#tarjetaIniciarSesion , #seccionMostrarDatos , #tarjetaCerrarSesion  {
 
     text-align: center;
     display: flex;
@@ -274,7 +271,13 @@ footer p {
     left: 38%;
     top: 38%;
     position: fixed;
+    visibility: hidden;
 
+}
+
+#seccionMostrarDatos button , #tarjetaCerrarSesion button {
+    width: 30%;
+    margin: 0PX auto;
 }
 
 #entradaDatos {
@@ -286,39 +289,10 @@ footer p {
     margin: 20px auto;
 }
 
-/* Mostrar datos ususario */
-
-#seccionMostrarDatos {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 300px;
-    border-radius: 20px;
-    height: 200px;
-    visibility: hidden;
-    background-color: rgb(241, 90, 90);
-    left: 38%;
-    top: 38%;
-    position: fixed;
-}
-
-/* Registro de usuario */
-
 #enlaceRegistro {
     margin-top: 10px;
 }
 
-#seccionRegistro {
-    text-align: center;
-    width: 300px;
-    border-radius: 20px;
-    padding: 5px;
-    background-color: #083c64;
-    left: 38%;
-    top: 10%;
-    position: fixed;
-}
 
 #seccionRegistro input {
     width: 50%;
@@ -332,6 +306,35 @@ footer p {
     margin: 0px auto;
 }
 
+
+
+
+/* #seccionMostrarDatos {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    border-radius: 20px;
+    height: 200px;
+    visibility: hidden;
+    background-color: rgb(241, 90, 90);
+    left: 38%;
+    top: 38%;
+    position: fixed;
+} */
+
+
+#seccionRegistro {
+    text-align: center;
+    width: 300px;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #083c64;
+    left: 38%;
+    top: 38%;
+    position: fixed;
+}
 /* Mostrar Datos */
 
 
@@ -436,7 +439,7 @@ footer p {
 
     /* iniciar sesion */
 
-    #tarjetaIniciarSesion {
+    #tarjetaIniciarSesion , #seccionMostrarDatos , #seccionRegistro , #tarjetaCerrarSesion  {
         left: 5%;
         top: 18%;
         width: 200px;
@@ -445,11 +448,12 @@ footer p {
     }
 
     #tarjetaIniciarSesion input{
-        width: 140px;
+        width: 150px;
+        margin: 0px auto;
     }
 
     #enlaceRegistro{
-        width: 150px;
+        width: 200px;
     }
 }
 
@@ -546,7 +550,7 @@ footer p {
 
      /* iniciar sesion */
 
-     #tarjetaIniciarSesion {
+    #tarjetaIniciarSesion , #seccionMostrarDatos , #seccionRegistro  {
         left: 5%;
         top: 18%;
         width: 300px;
@@ -608,10 +612,10 @@ footer p {
         font-size: 15px;
     }
 
-     /* iniciar sesion */
+      /* iniciar sesion */
 
-     #tarjetaIniciarSesion {
-        left: 20%;
+    #tarjetaIniciarSesion , #seccionMostrarDatos , #seccionRegistro  {
+        left: 5%;
         top: 18%;
         width: 300px;
         text-align: center;
@@ -625,6 +629,7 @@ footer p {
     #enlaceRegistro{
         width: 200px;
     }
+
 
 }
 
@@ -652,10 +657,11 @@ footer p {
         font-size: 20px;
     }
 
-     /* iniciar sesion */
+    
+ /* iniciar sesion */
 
-     #tarjetaIniciarSesion {
-        left: 30%;
+    #tarjetaIniciarSesion , #seccionMostrarDatos , #seccionRegistro  {
+        left: 5%;
         top: 18%;
         width: 300px;
         text-align: center;

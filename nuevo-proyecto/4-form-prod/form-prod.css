@@ -255,18 +255,91 @@ footer p {
 
 
 
-/* Seccion factura */
 
-#seccionFacturas {
-    background-color: rgb(198, 197, 197 , 0.4);
+/* Inicio de sesion */ 
+/* Mostrar datos ususario */
+/* Registro de usuario */
+
+
+#tarjetaIniciarSesion , #seccionMostrarDatos , #tarjetaCerrarSesion  {
+
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    border-radius: 20px;
     padding: 5px;
-    
+    background-color: rgb(241, 90, 90);
+    left: 38%;
+    top: 38%;
+    position: fixed;
+    visibility: hidden;
+
 }
 
-table{
-    margin: 5px auto;
+#seccionMostrarDatos button , #tarjetaCerrarSesion button {
+    width: 30%;
+    margin: 0PX auto;
 }
+
+#entradaDatos {
+
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 200px;
+    margin: 20px auto;
+}
+
+#enlaceRegistro {
+    margin-top: 10px;
+}
+
+
+#seccionRegistro input {
+    width: 50%;
+
+}
+
+#botonesRegistro {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 0px auto;
+}
+
+
+
+
+/* #seccionMostrarDatos {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    border-radius: 20px;
+    height: 200px;
+    visibility: hidden;
+    background-color: rgb(241, 90, 90);
+    left: 38%;
+    top: 38%;
+    position: fixed;
+} */
+
+
+#seccionRegistro {
+    text-align: center;
+    width: 300px;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #083c64;
+    left: 38%;
+    top: 38%;
+    position: fixed;
+}
+
+/* tarjeta cerrar sesion */
 
 
 
@@ -401,22 +474,22 @@ table{
         flex-direction: column;
     }
 
-    /* iniciar sesion */
+    /* iniciar sesion *//* registro usuarios */
 
-    #tarjetaIniciarSesion {
+    #tarjetaIniciarSesion , #seccionMostrarDatos , #seccionRegistro , #tarjetaCerrarSesion  {
         left: 5%;
         top: 18%;
         width: 200px;
         text-align: center;
-
+    
     }
 
-    #tarjetaIniciarSesion input {
+    #tarjetaIniciarSesion input{
         width: 150px;
         margin: 0px auto;
     }
 
-    #enlaceRegistro {
+    #enlaceRegistro{
         width: 200px;
     }
 
@@ -538,10 +611,33 @@ table{
         padding-top: 5%;
     }
 
+    /* facturas */
+    #seccionFacturas {
+        background-color: rgb(198, 197, 197 , 0.4);
+        text-align: center;
+        padding: 5px;
+        height: 450px;
+        
+    }
+
+
+    #seccionValorTotal{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    table{
+        margin: 5px auto;
+    }
+
+    #seccionValorTotal span{
+        margin: 17px 0px 0px 10px;
+    }
+
+
     form {
         width: 60%;
-
-
     }
 
     /* footer */
@@ -550,23 +646,25 @@ table{
         
     }
 
+    
 
 
-    /* iniciar sesion */
 
-    #tarjetaIniciarSesion {
+     /* iniciar sesion */
+
+     #tarjetaIniciarSesion , #seccionMostrarDatos , #seccionRegistro  {
         left: 5%;
         top: 18%;
         width: 300px;
         text-align: center;
-
+    
     }
 
-    #tarjetaIniciarSesion input {
+    #tarjetaIniciarSesion input{
         width: 200px;
     }
 
-    #enlaceRegistro {
+    #enlaceRegistro{
         width: 200px;
     }
 
@@ -628,6 +726,31 @@ table{
     }
 
 
+    /* facturas */
+    #seccionFacturas {
+        background-color: rgb(198, 197, 197 , 0.4);
+        text-align: center;
+        padding: 5px;
+        height: 450px;
+        
+    }
+
+
+    #seccionValorTotal{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    table{
+        margin: 5px auto;
+    }
+
+    #seccionValorTotal span{
+        margin: 17px 0px 0px 10px;
+    }
+
+
     form {
         width: 40%;
 
@@ -635,7 +758,7 @@ table{
 
     /* iniciar sesion */
 
-    #tarjetaIniciarSesion {
+    #tarjetaIniciarSesion , #seccionMostrarDatos , #seccionRegistro {
         left: 30%;
         top: 30%;
     }
@@ -701,6 +824,30 @@ table{
     .textoTarjeta {
         font-size: 18px;
         padding: 0px;
+    }
+
+    /* facturas */
+    #seccionFacturas {
+        background-color: rgb(198, 197, 197 , 0.4);
+        text-align: center;
+        padding: 5px;
+        height: 450px;
+        
+    }
+
+
+    #seccionValorTotal{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    table{
+        margin: 5px auto;
+    }
+
+    #seccionValorTotal span{
+        margin: 17px 0px 0px 10px;
     }
 
     form {
@@ -774,6 +921,31 @@ table{
         margin: 0px 2px;
         height: 30px;
         padding-top: 5%;
+    }
+
+
+    /* facturas */
+    #seccionFacturas {
+        background-color: rgb(198, 197, 197 , 0.4);
+        text-align: center;
+        padding: 5px;
+        height: 450px;
+        
+    }
+
+
+    #seccionValorTotal{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    table{
+        margin: 5px auto;
+    }
+
+    #seccionValorTotal span{
+        margin: 17px 0px 0px 10px;
     }
 
     form {

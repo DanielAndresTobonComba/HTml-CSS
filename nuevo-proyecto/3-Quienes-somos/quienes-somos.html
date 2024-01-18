@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="quienes-somos.css">
-    <link rel="stylesheet" href="../inicioSesion.css">
+    
 </head>
 <body>
     <div class="tituloEmpresa">
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="registrarte sin ">
-                    <svg  class="simboloInicioSesion" onclick="cerrarSesion()" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-x" width="100%" height="80%" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg  class="simboloInicioSesion" onclick="mostrarTarjeta()" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-x" width="100%" height="80%" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
                         <path d="M6 21v-2a4 4 0 0 1 4 -4h3.5" />
@@ -115,23 +115,14 @@
         <button onclick="tomarDatosRegistro()">Enviar</button>
         
     </div>
+    
+    <div id="tarjetaCerrarSesion" style="visibility: hidden;" >
 
+        <h2>Desea cerrar sesion</h2>
 
-    <main>
-        <div class="quienesSomos ">
-            <h2>Quienes somos</h2>
-            <p>Surti Tiendas Ubaté SAS es una empresa familiar colombiana dedicada a la distribución de productos de consumo masivo en el canal de tienda a tienda. Surge de la unión de los sueños de una pareja de esposos de crear su propia empresa y poder aplicar los conocimientos adquiridos en sus respectivas carreras</p>
-        </div>
-        
-        <div class="contenedorVision ">
-            <h2>Vision</h2>
-            <p>Como visión, para el 2025 buscamos ser la empresa líder en distribución tienda a tienda en la provincia de Ubaté. Queremos llegar a cada rincón y posicionar los productos que comercializamos, logrando que se conviertan en marcas líderes en la región.</p>
-        </div>
-
-        <div class="contenedorMision ">
-            <h2>Mision</h2>
-            <p>Nuestra misión es satisfacer las necesidades del mercado de bienes de consumo masivo de lácteos y sus derivados con un excelente servicio, y sobre todo con productos que logren democratizar el consumo, esto quiere decir que sean productos con precios competitivos para el acceso de toda la comunidad.</p>
-        </div>
+        <button onclick="mostrarTarjeta()">No</button>
+        <button onclick="cerrarSesion() , mostrarTarjeta()">Si</button>
+    </div>
 
 
     </main>

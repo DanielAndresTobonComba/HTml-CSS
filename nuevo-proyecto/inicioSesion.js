@@ -273,6 +273,7 @@ function tomarDatosRegistro() {
         .then(json => {
 
             let tamaño = json.usuarios.length
+            let caracterTamaño = tamaño.toString()
             
 
             json.usuarios.forEach(usuario => {
@@ -306,7 +307,7 @@ function tomarDatosRegistro() {
                             "Content-type": "application/json; charset=UTF-8"
                         },
                         body: JSON.stringify({
-                            id: tamaño,
+                            id: caracterTamaño,
                             nombre: nombreUsuario,
                             contraseña: contraseñaUsuario,
                             telefono: telefonoUsuario,
