@@ -342,7 +342,29 @@ footer p {
 /* tarjeta cerrar sesion */
 
 
+#contenedorHistorial{
+    text-align: center;
+    background-color: wheat;
+    width: 80%;
+    position: fixed;
+    left: 10%;
+    top: 10%;
+    border-radius: 20px;
+    padding: 20px 0px;
+}
 
+#factura , #facturaProductos{
+    
+    border: dotted 3px;
+    margin: 0px auto;
+    max-width: 200px;
+    text-align: left;
+}
+
+
+#factura p  , #facturaProductos p{
+   margin: 5px auto;
+}
 
 
 

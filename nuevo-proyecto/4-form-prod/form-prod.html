@@ -142,6 +142,25 @@
 
             <button onclick="mostrarFactura()" id="botonMostrarFactura">Generar Factura</button>
 
+            <button onclick="historialFacturas()" 
+            id="botonHistorial">Historial de facturas</button>
+
+            <div id="contenedorHistorial" style="visibility: hidden;">
+                <div id="factura">
+
+                </div>
+
+                <div id="facturaProductos">
+
+                </div>
+
+                
+
+                <button id="botonRestar" onclick="historialFacturas('restar')"><</button>
+                <button>X</button>
+                <button id="botonSumar" onclick="historialFacturas('sumar')"> > </button>
+            </div>
+
             <h4 style="color: red; visibility: hidden;" id="aviso">Debe iniciar sesion o registrarse para poder realizar
                 facturas</h4>
 

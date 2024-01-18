@@ -1,5 +1,174 @@
 let ids = []
 let valorTotal = 0
+let numero = 0
+
+
+
+
+function historialFacturas(accion = "") {
+
+    let seccionHistorial = document.getElementById("contenedorHistorial")
+    let contenedor = document.getElementById("factura")
+    let contenedorProductos = document.getElementById("facturaProductos")
+
+    seccionHistorial.style.visibility = "visible"
+
+    let nombreUsuario = localStorage.getItem("nombre")
+    let botonSumar = document.getElementById("botonSumar")
+    let botonRestar = document.getElementById("botonRestar")
+
+    
+
+
+    fetch("../usuarios.json")
+        .then(data => data.json())
+        .then(json => {
+
+            
+            
+            if (accion == "" || accion == "sumar") {
+
+                json.usuarios.forEach(usuario => {
+                    if (usuario.nombre == nombreUsuario) {
+
+                        let ident = usuario.id
+
+                        //console.log(usuario)
+                        //console.log(ident)
+
+                        fetch(`http://localhost:3000/facturas/?_embed=${ident}`)
+
+                            .then(data => data.json())
+                            .then(json => {
+                                console.log("longitud json: " + json.length)
+
+                                
+
+                                if( numero >= json.length - 1){
+                                    botonSumar.style.visibility = "hidden"
+                                   
+                                }else if(numero > 0){
+                                    botonRestar.style.visibility = "visible"
+                                    botonSumar.style.visibility = "visible"
+                                }
+
+                                
+                                console.log("numero: mas " + numero)
+
+                                let elemento = `
+    
+                                <p>Factura Numero: <span>${json[numero].idFactura}</span></p>
+                                <p>Comprador: <span>${json[numero].comprador}</span></p>
+                                <p>Id comprador: <span>${json[numero].id}</span></p>
+                                <p>Detalles</p>
+    
+                                
+                                
+                                `
+
+                                contenedor.innerHTML = elemento
+
+
+                                let productos = ""
+
+                                for (let i = 0; i < json[numero].datalles.length; i++) {
+
+                                    fila = `
+    
+                                    
+                                    <p>-- <span>${json[numero].datalles[i].cantidadProducto}</span> <span>${json[numero].datalles[i].nombreProducto}:</span> <span>$${json[numero].datalles[i].valorUnidad}</span></p>`
+
+                                    productos += fila
+
+                                }
+
+                                console.log(productos)
+
+                                contenedorProductos.innerHTML = productos
+
+                                numero++
+
+                            })
+
+                    }
+                })
+
+                
+
+            }else{ 
+
+                numero--
+
+                if(numero < 0){
+                    botonRestar.style.visibility = "hidden"
+                    
+                    numero++
+    
+                }else{
+                    botonSumar.style.visibility = "visible"
+                }
+                
+                console.log("numero menos: " + numero)
+
+                json.usuarios.forEach(usuario => {
+                    if (usuario.nombre == nombreUsuario) {
+
+                        let ident = usuario.id
+
+                        //console.log(usuario)
+                        //console.log(ident)
+
+                        fetch(`http://localhost:3000/facturas/?_embed=${ident}`)
+
+                            .then(data => data.json())
+                            .then(json => {
+                                console.log(json)
+
+                                let elemento = `
+    
+                                <p>Factura Numero: <span>${json[numero].idFactura}</span></p>
+                                <p>Comprador: <span>${json[numero].comprador}</span></p>
+                                <p>Id comprador: <span>${json[numero].id}</span></p>
+                                <p>Detalles</p>
+    
+                                
+                                
+                                `
+
+                                contenedor.innerHTML = elemento
+
+
+                                let productos = ""
+
+                                for (let i = 0; i < json[numero].datalles.length; i++) {
+
+                                    fila = `
+    
+                                    
+                                    <p>-- <span>${json[numero].datalles[i].cantidadProducto}</span> <span>${json[numero].datalles[i].nombreProducto}:</span> <span>$${json[numero].datalles[i].valorUnidad}</span></p>`
+
+                                    productos += fila
+
+                                }
+
+                                console.log(productos)
+
+                                contenedorProductos.innerHTML = productos
+
+                            })
+
+                    }
+                })
+                
+
+            }
+
+
+        })
+
+
+
+}
 
 console.log("Nombre: " + localStorage.getItem("nombre"))
 console.log("Contraseña: " + localStorage.getItem("contraseña"))
@@ -46,10 +215,10 @@ function generarFactura() {
 
     let nombreUsuario = localStorage.getItem("nombre")
 
-    
+
     console.log("Contraseña: " + localStorage.getItem("contraseña"))
 
-    
+
     for (let i = 1; i < hijos.length; i++) {
 
         console.log(hijos[i].children)
@@ -83,57 +252,57 @@ function generarFactura() {
 
     console.log(productos)
 
-    
+
 
     fetch("../usuarios.json")
 
-    .then(data => data.json())
-    .then(json => {
+        .then(data => data.json())
+        .then(json => {
 
 
-        json.usuarios.forEach(usuario => {
+            json.usuarios.forEach(usuario => {
 
-            if (usuario.nombre === nombreUsuario) {
+                if (usuario.nombre === nombreUsuario) {
 
-                let tamaño = json.facturas.length
-                let caracterTamaño = tamaño.toString()
-                
-                let ident = usuario.id 
+                    let tamaño = json.facturas.length
+                    let caracterTamaño = tamaño.toString()
 
-                let caracterIdent = ident.toString()
-                let nombre = usuario.nombre
-                
-                enviar(caracterTamaño , caracterIdent , nombre , productos)
-                
-                
-            }
+                    let ident = usuario.id
 
-            
+                    let caracterIdent = ident.toString()
+                    let nombre = usuario.nombre
+
+                    enviar(caracterTamaño, caracterIdent, nombre, productos)
+
+
+                }
+
+
+            })
         })
-    })
 
 }
 
-function enviar(caracterTamaño , caracterIdent , nombre , productos ){
+function enviar(caracterTamaño, caracterIdent, nombre, productos) {
 
     fetch(`http://localhost:3000/facturas/`, {
-                    method: "POST",
-                    headers: {
-                        "Content-type": "application/json; charset=UTF-8"
-                    },
-                    body: JSON.stringify({
+        method: "POST",
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        },
+        body: JSON.stringify({
 
-                        id: caracterIdent,
-                        idFactura: caracterTamaño,
-                        comprador: nombre,
-                        datalles: productos,
+            id: caracterIdent,
+            idFactura: caracterTamaño,
+            comprador: nombre,
+            datalles: productos,
 
 
-                    })
-                })
-                    .then(response => response.json())
-                    .then(json => console.log(json))
-                    .catch(error => console.error("Error !!!" + error));
+        })
+    })
+        .then(response => response.json())
+        .then(json => console.log(json))
+        .catch(error => console.error("Error !!!" + error));
 }
 
 
