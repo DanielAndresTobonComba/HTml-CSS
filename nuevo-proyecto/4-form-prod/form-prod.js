@@ -57,6 +57,13 @@ function historialFacturas(accion = "") {
                             .then(json => {
                                 console.log("longitud json: " + json.length)
 
+                                let valorTotal = 0
+
+                                if (json.length == 0){
+                                    let titulo = `<h2>No tiene ninguna factura</h2>`
+                                    contenedor.innerHTML = titulo
+                                    return
+                                }
                                 
 
                                 if( numero >= json.length - 1){
@@ -94,12 +101,18 @@ function historialFacturas(accion = "") {
                                     <p>-- <span>${json[numero].datalles[i].cantidadProducto}</span> <span>${json[numero].datalles[i].nombreProducto}:</span> <span>$${json[numero].datalles[i].valorUnidad}</span></p>`
 
                                     productos += fila
+                                    valorTotal += json[numero].datalles[i].cantidadProducto * json[numero].datalles[i].valorUnidad
 
                                 }
+
+                                let filaValorTotal = `<p>Valor Total: <span>$ ${valorTotal}</span></p>`
+                                
 
                                 console.log(productos)
 
                                 contenedorProductos.innerHTML = productos
+                                contenedorProductos.innerHTML += filaValorTotal
+                                valorTotal = 0
 
                                 numero++
 
@@ -236,6 +249,8 @@ function generarFactura() {
 
     for (let i = 1; i < hijos.length; i++) {
 
+
+
         console.log(hijos[i].children)
 
         let fila = hijos[i].children
@@ -247,6 +262,8 @@ function generarFactura() {
         console.log("Nombre: " + nombre)
         console.log("Cantidad: " + cantidad)
         console.log("Precio: " + precio)
+
+        
 
 
 
@@ -267,7 +284,9 @@ function generarFactura() {
 
     console.log(productos)
 
-
+    if(productos.length == 0){
+        return
+    }
 
     fetch("../usuarios.json")
 

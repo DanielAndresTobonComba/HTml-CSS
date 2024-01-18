@@ -365,10 +365,11 @@ footer p {
 
 /* tarjeta cerrar sesion */
 
+/* Factura */
 
 #contenedorHistorial{
     text-align: center;
-    background-color: white;
+    background-color: rgb(247, 239, 239);
     width: 80%;
     position: fixed;
     left: 10%;
@@ -390,6 +391,28 @@ footer p {
    margin: 5px auto;
 }
 
+
+#botonMostrarFactura , #botonHistorial , #botonConfirmarCompra{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(33, 122, 27);
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+#contenedorHistorial button{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(126, 206, 121);
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin: 10px auto;
+}
 
 
 

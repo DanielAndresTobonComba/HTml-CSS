@@ -9,5 +9,37 @@
     }
   ],
   "facturas": [
+    {
+      "id": "0",
+      "idFactura": "0",
+      "comprador": "Daniel",
+      "datalles": [
+        {
+          "nombreProducto": "ChocoLeche",
+          "cantidadProducto": 3,
+          "valorUnidad": 5000,
+          "precioTotal": 15000
+        },
+        {
+          "nombreProducto": "Jugo Tangelo",
+          "cantidadProducto": 3,
+          "valorUnidad": 5000,
+          "precioTotal": 15000
+        }
+      ]
+    },
+    {
+      "id": "0",
+      "idFactura": "1",
+      "comprador": "Daniel",
+      "datalles": [
+        {
+          "nombreProducto": "Jugo Tangelo",
+          "cantidadProducto": 4,
+          "valorUnidad": 5000,
+          "precioTotal": 20000
+        }
+      ]
+    }
   ]
 }
