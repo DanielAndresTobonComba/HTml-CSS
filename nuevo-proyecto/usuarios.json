@@ -9,6 +9,30 @@
     }
   ],
   "facturas": [
-    
+    {
+      "id": "0",
+      "idFactura": "0",
+      "comprador": "Daniel",
+      "datalles": [
+        {
+          "nombreProducto": "ChocoLeche",
+          "cantidadProducto": 3,
+          "valorUnidad": 5000,
+          "precioTotal": 15000
+        },
+        {
+          "nombreProducto": "Leche",
+          "cantidadProducto": 2,
+          "valorUnidad": 4500,
+          "precioTotal": 9000
+        },
+        {
+          "nombreProducto": "Arequipe",
+          "cantidadProducto": 2,
+          "valorUnidad": 5000,
+          "precioTotal": 10000
+        }
+      ]
+    }
   ]
 }
