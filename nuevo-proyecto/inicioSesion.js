@@ -1,4 +1,22 @@
 
+function cerrarTarjeta(){
+    let tarjeta = document.getElementById("tarjetaCerrarSesion")
+    tarjeta.style.visibility = "hidden"
+}
+
+function mostrarTarjeta (){
+    let tarjeta = document.getElementById("tarjetaCerrarSesion")
+    let nombreUsuario = localStorage.getItem("nombre")
+    let contraseñaUsuario = localStorage.getItem("contraseña")
+
+    
+
+    if (nombreUsuario == null || contraseñaUsuario == null){
+        return
+    }
+
+    tarjeta.style.visibility = "visible"
+}
 
 /* Seccion tarjeta incio sesion */
 
@@ -19,6 +37,8 @@ function iniciarSesion() {
 
 
 }
+
+
 
 
 function cerrarInicioSesion() {
@@ -241,84 +261,111 @@ function tomarDatosRegistro() {
     let telefonoUsuario = document.getElementById("Telefono").value;
     let contraseñaUsuario = document.getElementById("contraseñaRegistro").value;
 
-
-
-    if (nombreUsuario === "") {
-        document.getElementById("nombreRegistro").value = "Dato Invalido";
-        return;
-    } else if (correoUsuario === "") {
-        document.getElementById("correo").value = "Dato Invalido";
-        return;
-    } else if (telefonoUsuario === "") {
-        document.getElementById("Telefono").value = "Dato Invalido";
-        return;
-    } else if (contraseñaUsuario === "") {
-        document.getElementById("contraseñaRegistro").value = "Dato Invalido";
-        return;
-    } else { 
-
-        fetch("../usuarios.json")
+    fetch("../usuarios.json")
         .then(data => data.json())
         .then(json => {
-
             let tamaño = json.usuarios.length
-            
+            let caracterTamaño = tamaño.toString()
 
-            json.usuarios.forEach(usuario => {
-
-                console.log("nombre" + usuario.nombre)
-
-                if (usuario.nombre.toLowerCase() == nombreUsuario.toLowerCase()) {
-                    console.log("esxiste ese nombre")
-                    document.getElementById("nombreRegistro").value = "ese nombre ya existe"
-
-                } else if (usuario.contraseña == contraseñaUsuario) {
-                    console.log("existe esa contraseña")
-                    document.getElementById("contraseñaRegistro").value = "ya existe esa contraseña"
-
-                }else if(tamaño == usuario.id + 1){
-
-                    console.log("datos tomados");
-                    console.log(nombreUsuario + correoUsuario + telefonoUsuario + contraseñaUsuario)
-            
-                    /* Escondo la tarjeta de registro */
-                    tarjetaRegistro.style.visibility = "hidden"
-            
-                    /* Guardo los datos */
-                    localStorage.setItem("nombre", nombreUsuario)
-                    localStorage.setItem("contraseña", contraseñaUsuario);
-
-                    
-                    fetch("http://localhost:3000/usuarios", {
-                        method: "POST",
-                        headers: {
-                            "Content-type": "application/json; charset=UTF-8"
-                        },
-                        body: JSON.stringify({
-                            id: tamaño,
-                            nombre: nombreUsuario,
-                            contraseña: contraseñaUsuario,
-                            telefono: telefonoUsuario,
-                            correo: correoUsuario , 
-                            facturas:[]
-                        })
-                    })
-                        .then(response => response.json())
-                        .then(json => console.log(json))
-                        .catch(error => console.error("Error !!!" + error));
-                    
-                }
-            })
-
-        })
+            if (nombreUsuario === "") {
+                document.getElementById("nombreRegistro").value = "Dato Invalido";
+                return;
+            } else if (correoUsuario === "") {
+                document.getElementById("correo").value = "Dato Invalido";
+                return;
+            } else if (telefonoUsuario === "") {
+                document.getElementById("Telefono").value = "Dato Invalido";
+                return;
+            } else if (contraseñaUsuario === "") {
+                document.getElementById("contraseñaRegistro").value = "Dato Invalido";
+                return;
+            } else if (tamaño == 0){
         
-    
-    
-    
-       
+                fetch("http://localhost:3000/usuarios", {
+                    method: "POST",
+                    headers: {
+                        "Content-type": "application/json; charset=UTF-8"
+                    },
+                    body: JSON.stringify({
+                        id: caracterTamaño,
+                        nombre: nombreUsuario,
+                        contraseña: contraseñaUsuario,
+                        telefono: telefonoUsuario,
+                        correo: correoUsuario
+                    })
+                })
+                    .then(response => response.json())
+                    .then(json => console.log(json))
+                    .catch(error => console.error("Error !!!" + error));
+        
+            } else { 
 
+                fetch("../usuarios.json")
+                .then(data => data.json())
+                .then(json => {
+        
+                    let tamaño = json.usuarios.length
+                    let caracterTamaño = tamaño.toString()
+                    
+        
+                    json.usuarios.forEach(usuario => {
+        
+                        console.log("nombre" + usuario.nombre)
+        
+                        if (usuario.nombre.toLowerCase() == nombreUsuario.toLowerCase()) {
+                            console.log("esxiste ese nombre")
+                            document.getElementById("nombreRegistro").value = "ese nombre ya existe"
+        
+                        } else if (usuario.contraseña == contraseñaUsuario) {
+                            console.log("existe esa contraseña")
+                            document.getElementById("contraseñaRegistro").value = "ya existe esa contraseña"
+        
+                        }else if(tamaño == usuario.id + 1){
+        
+                            console.log("datos tomados");
+                            console.log(nombreUsuario + correoUsuario + telefonoUsuario + contraseñaUsuario)
+                    
+                            /* Escondo la tarjeta de registro */
+                            tarjetaRegistro.style.visibility = "hidden"
+                    
+                            /* Guardo los datos */
+                            localStorage.setItem("nombre", nombreUsuario)
+                            localStorage.setItem("contraseña", contraseñaUsuario);
+        
+                            
+                            fetch("http://localhost:3000/usuarios", {
+                                method: "POST",
+                                headers: {
+                                    "Content-type": "application/json; charset=UTF-8"
+                                },
+                                body: JSON.stringify({
+                                    id: caracterTamaño,
+                                    nombre: nombreUsuario,
+                                    contraseña: contraseñaUsuario,
+                                    telefono: telefonoUsuario,
+                                    correo: correoUsuario 
+                                })
+                            })
+                                .then(response => response.json())
+                                .then(json => console.log(json))
+                                .catch(error => console.error("Error !!!" + error));
+                            
+                        }
+                    })
+        
+                })
+                
+            
+            
+            
+               
+        
+        
+            }
+            
+        })
 
-    }
+  
 
 
 }
@@ -337,13 +384,21 @@ function salirRegistro() {
 
 function cerrarSesion() {
 
+    let tarjeta = document.getElementById("tarjetaCerrarSesion")
+    tarjeta.style.visibility = "hidden"
+
     localStorage.clear()
     console.log(localStorage.getItem("nombreIS"))
     console.log(localStorage.getItem("contraseñaIS"))
     console.log("Datos removidos")
 
+    
+
     document.getElementById("usuarioInicioSesion").value = ""
     document.getElementById("contraseñaInicioSesion").value = ""
+
+    
+    
 }
 
 
