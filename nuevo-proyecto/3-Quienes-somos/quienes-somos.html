@@ -5,22 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="quienes-somos.css">
-    
 </head>
 <body>
     <div class="tituloEmpresa">
         <p>Surtitiendas Ubate</p>
     </div>
     
-    
 
-    <header id="header">
+    <header>
         <div class="seccionLogo ">
             <div class="logo "></div>
             
             <div class="seccionInicio">
                 <div class="iniciarSesion ">
-                    <svg  class="simboloInicioSesion" onclick="mostrarDatosIS()" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="100%" height="80%" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="100%" height="80%" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
                         <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
@@ -29,7 +27,7 @@
                 </div>
 
                 <div class="registrarte ">
-                    <svg class="simboloInicioSesion" onclick="iniciarSesion()" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-plus" width="100%" height="80%" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-plus" width="100%" height="80%" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
                         <path d="M16 19h6" />
@@ -40,7 +38,7 @@
                 </div>
 
                 <div class="registrarte sin ">
-                    <svg  class="simboloInicioSesion" onclick="mostrarTarjeta()" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-x" width="100%" height="80%" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-x" width="100%" height="80%" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
                         <path d="M6 21v-2a4 4 0 0 1 4 -4h3.5" />
@@ -64,68 +62,43 @@
         </div>
 
         <div class="seccionBuscador">
-            <!-- <div class="logoLupa">
+            <div class="logoLupa">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="40" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                     <path d="M21 21l-6 -6" />
                 </svg>
-            </div> -->
-
+            </div>
             <form action="https://www.google.com/search" class="buscador">
-                <input type="submit" value="Buscar" >
                 <input type="text" name="q" id="busqueda" target="_blank" >
+                <input type="submit" value="Buscar" >
             </form>
             
         </div>
     </header>
 
-    <div id="tarjetaIniciarSesion">
-
-        <h2 style="color: black;">Iniciar Sesion</h2>
-
-        <section id="entradaDatos">
-
-            <input id="usuarioInicioSesion" type="text" placeholder="Nombre de usuario">
-
-            <input id="contraseñaInicioSesion" type="text" placeholder="Contraseña">
-            
-            <a id=enlaceRegistro onclick="registro(this) , cerrarInicioSesion() " >Registrarse</a>
-
-        </section>
-        
-        <section id="botones">
-            
-            <button onclick ="cerrarInicioSesion()" id="botonSalir">Cerrar</button>
-            <button onclick="mostrarDatosIS()" id="botonIngresar" >Ingresar</button>
-        </section>
-    </div>
     
-    <div id="seccionMostrarDatos">
 
-        <h2>Datos del usuario</h2>
-        <p>Nombre:<span id="spanUsuario"></span></p>
-        <p>Contraseña: <span id="spanContraseña"></span></p> 
-        <button onclick="cerrarDatos()">Ok</button>
+    <div class="menuNav">
 
     </div>
 
-    <div id="seccionRegistro" style="visibility: hidden;">
 
-        <button onclick="salirRegistro()">Cerrar</button>
-        <button onclick="tomarDatosRegistro()">Enviar</button>
-        
-    </div>
-    
-    <div id="tarjetaCerrarSesion" style="visibility: hidden;" >
-
-        <h2>Desea cerrar sesion</h2>
-
-        <div id="botonesCerrarSesion">
-            <button onclick="cerrarTarjeta()">No</button>
-            <button onclick="cerrarSesion() , mostrarTarjeta()">Si</button>
+    <main>
+        <div class="quienesSomos ">
+            <h2>Quienes somos</h2>
+            <p>Surti Tiendas Ubaté SAS es una empresa familiar colombiana dedicada a la distribución de productos de consumo masivo en el canal de tienda a tienda. Surge de la unión de los sueños de una pareja de esposos de crear su propia empresa y poder aplicar los conocimientos adquiridos en sus respectivas carreras</p>
         </div>
-    </div>
+        
+        <div class="contenedorVision ">
+            <h2>Vision</h2>
+            <p>Como visión, para el 2025 buscamos ser la empresa líder en distribución tienda a tienda en la provincia de Ubaté. Queremos llegar a cada rincón y posicionar los productos que comercializamos, logrando que se conviertan en marcas líderes en la región.</p>
+        </div>
+
+        <div class="contenedorMision ">
+            <h2>Mision</h2>
+            <p>Nuestra misión es satisfacer las necesidades del mercado de bienes de consumo masivo de lácteos y sus derivados con un excelente servicio, y sobre todo con productos que logren democratizar el consumo, esto quiere decir que sean productos con precios competitivos para el acceso de toda la comunidad.</p>
+        </div>
 
 
     </main>
@@ -242,6 +215,5 @@
 
     </footer>
     
-    <script src="../inicioSesion.js"></script>
 </body>
 </html>
